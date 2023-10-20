@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Index Page</title>
+    <title>Find</title>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="AUEB Web-Assignment 2023">
+    <meta name="description" content="Index Page">
     <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="authors" content="Thodoris, Antzi">
+    <meta name="author" content="Thodoris, Antzi">
+
+    <link rel="icon" type="image/x-icon" href="../resources/favicon.png">
 
     <!-- We also need to add:
          The links to our css code
@@ -23,27 +25,90 @@
             
         <header>
             <!-- ADD a PHOTO -->
-            <h1>Our Site Name</h1>
+            <img src="../resources/find_logo.png"  alt="logo" width="200px" height="100px">
+            
             <nav>
                 <!-- Contains links to the other webpages -->
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="categories.html">Categories</a></li>
+
+                    <li><a href="categories.html">Categories</a>
+                        <ul>
+                            <li><a href="">Category1</a>
+                                <ul>
+                                    <li><a href="">Category1_page</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">Category2</a></li>
+                        </ul>
+                    </li>
+
                     <li><a href="aboutus.html">About us</a></li>
+
                     <li><a href="contactus.html">Contact us</a></li>
                 </ul>
             </nav>
 
         </header>
-
+        <hr>
         <main>
-            <hr> <!-- delete this  -->
-        </main>
 
-        <footer>
-            <!-- Logo+SiteName Section -->
             <section>
-                <h2>sitename</h2>
+                <!-- section for introductory info -->
+                <h2>Welcome to Find!</h2>
+                <p>We scout the market to find the <b>best prices</b> 
+                    for <b>realty,cars,electronic devices</b> and many more goods!</p>
+                <p>We also offer advertisment for <b>available jobs</b> in the job market!</p>
+            </section>
+
+            <section>
+                <!-- Section for links to the specific categories -->
+                <h2>Discover our Services!</h2>
+                <article>
+                    <figure>
+                        <img src="" alt="category1_relative_photo">
+                        <figcaption>This is the caption for category1</figcaption>
+                    </figure>
+                    <a href="">category1_link</a>
+                </article>
+                <article>
+                    <figure>
+                        <img src="" alt="category2_relative_photo">
+                        <figcaption>This is the caption for category2</figcaption>
+                    </figure>
+                    <a href="">category2_link</a>
+                </article>
+            </section>
+
+            <section>
+                <!-- Section for links to useful external sources  -->
+                <h2>Find News!</h2>
+
+                <article>
+                    <figure>
+                        <img src="" alt="news1_photo">
+                        <figcaption>Learn more about c1</figcaption>
+                    </figure>
+                    <a href="">news1_link</a>
+                </article>
+
+                <article>
+                    <figure>
+                        <img src="" alt="news2_photo">
+                        <figcaption>Learn more about c2</figcaption>
+                    </figure>
+                    <a href="">news2_link</a>
+                </article>
+
+            </section>
+
+        </main>
+        <hr>
+        <footer>
+
+            <section>
+                <!-- Logo+SiteName Section -->
+                <h2>Find</h2>
                 <img src="" alt="our Logo">
             </section>
                
@@ -53,20 +118,21 @@
                     <address>
                         <a href="mailto:lazaristheo@gmail.com">lazaristheo@gmail.com</a>
                         <a href="tel:6987470962">6987470962</a>
-                        <a href="contactus.html">Contact Us</a>
-                </address>
+                        <a href="contactus.html">Technical Support</a>
+                    </address>
                 </section>
 
                 <section>
                     <h2>Find us on Social Media</h2>
                     <ul>
-                        <li><a href=""><img src="" alt="fb_logo"></a></li>
-                        <li><a href=""><img src="" alt="insta_logo"></a></li>
-                        <li><a href=""><img src="" alt="git_logo"></a></li>
+                        <li><a href="https://www.facebook.com/"><img src="../resources/fb_logo.png" alt="fb_logo"></a></li>
+                        <li><a href="https://www.instagram.com/"><img src="../resources/insta_logo.png" alt="insta_logo"></a></li>
+                        <li><a href="https://github.com/Lazaris02"><img src="../resources/git_logo.png"   alt="git_logo"></a></li>
                     </ul>
                 </section>
                 <hr>
                 <p>&copy;SITENAME.GR ALL RIGHTS RESERVED</p>
+
         </footer>
 </body>
 
