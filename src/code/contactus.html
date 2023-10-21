@@ -10,6 +10,118 @@
     <meta name="author" content="Thodoris, Antzi">
 </head>
 <body>
-    
+    <header>
+        <!-- ADD a PHOTO AS a Background for the Header-->
+        <img src="../resources/find_logo.png"  alt="logo" width="200px" height="100px">
+        
+        <nav>
+            <!-- Contains links to the other webpages -->
+            <ul>
+                <li><a href="index.html">Home</a></li>
+
+                <li><a href="categories.html">Categories</a>
+                    <ul>
+                        <li><a href="">Category1</a>
+                            <ul>
+                                <li><a href="">Category1_page</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">Category2</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="aboutus.html">About us</a></li>
+
+                <li><a href="contactus.html">Contact us</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <hr>
+
+    <main>
+        <h1>Having Trouble? We can help!</h1>
+        <form action="" method="post">
+            <fieldset>
+                <legend>Customer Details</legend>
+                <label for="name">Name:</label>
+                <input type="text"  name="name" id="name" required>
+
+                <label for="surname">Surname:</label>
+                <input type="text"  name="surname" id="surname" required>
+
+                <label for="email">Email:</label>
+                <input type="email" name="email" id="email"  required>
+
+                <label for="telephone">Telephone:</label>
+                <input type="tel" pattern="[0-9]{10}"  name="telephone" id="telephone"
+                title="for example 6900989810" required>
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Select Gender</legend>
+
+                <label for="male">Male</label>
+                <input type="radio" id="male" name="gender" value="M" required>
+
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="gender" value="F">
+
+            </fieldset>
+
+            <fieldset>
+                <legend>Advertisment Details</legend>
+
+                <label for="code">Code:</label>
+                <input type="text" pattern="[A-Z]{2}-[0-9]{3}" name="code" id="code" 
+                placeholder="f.e AD-333" 
+                title="The code must be formated as follows: (2 letters)-(3 numbers) f.e AB-123" required>
+
+                <label for="prob_details">Comments</label>
+                <textarea name="prob_details" id="prob_details" cols="30" rows="10" 
+                placeholder="Describe your issue in detail (what is the problem etc.)"  required></textarea>
+
+            </fieldset>
+
+            <button type="reset">Reset</button>
+            <button type="submit">Submit</button>
+
+        </form>
+
+    </main>
+
+    <hr>
+
+    <footer>
+
+        <section>
+            <!-- Logo+SiteName Section -->
+            <h2>Find</h2>
+            <img src="" alt="our Logo">
+        </section>
+           
+        <section>
+            <!-- Section for Contact Details -->
+            <h2>Contact Details</h2>
+            <address>
+                <a href="mailto:lazaristheo@gmail.com">lazaristheo@gmail.com</a>
+                <a href="tel:6987470962">6987470962</a>                       
+                <a href="contactus.html">Technical Support</a>
+                </address>
+        </section>
+
+        <section>
+            <h2>Find us on Social Media</h2>
+            <ul>
+                <li><a href="https://www.facebook.com/"><img src="../resources/fb_logo.png" alt="fb_logo"></a></li>                        <li><a href="https://www.instagram.com/"><img src="../resources/insta_logo.png" alt="insta_logo"></a></li>
+                 <li><a href="https://github.com/Lazaris02"><img src="../resources/git_logo.png"   alt="git_logo"></a></li>
+            </ul>
+        </section>
+        <hr>
+        <p>&copy;SITENAME.GR ALL RIGHTS RESERVED</p>
+
+    </footer>
 </body>
 </html>
