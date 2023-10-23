@@ -1,17 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>About Us</title>
+    <title>About us</title>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About Us">
+    <meta name="description" content="AUEB Web-Assignment 2023">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="Thodoris, Antzi">
 
+    <link rel="icon" type="image/x-icon" href="../resources/favicon.png">
+
+    <!-- We also need to add:
+         The links to our css code
+         The links to our javascript code
+         The links to our google fonts here-->
 </head>
 
 <body>
-    
+    <!-- The format we need to follow:
+        1)header:contains our logo and nav bar(same in every page)
+        3)main content of the page(differs in every page)
+        4)footer(same in every page) -->
+            
+        <header>
+            <!-- ADD a PHOTO AS a Background for the Header-->
+            <img src="../resources/find_logo.png"  alt="logo" width="200px" height="100px">
+            
+            <nav>
+                <!-- Contains links to the other webpages -->
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+
+                    <li><a href="categories.html">Categories</a>
+                        <ul>
+                            <li><a href="house_sales.html">House Sales</a>
+                                <ul>
+                                    <li><a href="house_sales_details.html">House Sale AH-001</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="car_sales.html">Car Sales</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="aboutus.html">About us</a></li>
+
+                    <li><a href="contactus.html">Contact us</a></li>
+                </ul>
+            </nav>
+
+        </header>
+        
+        <hr>
+
+        <main>
+            <!-- article for info about the site -->
+            <article>
+                <h2>About Find</h2>
+                <p>At "Find", we take pride in being your trusted source for a wide range of listings, from houses and cars to job opportunities and more. 
+                Our mission is to connect individuals and families with their dream homes, perfect vehicles, and exciting career prospects. 
+                With a passion for providing a seamless experience, we aim to make your search for the ideal living space, your next set of wheels, or your dream job as simple and enjoyable as possible. 
+                Our team is committed to delivering a user-friendly platform where you can explore, compare, and discover the best options available. 
+                Thank you for choosing "Find", where your dreams become possibilities. </p>
+                </article>
+
+            <article>
+                <!-- article for info about the team -->
+                <h2>Meet the Team</h2>
+                <section>
+                    <img src="" alt="lazaroukos">
+                    <h3>Thodoris Lazaris</h3>
+                    <p>"Mini description for lazarouko"</p>
+                </section>
+
+                <section>
+                    <img src="" alt="tzi">
+                    <h3>Angeliki Giakovi</h3>
+                    <p>"Mini description for tzi"</p>
+                </section>
+            </article>
+
+        </main>
+
+        <hr>
+
+        <footer>
+
+            <section>
+                <!-- Logo+SiteName Section -->
+                <h2>Find</h2>
+                <img src="" alt="our Logo">
+            </section>
+               
+            <section>
+                <!-- Section for Contact Details -->
+                <h2>Contact Details</h2>
+                <address>
+                    <a href="mailto:lazaristheo@gmail.com">lazaristheo@gmail.com</a>
+                    <a href="tel:6987470962">6987470962</a>                        <a href="contactus.html">Technical Support</a>
+                    </address>
+            </section>
+
+            <section>
+                <h2>Find us on Social Media</h2>
+                <ul>
+                    <li><a href="https://www.facebook.com/"><img src="../resources/fb_logo.png" alt="fb_logo"></a></li>                        <li><a href="https://www.instagram.com/"><img src="../resources/insta_logo.png" alt="insta_logo"></a></li>
+                     <li><a href="https://github.com/Lazaris02"><img src="../resources/git_logo.png"   alt="git_logo"></a></li>
+                </ul>
+            </section>
+            <hr>
+            <p>&copy;SITENAME.GR ALL RIGHTS RESERVED</p>
+
+        </footer>
 </body>
+
 </html>

@@ -10,22 +10,16 @@
     <meta name="author" content="Thodoris, Antzi">
 
     <link rel="icon" type="image/x-icon" href="../resources/favicon.png">
+    <link rel="stylesheet" href="styles.css">
 
-    <!-- We also need to add:
-         The links to our css code
-         The links to our javascript code
-         The links to our google fonts here-->
 </head>
 
 <body>
-    <!-- The format we need to follow:
-        1)header:contains our logo and nav bar(same in every page)
-        3)main content of the page(differs in every page)
-        4)footer(same in every page) -->
+   
             
         <header>
             <!-- ADD a PHOTO AS a Background for the Header-->
-            <img src="../resources/find_logo.png"  alt="logo" width="200px" height="100px">
+            <img   src="../resources/logo-no-background.png"  alt="logo">
             
             <nav>
                 <!-- Contains links to the other webpages -->
@@ -34,12 +28,12 @@
 
                     <li><a href="categories.html">Categories</a>
                         <ul>
-                            <li><a href="">Category1</a>
+                            <li><a href="house_sales.html">House Sales</a>
                                 <ul>
-                                    <li><a href="">Category1_page</a></li>
+                                    <li><a href="house_sales_details.html">House Sale AH-001</a></li>
                                 </ul>
                             </li>
-                            <li><a href="">Category2</a></li>
+                            <li><a href="car_sales.html">Car Sales</a></li>
                         </ul>
                     </li>
 
@@ -64,7 +58,11 @@
             </section>
 
             <section>
+                
                 <!-- Section for links to the specific categories -->
+                <!-- TODO wrap this around a nav instead of a section since the 
+                links I am using are to navigate our site -->
+
                 <h2>Discover some of our Services!</h2>
                 <article>
                     <h3>Find Realty</h3>
@@ -83,6 +81,8 @@
 
             <section>
                 <!-- Section for links to useful external sources  -->
+                <!-- TODO change structure of this section to the following:
+                    article*2>h3+img+link+p -->
                 <h2>Find News!</h2>
 
                 <article>
@@ -109,31 +109,33 @@
 
         <footer>
 
-            <section>
+            <div>
                 <!-- Logo+SiteName Section -->
                 <h2>Find</h2>
-                <img src="" alt="our Logo">
-            </section>
+                <img src="../resources/logo-no-background.png" alt="our Logo">
+            </div>
                
-            <section>
+            <div>
                 <!-- Section for Contact Details -->
                 <h2>Contact Details</h2>
                 <address>
                     <a href="mailto:lazaristheo@gmail.com">lazaristheo@gmail.com</a>
-                    <a href="tel:6987470962">6987470962</a>                        <a href="contactus.html">Technical Support</a>
-                    </address>
-            </section>
+                    <a href="tel:6987470962">6987470962</a>                        
+                    <a href="contactus.html">Technical Support</a>
+                </address>
+            </div>
 
-            <section>
+            <div>
                 <h2>Find us on Social Media</h2>
                 <ul>
-                    <li><a href="https://www.facebook.com/"><img src="../resources/fb_logo.png" alt="fb_logo"></a></li>                        <li><a href="https://www.instagram.com/"><img src="../resources/insta_logo.png" alt="insta_logo"></a></li>
-                     <li><a href="https://github.com/Lazaris02"><img src="../resources/git_logo.png"   alt="git_logo"></a></li>
+                    <li><a href="https://www.facebook.com/"><img src="../resources/fb_logo.png" alt="fb_logo"></a></li>                       
+                    <li><a href="https://www.instagram.com/"><img src="../resources/insta_logo.png" alt="insta_logo"></a></li>
+                    <li><a href="https://github.com/Lazaris02"><img src="../resources/git_logo.png"   alt="git_logo"></a></li>
                 </ul>
-            </section>
+            </div>
+
             <hr>
             <p>&copy;SITENAME.GR ALL RIGHTS RESERVED</p>
-
         </footer>
 </body>
 
