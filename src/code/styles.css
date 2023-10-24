@@ -1,1 +1,115 @@
+/* General rules */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
 
+
+/*------- Styling for header ----------*/
+#primary_header{
+    background-color: #f0efef;
+    margin-bottom: 20px;
+}
+
+
+/*-------------------Styling the nav bar-------------- */
+
+.nav_bar{
+    /* To move the bar afterwards */ 
+    background-color: #e5e4e2;
+    border-radius: 30px;
+    text-align: center;
+    
+}
+
+
+
+.nav_bar a{
+    text-decoration: none;
+    color:#241e1e;
+    font-weight:500;
+}
+
+
+.nav_bar a:hover{
+    background-color:#241e1e;
+    color: white;
+    border-radius:30px ;
+    
+}
+
+.nav_bar a:active{
+    font-size: 1.2em;
+}
+
+/* ------------------Styling the logo----------------*/
+.logo{
+}
+
+.logo img{
+    height: 25px;
+    width: 25px;
+    margin-bottom: 30px;
+}
+
+
+.logo>h1,.logo>h2{
+    color:#241e1e;
+    float: left;
+}
+
+/* ----------------------Styling for main ---------------------- */
+.main_article{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.main_article img {
+    height: 200px;
+    width: 200px;
+    border-radius: 30px;
+}
+
+.main_article a {
+    color: #241e1e;
+    
+}
+
+.main_article a:hover{
+    font-weight: 500;
+}
+
+
+
+
+/* ------------Styling for footer ----------------*/
+
+#footer{
+    background-color:#f0efef;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+#footer a {
+    text-decoration: none;
+    color: #241e1e;
+}
+
+#footer address a:hover {
+    font-weight: 500;
+}
+
+#footer address a:active{
+    font-size: 1.2em;
+}
+
+
+.footer_img{
+    height: 50px;
+    width: 50px;
+}
+
+
+
+/* ----------------------------Styling for index html----------------------- */
