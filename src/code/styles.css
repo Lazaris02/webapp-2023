@@ -5,27 +5,42 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.main_header{
+    background-color: #e5e4e2;
+}
+
+ul{
+    list-style: none;
+}
+
+.background{
+    position: absolute;
+    z-index: -1;
+    right: 0;
+}
 
 /*------- Styling for header ----------*/
-#primary_header{
-    background-color: #f0efef;
-    margin-bottom: 20px;
-}
 
 
 /*-------------------Styling the nav bar-------------- */
 
-.nav_bar{
-    /* To move the bar afterwards */ 
-    background-color: #e5e4e2;
+
+.nav_bar ul{
+    /* cuts the edges of all ul's border inside nav bar and
+    aligns its elements at the center of the nav-block */
     border-radius: 30px;
-    text-align: center;
-    
+    text-align: center; 
+}
+
+.nav_bar>ul{
+    display: inline-block;
+    background-color: #e5e4e2;
 }
 
 
-
 .nav_bar a{
+    /* for all anchors in the nav bar it revokes their design
+    applies black color and changes font-weight */
     text-decoration: none;
     color:#241e1e;
     font-weight:500;
@@ -33,6 +48,9 @@
 
 
 .nav_bar a:hover{
+    /* hovering over an anchor tag inside of an element that has the 
+    nav bar class changes the background color to black and the text-color
+    to white. Also the black background will have cut edges */
     background-color:#241e1e;
     color: white;
     border-radius:30px ;
@@ -40,17 +58,72 @@
 }
 
 .nav_bar a:active{
+    /* when you click on an anchor tag inside an element with the nav_bar
+    class the font-size increases to 1.2 times the size it was */
     font-size: 1.2em;
 }
 
-/* ------------------Styling the logo----------------*/
-.logo{
+
+/* nav-bar position */
+
+.nav_bar{
+    /* applies some margin to the nav bar so we space out the other 
+    body elements from it */
+    margin-bottom: 100px;
+    
 }
 
+.nav_bar ul li{
+    /* all the list elements that are inside of all the lists that */
+    display: inline-block;
+}
+
+
+/* drop-down menu */
+
+.drop-down-1{
+    display: inline-block;
+}
+
+.sub-menu-1{
+    display: none;
+    background-color: #e5e4e2d5;
+
+}
+
+.drop-down-1:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+    padding-top: 5px;
+
+}
+
+.sub-menu-2{
+    display: none;
+    background-color:#e5e4e2; 
+}
+
+.drop-down-2:hover .sub-menu-2{
+    display:block;
+    position: absolute;
+    padding-top: 5px;
+}
+
+
+
+
+/* ------------------Styling the logo----------------*/
+
+.logo{
+    padding: 10px;
+}
+
+
 .logo img{
+    display: block;
+    position: flex;
     height: 25px;
     width: 25px;
-    margin-bottom: 30px;
 }
 
 
@@ -61,8 +134,17 @@
 
 /* ----------------------Styling for main ---------------------- */
 .main_article{
+    display: inline-block;
+    background-color: rgb(250, 250, 250);
     text-align: center;
-    margin-bottom: 20px;
+    border:1px solid black;
+    border-radius: 30px;
+    margin:20px;
+}
+
+.main_article:hover{
+    box-shadow: 5px 5px 10px  #a09f9f;
+    
 }
 
 .main_article img {
@@ -72,7 +154,7 @@
 }
 
 .main_article a {
-    color: #241e1e;
+    color: rgb(0, 140, 140);
     
 }
 
@@ -87,8 +169,7 @@
 
 #footer{
     background-color:#f0efef;
-    border-top: 1px solid black;
-    border-bottom: 1px solid black;
+    text-align: center;
 }
 
 #footer a {
@@ -113,3 +194,9 @@
 
 
 /* ----------------------------Styling for index html----------------------- */
+
+
+
+
+
+/* ----------------------------Positioning for index html----------------------- */
