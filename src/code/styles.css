@@ -1,5 +1,6 @@
 /* General rules */
 *{
+    /* makes laying out the content easier */
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
@@ -21,6 +22,7 @@ body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #F2F2F1;
 }
 
 
@@ -36,6 +38,8 @@ body{
 }
 
 .nav_bar>ul{
+    /* every ul direct child of items with the class nav_bar will
+    be displayed as blocks that can have other blocks next to them */
     display: inline-block;
     background-color: #e5e4e2;
 }
@@ -70,7 +74,7 @@ body{
 /* nav-bar position */
 
 .nav_bar{
-        /*Used in flex-box */
+    /* nav_bar is used as a container in flex-box */
     display: flex;
 }
 
@@ -170,7 +174,7 @@ body{
     /* changes the background color of the footer + margin-top:auto 
     maximizes the space between the above block and the footer so that the footer always
     sticks at the bottom*/
-    background-color:#f0efef;
+    background-color:#e5e4e2;
     margin-top: auto;
 }
 
