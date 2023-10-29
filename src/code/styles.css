@@ -1,4 +1,49 @@
 /* General rules */
+@font-face {
+    font-family: 'Poppins';
+    src: url(../resources/font/Poppins-Light.ttf);
+    font-weight: lighter;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(../resources/font/Poppins-Regular.ttf);
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(../resources/font/Poppins-Medium.ttf);
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(../resources/font/Poppins-SemiBold.ttf);
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(../resources/font/Poppins-Bold.ttf);
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url(../resources/font/Poppins-Black.ttf);
+    font-weight: 800;
+    font-style: normal;
+}
+
+/* To display our locally saved font for their respective font-weight and font-style */
+
+
 *{
     /* makes laying out the content easier */
     margin: 0;
@@ -24,6 +69,7 @@ body{
     flex-direction: column;
     background-color: #F2F2F1;
 }
+
 
 
 
@@ -67,7 +113,7 @@ body{
 .nav_bar a:active{
     /* when you click on an anchor tag inside an element with the nav_bar
     class the font-size increases to 1.2 times the size it was */
-    font-size: 1.2em;
+    font-weight: 800;
 }
 
 
