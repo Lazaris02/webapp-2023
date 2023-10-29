@@ -1,1 +1,227 @@
+/* General rules */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
 
+.main_header{
+    background-color: #e5e4e2;
+}
+
+ul{
+    list-style: none;
+}
+
+
+body{
+    /* I set display flex + flex-direction colum so that i make the body container
+    (parent of my footer) a flexbox  so that I can set the footer margin-top:auto and
+    stick the footer at the bottom of the page*/
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image:url(../resources/background_image.jpg) ;
+    background-repeat: repeat;
+}
+
+
+
+/*-------------------Styling the nav bar-------------- */
+
+
+.nav_bar ul{
+    /* cuts the edges of all ul's border inside nav bar and
+    aligns its elements at the center of the nav-block */
+    border-radius: 30px;
+    text-align: center; 
+}
+
+.nav_bar>ul{
+    display: inline-block;
+    background-color: #e5e4e2;
+}
+
+
+.nav_bar a{
+    /* for all anchors in the nav bar it revokes their design
+    applies black color and changes font-weight */
+    text-decoration: none;
+    color:#241e1e;
+    font-weight:500;
+}
+
+
+.nav_bar a:hover{
+    /* hovering over an anchor tag inside of an element that has the 
+    nav bar class changes the background color to black and the text-color
+    to white. Also the black background will have cut edges */
+    background-color:#241e1e;
+    color: white;
+    border-radius:30px ;
+    
+}
+
+.nav_bar a:active{
+    /* when you click on an anchor tag inside an element with the nav_bar
+    class the font-size increases to 1.2 times the size it was */
+    font-size: 1.2em;
+}
+
+
+/* nav-bar position */
+
+.nav_bar{
+        /*Used in flex-box */
+    display: flex;
+}
+
+.nav_bar ul li{
+    /* all the list elements that are inside of all the lists that */
+    display: inline-block;
+}
+
+
+/* drop-down menu */
+
+.drop-down-1{
+    display: inline-block;
+}
+
+.sub-menu-1{
+    display: none;
+    background-color: #e5e4e2d5;
+
+}
+
+.drop-down-1:hover .sub-menu-1{
+    display: block;
+    position: absolute;
+    padding-top: 5px;
+
+}
+
+.sub-menu-2{
+    display: none;
+    background-color:#e5e4e2; 
+}
+
+.drop-down-2:hover .sub-menu-2{
+    display:block;
+    position: absolute;
+    padding-top: 5px;
+}
+
+
+
+
+/* ------------------Styling the logo----------------*/
+
+.logo{
+    padding: 10px;
+}
+
+
+.logo img{
+    display: block;
+    height: 25px;
+    width: 25px;
+}
+
+
+.logo>h1,.logo>h2{
+    color:#241e1e;
+    float: left;
+}
+
+/* ----------------------Styling for main ---------------------- */
+.main_article{
+    display: inline-block;
+    background-color: rgb(250, 250, 250);
+    text-align: center;
+    border:1px solid black;
+    border-radius: 30px;
+}
+
+.main_article:hover{
+    box-shadow: 5px 5px 10px  #a09f9f;
+    
+}
+
+.main_article img {
+    height: 200px;
+    width: 200px;
+    border-radius: 30px;
+}
+
+.main_article a {
+    color: rgb(0, 140, 140);
+    
+}
+
+.main_article a:hover{
+    font-weight: 500;
+}
+
+
+
+
+/* ------------Styling for footer ----------------*/
+
+#main_footer{
+    /* changes the background color of the footer + margin-top:auto 
+    maximizes the space between the above block and the footer so that the footer always
+    sticks at the bottom*/
+    background-color:#f0efef;
+    margin-top: auto;
+}
+
+#main_footer a {
+    text-decoration: none;
+    color: #241e1e;
+}
+
+#main_footer address a:hover {
+    font-weight: 500;
+}
+
+#main_footer address a:active{
+    font-size: 1.2em;
+}
+
+
+.footer_img{
+    height: 50px;
+    width: 50px;
+}
+
+
+
+.background{
+    /* TODO change to id--> background_img_1 */
+    position: absolute;
+    z-index: -1;
+}
+
+.background#photo_index_1{
+    right: 0;
+    bottom: 0;
+    opacity: 100%;
+}
+
+.background#photo_index_2{
+    /* overrides the z-index
+     */
+    z-index: -2;
+    overflow-y: hidden;
+    top:0;
+    opacity: 20%;
+}
+
+/* ----------------------------Styling for index html----------------------- */
+
+
+
+
+
+/* ----------------------------Positioning for index html----------------------- */
