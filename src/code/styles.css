@@ -13,13 +13,18 @@ ul{
     list-style: none;
 }
 
-.background{
-    position: absolute;
-    z-index: -1;
-    right: 0;
+
+body{
+    /* I set display flex + flex-direction colum so that i make the body container
+    (parent of my footer) a flexbox  so that I can set the footer margin-top:auto and
+    stick the footer at the bottom of the page*/
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-image:url(../resources/background_image.jpg) ;
+    background-repeat: repeat;
 }
 
-/*------- Styling for header ----------*/
 
 
 /*-------------------Styling the nav bar-------------- */
@@ -67,10 +72,8 @@ ul{
 /* nav-bar position */
 
 .nav_bar{
-    /* applies some margin to the nav bar so we space out the other 
-    body elements from it */
-    margin-bottom: 100px;
-    
+        /*Used in flex-box */
+    display: flex;
 }
 
 .nav_bar ul li{
@@ -121,7 +124,6 @@ ul{
 
 .logo img{
     display: block;
-    position: flex;
     height: 25px;
     width: 25px;
 }
@@ -139,7 +141,6 @@ ul{
     text-align: center;
     border:1px solid black;
     border-radius: 30px;
-    margin:20px;
 }
 
 .main_article:hover{
@@ -167,21 +168,24 @@ ul{
 
 /* ------------Styling for footer ----------------*/
 
-#footer{
+#main_footer{
+    /* changes the background color of the footer + margin-top:auto 
+    maximizes the space between the above block and the footer so that the footer always
+    sticks at the bottom*/
     background-color:#f0efef;
-    text-align: center;
+    margin-top: auto;
 }
 
-#footer a {
+#main_footer a {
     text-decoration: none;
     color: #241e1e;
 }
 
-#footer address a:hover {
+#main_footer address a:hover {
     font-weight: 500;
 }
 
-#footer address a:active{
+#main_footer address a:active{
     font-size: 1.2em;
 }
 
@@ -192,6 +196,27 @@ ul{
 }
 
 
+
+.background{
+    /* TODO change to id--> background_img_1 */
+    position: absolute;
+    z-index: -1;
+}
+
+.background#photo_index_1{
+    right: 0;
+    bottom: 0;
+    opacity: 100%;
+}
+
+.background#photo_index_2{
+    /* overrides the z-index
+     */
+    z-index: -2;
+    overflow-y: hidden;
+    top:0;
+    opacity: 20%;
+}
 
 /* ----------------------------Styling for index html----------------------- */
 
