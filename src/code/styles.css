@@ -2,7 +2,7 @@
 @font-face {
     font-family: 'Poppins';
     src: url(../resources/font/Poppins-Light.ttf);
-    font-weight: lighter;
+    font-weight: 300;
     font-style: normal;
 }
 
@@ -41,6 +41,7 @@
     font-style: normal;
 }
 
+
 /* To display our locally saved font for their respective font-weight and font-style */
 
 
@@ -67,7 +68,7 @@ body{
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #F2F2F1;
+    background-color: #e5e4e246;
 }
 
 
@@ -76,55 +77,52 @@ body{
 /*-------------------Styling the nav bar-------------- */
 
 
-.nav_bar ul{
+#nav_bar ul{
     /* cuts the edges of all ul's border inside nav bar and
     aligns its elements at the center of the nav-block */
-    border-radius: 30px;
-    text-align: center; 
+    border-radius: 5px; 
 }
 
-.nav_bar>ul{
+#nav_bar>ul{
     /* every ul direct child of items with the class nav_bar will
     be displayed as blocks that can have other blocks next to them */
     display: inline-block;
     background-color: #e5e4e2;
+    font-size: x-large;
 }
 
 
-.nav_bar a{
+#nav_bar a{
     /* for all anchors in the nav bar it revokes their design
-    applies black color and changes font-weight */
+    applies black color and changes font-weight 
+    the display:block makes it so that it takes up all its parent's container
+    */
+    display: block;
     text-decoration: none;
     color:#241e1e;
     font-weight:500;
 }
 
 
-.nav_bar a:hover{
+#nav_bar a:hover{
     /* hovering over an anchor tag inside of an element that has the 
     nav bar class changes the background color to black and the text-color
     to white. Also the black background will have cut edges */
     background-color:#241e1e;
     color: white;
-    border-radius:30px ;
+    border-radius:10px;
+    transition:all 400ms ease;
     
 }
 
-.nav_bar a:active{
+#nav_bar a:active{
     /* when you click on an anchor tag inside an element with the nav_bar
     class the font-size increases to 1.2 times the size it was */
     font-weight: 800;
 }
 
 
-/* nav-bar position */
-
-.nav_bar{
-    /* nav_bar is used as a container in flex-box */
-    display: flex;
-}
-
-.nav_bar ul li{
+#nav_bar ul li{
     /* all the list elements that are inside of all the lists that */
     display: inline-block;
 }
@@ -132,84 +130,125 @@ body{
 
 /* drop-down menu */
 
-.drop-down-1{
-    display: inline-block;
-}
-
 .sub-menu-1{
     display: none;
+    position: absolute;
+    padding: 5px;
     background-color: #e5e4e2d5;
 
 }
 
 .drop-down-1:hover .sub-menu-1{
     display: block;
-    position: absolute;
-    padding-top: 5px;
-
 }
 
 .sub-menu-2{
     display: none;
+    position: absolute;
+    padding: 5px;
     background-color:#e5e4e2; 
 }
 
 .drop-down-2:hover .sub-menu-2{
     display:block;
-    position: absolute;
-    padding-top: 5px;
 }
-
 
 
 
 /* ------------------Styling the logo----------------*/
 
 .logo{
-    padding: 10px;
+    display: inline-block;
 }
 
 
 .logo img{
-    display: block;
     height: 25px;
     width: 25px;
+    float: left;
 }
 
 
 .logo>h1,.logo>h2{
     color:#241e1e;
-    float: left;
+    float:left;
 }
 
 /* ----------------------Styling for main ---------------------- */
-.main_article{
+
+.important_text{
+    /* used to highlight text */
+    color:rgb(0, 140, 140) ;
+    font-weight: 600;
+}
+
+
+#intro_section .intro_info li {
     display: inline-block;
-    background-color: rgb(250, 250, 250);
-    text-align: center;
-    border:1px solid black;
+    background-color: #e5e4e263;
     border-radius: 30px;
 }
 
-.main_article:hover{
-    box-shadow: 5px 5px 10px  #a09f9f;
-    
+#intro_section .intro_info h3 {
+    display: block;
+    text-align: center;
+    color: rgb(0, 140, 140);
+    font-weight: 600;
 }
 
-.main_article img {
+#intro_section .intro_info p {
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+}
+
+
+
+
+.main_content_design{
+    /* The general design of the secondary navigation + the news articles of main content */
+    background-color: #e5e4e263;
+    text-align: center;
+    border-radius: 30px;
+    height: 400px;
+    width: 400px;
+}
+
+.main_content_design:hover{
+    box-shadow: 5px 5px 10px  #a09f9f;
+    transition: all 100ms ease-in;
+}
+
+.main_content_design img {
     height: 200px;
     width: 200px;
     border-radius: 30px;
 }
 
-.main_article a {
+.main_content_design a {
     color: rgb(0, 140, 140);
-    
 }
 
-.main_article a:hover{
+.main_content_design a:hover{
     font-weight: 500;
 }
+
+.main_content_design p{
+   font-weight: 100;
+}
+
+
+
+.index_nav_2 .main_content_design{
+    /* I need to override the height and width of the secondary nav elements */
+    height: 350px;
+    width: 300px;
+}
+
+
+
+
 
 
 
@@ -245,6 +284,7 @@ body{
 
 
 
+
 .background{
     /* TODO change to id--> background_img_1 */
     position: absolute;
@@ -254,7 +294,7 @@ body{
 .background#photo_index_1{
     right: 0;
     bottom: 0;
-    opacity: 100%;
+    opacity: 80%;
 }
 
 .background#photo_index_2{
@@ -269,7 +309,3 @@ body{
 /* ----------------------------Styling for index html----------------------- */
 
 
-
-
-
-/* ----------------------------Positioning for index html----------------------- */

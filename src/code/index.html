@@ -21,8 +21,7 @@
             <h1>Find</h1>
             <img src="../resources/logo-no-background.png" alt="logo">
         </div>
-
-        <nav class="nav_bar">
+        <nav id="nav_bar">
             <!-- Contains links to our other webpages -->
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -51,15 +50,15 @@
 
     <main>
 
-        <section>
+        <section id="intro_section">
             <!-- section for introductory info -->
             <h2>Welcome to Find!</h2>
 
-            <p>We scout the market to find the <b>best prices</b>
+            <p>We scout the market to find the <span class="important_text">best prices</span>
 
-                for <b>realty,cars,electronic devices</b> and many more goods!</p>
+                for <span class="important_text">realty,cars,electronic devices</span> and many more goods!</p>
 
-            <p>We also offer advertisment for <b>available jobs</b> in the job market!</p>
+            <p>We also offer advertisment for <span class="important_text">available jobs</span> in the job market!</p>
 
             <h2>Why choose us?</h2>
 
@@ -74,7 +73,7 @@
                     <h3>Efficiency</h3>
                     <p>We introduce technology into real estate to speed up every process. E-signatures,real-time
                         notifications
-                        & easy access to financing your dream home reduce every transaction’s completion time.</p>
+                        & easy access to financing your dream home reduce every transaction's completion time.</p>
                 </li>
                 <li>
                     <h3>Transparency</h3>
@@ -90,46 +89,43 @@
 
         <h2>Discover some of our Services!</h2>
 
-        <nav>
+        <nav class="index_nav_2">
             <!-- links to the specific categories -->
-            <article class="main_article">
-                <h3>Find Realty</h3>
-                <p>Take a look at some estate offers!</p>
-                <figure>
-                    <img src="../resources/index_house.jpg" alt="house_sales_img">
-                    <figcaption><a href="house_sales.html">Let's Go!</a></figcaption>
-                </figure>
-            </article>
+            <ul>
+                <li class="main_content_design">
+                    <h3>Find Realty</h3>
+                    <p>Take a look at some estate offers!</p>
+                    <figure>
+                        <img src="../resources/index_house.jpg" alt="house_sales_img">
+                        <figcaption><a href="house_sales.html">Let's Go!</a></figcaption>
+                    </figure>
+                </li>
+                <li class="main_content_design">
+                    <h3>Find Cars</h3>
+                    <p>The place to be if you are in search for a car!</p>
+                    <figure>
+                        <img src="../resources/index_car.jpg" alt="car_sales_img">
+                        <figcaption><a href="car_sales.html">Let's Go!</a></figcaption>
+                    </figure>
+                </li>
 
-            <article class="main_article">
-                <h3>Find Cars</h3>
-                <p>The place to be if you are in search for a car!</p>
-                <figure>
-                    <img src="../resources/index_car.jpg" alt="car_sales_img">
-                    <figcaption><a href="car_sales.html">Let's Go!</a></figcaption>
-                </figure>
-
-            </article>
-
-            <article class="main_article">
-                <h3>Find Gadgets</h3>
-                <p>Devices you need at prices you love!</p>
-                <figure>
-                    <img src="../resources/gadgets.jpg" alt="gadgets_img">
-                    <figcaption><a href="categories.html">Let's Go!</a></figcaption>
-                </figure>
-
-            </article>
-
-            <article class="main_article">
-                <h3>Find Jobs</h3>
-                <p>Job offers that you need to check out!</p>
-                <figure>
-                    <img src="../resources/jobs.png" alt="job_img">
-                    <figcaption><a href="categories.html">Let's Go!</a></figcaption>
-                </figure>
-
-            </article>
+                <li class="main_content_design">
+                    <h3>Find Gadgets</h3>
+                    <p>Devices you need at prices you love!</p>
+                    <figure>
+                        <img src="../resources/gadgets.jpg" alt="gadgets_img">
+                        <figcaption><a href="categories.html">Let's Go!</a></figcaption>
+                    </figure>
+                </li>
+                <li class="main_content_design">
+                    <h3>Find Jobs</h3>
+                    <p>Job offers that you need to check out!</p>
+                    <figure>
+                        <img src="../resources/jobs.png" alt="job_img">
+                        <figcaption><a href="categories.html">Let's Go!</a></figcaption>
+                    </figure>
+                </li>
+            </ul>
 
         </nav>
 
@@ -139,34 +135,41 @@
                     article*2>h3+img+link+p -->
             <h2>Find News!</h2>
 
-            <article class="main_article">
+            <article class="main_content_design">
                 <h3>Real estate prices reaching record highs</h3>
                 <img src="../resources/news_photo.jpg" alt="news_photo_1">
-                <p>The rate of house price growth is continuously exceeding record highs, according to data compiled by the Bank of Greece for the first quarter of this year.</p>
-                <a href="https://www.ekathimerini.com/economy/1213586/real-estate-prices-reaching-record-highs/">Learn More</a>
+                <p>The rate of house price growth is continuously exceeding record highs, according to data compiled by
+                    the Bank of Greece for the first quarter of this year.</p>
+                <a href="https://www.ekathimerini.com/economy/1213586/real-estate-prices-reaching-record-highs/">Learn
+                    More</a>
             </article>
 
-            <article class="main_article">
+            <article class="main_content_design">
                 <h3>Car sales rise 5.6% in Greece during May</h3>
                 <img src="../resources/news_photo.jpg" alt="news2_photo">
-                <p>Car sales grew 5.6% in May totaling 22,877 vehicles (new or used ones), from 21,665 in the corresponding month last year, Hellenic Statistical Authority said on Tuesday, ANA reports.</p>
-                <a href="https://www.tornosnews.gr/en/transport/48990-car-sales-rise-5-6-in-greece-during-may.html">Learn More</a>
+                <p>Car sales grew 5.6% in May totaling 22,877 vehicles (new or used ones), from 21,665 in the
+                    corresponding month last year, Hellenic Statistical Authority said on Tuesday, ANA reports.</p>
+                <a href="https://www.tornosnews.gr/en/transport/48990-car-sales-rise-5-6-in-greece-during-may.html">Learn
+                    More</a>
             </article>
 
-            <article class="main_article">
+            <article class="main_content_design">
                 <h3>Select Giftable Tech Awards 2023</h3>
                 <img src="../resources/news_photo.jpg" alt="news_photo_3">
                 <p>Loved ones deserve the best tech — headphones, speakers, smartwatches and so much more.
 
-                    So with years of experience reviewing (and gifting) the latest and greatest tech, we spent months deciding...</p>
+                    So with years of experience reviewing (and gifting) the latest and greatest tech, we spent months
+                    deciding...</p>
                 <a href="">Learn More</a>
             </article>
 
-            <article class="main_article">
+            <article class="main_content_design">
                 <h3>30 Best Paying Jobs With High School Degrees</h3>
                 <img src="../resources/news_photo.jpg" alt="news_photo_4">
                 <p>In this article, we will look at the 30 best-paying jobs with high school degrees.</p>
-                <a href="https://finance.yahoo.com/news/30-best-paying-jobs-high-093139922.html?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAIHXBMX3L6UF3wHnN5Jk-Xbs7O9iM5uEG8O7XxOuQkjdBN7hCw7d5z64CvmijVWaUb23g8b_ocpTvNXgdeU5aVHXCgSO6oJNTCc-OF2MAjact__NFFwq6xSbups1wMNhCNmhKKwDG7ULlMTm6qULsNAJwqUCAqzR2lgbuj9KqINw">Learn More</a>
+                <a
+                    href="https://finance.yahoo.com/news/30-best-paying-jobs-high-093139922.html?guccounter=1&guce_referrer=aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8&guce_referrer_sig=AQAAAIHXBMX3L6UF3wHnN5Jk-Xbs7O9iM5uEG8O7XxOuQkjdBN7hCw7d5z64CvmijVWaUb23g8b_ocpTvNXgdeU5aVHXCgSO6oJNTCc-OF2MAjact__NFFwq6xSbups1wMNhCNmhKKwDG7ULlMTm6qULsNAJwqUCAqzR2lgbuj9KqINw">Learn
+                    More</a>
             </article>
 
         </section>
@@ -179,6 +182,14 @@
             <!-- Logo+SiteName Section -->
             <h2>Find</h2>
             <img class="footer_img" src="../resources/logo-no-background.png" alt="our Logo">
+        </div>
+
+        <div id="news_letter">
+            <form action="" method="post">
+                <label for="news-letter">Our Newsletter:</label>
+                <input type="email" id="news-letter" name="news-letter" placeholder="Enter your Email" required>
+                <button type="submit">Subscribe!</button>
+            </form>
         </div>
 
         <div>
@@ -202,7 +213,7 @@
                     alt="insta_logo"></a>
             <a href="https://github.com/Lazaris02"><img class="footer_img" src="../resources/git_logo.png"
                     alt="git_logo"></a>
-                    
+
         </div>
 
         <hr>
