@@ -10,6 +10,8 @@
     <meta name="author" content="Thodoris, Antzi">
 
     <link rel="icon" type="image/x-icon" href="../resources/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+
 
     <!-- We also need to add:
          The links to our css code
@@ -23,89 +25,94 @@
         3)main content of the page(differs in every page)
         4)footer(same in every page) -->
             
-        <header>
-            <!-- ADD a PHOTO AS a Background for the Header-->
-            <img   src="../resources/logo-no-background.png"  alt="logo">
-            
-            <nav>
-                <!-- Contains links to the other webpages -->
+        <header class="main_header">
+            <div class="logo">
+                <h1>Find</h1>
+                <img src="../resources/logo-no-background.png" alt="logo">
+            </div>
+    
+            <nav class="nav_bar">
+                <!-- Contains links to our other webpages -->
                 <ul>
                     <li><a href="index.html">Home</a></li>
-
-                    <li><a href="categories.html">Categories</a>
-                        <ul>
-                            <li><a href="house_sales.html">House Sales</a>
-                                <ul>
-                                    <li><a href="house_sales_details.html">House Sale AH-001</a></li>
+    
+                    <li class="drop-down-1"><a href="categories.html">Categories</a>
+                        <ul class="sub-menu-1">
+                            <li class="drop-down-2"><a href="house_sales.html">House Sales</a>
+                                <ul class="sub-menu-2">
+                                    <li><a href="house_sales_details.html" target="_blank">House Sale AH-001</a></li>
                                 </ul>
                             </li>
                             <li><a href="car_sales.html">Car Sales</a></li>
                         </ul>
                     </li>
-
+    
                     <li><a href="aboutus.html">About us</a></li>
-
+    
                     <li><a href="contactus.html">Contact us</a></li>
                 </ul>
             </nav>
-
+    
         </header>
         
         <hr>
 
-        <main>
+        <main class="sales_page AH-001">
 
-        <section>
-            <!-- Section for the images of the ad -->
-            <img src="../resources/house_ad/house1.png" alt="image1" width="350px" height="200px">
-            <img src="../resources/house_ad/house2.png" alt="image2" width="200px" height="100px">
-            <img src="../resources/house_ad/house3.png" alt="image3" width="200px" height="100px">
-            <img src="../resources/house_ad/house4.png" alt="image4" width="200px" height="100px">
-            <img src="../resources/house_ad/house5.png" alt="image5" width="200px" height="100px">
-            <img src="../resources/house_ad/house6.png" alt="image6" width="200px" height="100px">
-            <img src="../resources/house_ad/house7.png" alt="image7" width="200px" height="100px">
-            <img src="../resources/house_ad/house8.png" alt="image8" width="200px" height="100px">
-            <img src="../resources/house_ad/house9.png" alt="image9" width="200px" height="100px">
-            <img src="../resources/house_ad/house10.png" alt="image10" width="200px" height="100px">
-        </section>    
+            <section>
+                <!-- Section for the images of the ad -->
+                <img class="house_ad" src="../resources/house_ad/house1.png" alt="image1" width="350px" height="200px">
+                <img class="house_ad" src="../resources/house_ad/house2.png" alt="image2" width="200px" height="100px">
+                <img class="house_ad" src="../resources/house_ad/house3.png" alt="image3" width="200px" height="100px">
+                <img class="house_ad" src="../resources/house_ad/house4.png" alt="image4" width="200px" height="100px">
+                <img class="house_ad" src="../resources/house_ad/house5.png" alt="image5" width="200px" height="100px">
+                <img class="house_ad" src="../resources/house_ad/house6.png" alt="image6" width="200px" height="100px">
+                <img class="house_ad" src="../resources/house_ad/house7.png" alt="image7" width="200px" height="100px">
+                <img class="house_ad" src="../resources/house_ad/house8.png" alt="image8" width="200px" height="100px">
+                <img class="house_ad" src="../resources/house_ad/house9.png" alt="image9" width="200px" height="100px">
+                <img class="house_ad" src="../resources/house_ad/house10.png" alt="image10" width="200px" height="100px">
+            </section>    
 
-        <section>
-            <!-- Section for the basic info -->
-            <h2>Apartment, 105m&sup2;</h2>
-            <p>AH-001</p>
-            <p>Ano Kypseli, Attiki</p>
-            <p>400,000€</p>
+            <div>
+                <!-- Section for the basic info -->
+                <h2>Apartment, 105m&sup2;</h2>
+                <p>AH-001</p>
+                <p>Ano Kypseli, Attiki</p>
+            </div>
+            
+            <div>
+                <h3>400,000€</h3>
+                <img id="price_house_ad" src="../resources/price-increase.png" alt="price">
+            </div>
 
-            <ul>
+
+            <ul class="ul_basics">
                 <li>2nd floor</li>
                 <li>2 bedrooms</li>
                 <li>1 bathroom</li>
             </ul>
 
-            <p>Published: 27/07/2023</p>
-            
             <section>
-                <!-- Mini section for the views of the ad -->
-                <img src="" alt="eye">
-                <p>1,857 views</p>
+                <!-- Section for the description of the house -->
+                <h3>Description</h3>
+                <p>Luxurious 105sqm 2nd floor apartment in Polygono Attica, built in 2023, with an excellent view of the Acropolis. 
+                    It consists of 2 bedrooms, one master, living room, kitchen and 2 bathrooms. 
+                    It has aluminum frames with double glazing, security door, alarm, screens, awnings, solar water heater, hidden lighting. 
+                    It is located 5 minutes from Psychiko and from the center of Athens with a car and is served by many means of mass transport.</p>
             </section>
 
-        </section>
-
-        <section>
-            <!-- Section for the description of the house -->
-            <h3>Description</h3>
-            <p>Luxurious 105sqm 2nd floor apartment in Polygono Attica, built in 2023, with an excellent view of the Acropolis. 
-                It consists of 2 bedrooms, one master, living room, kitchen and 2 bathrooms. 
-                It has aluminum frames with double glazing, security door, alarm, screens, awnings, solar water heater, hidden lighting. 
-                It is located 5 minutes from Psychiko and from the center of Athens with a car and is served by many means of mass transport.</p>
-        </section>
-
-        <section>
-            <!-- Section for the features table -->
-            <h3>Features</h3>
+            <p>Published: 27/07/2023</p>
+                
+            <div class="views">
+                <!-- Mini section for the views of the ad -->
+                <img src="../resources/eye.png" alt="eye">
+                <p>1,857 views</p>
+            </div>
 
             <table>
+                <caption>
+                    <h3>Features</h3>
+                </caption>
                 <tr>
                     <th>Category</th>
                     <th>House Sale</th>
@@ -185,68 +192,71 @@
 
             </table>
 
-        </section>
+            <section>
+                <!-- Section for more internal and external infos displayed in lists -->
+                <h3>Internal</h3>
+                <ul>
+                    <li>Internal staircase</li>
+                    <li>Floor type: Wood</li>
+                    <li>Alarm</li>
+                    <li>Airy</li>
+                    <li>Air condition</li>
+                    <li>Pets welcome</li>
+                    <li>Frames type: Aluminium</li>
+                    <li>Painted</li>
+                    <li>Solar water heating</li>
+                    <li>Secure door</li>
+                    <li>Window screens</li>
+                </ul>
 
-        <section>
-            <!-- Section for more internal and external infos displayed in lists -->
-            <h3>Internal</h3>
-            <ul>
-                <li>Internal staircase</li>
-                <li>Floor type: Wood</li>
-                <li>Alarm</li>
-                <li>Airy</li>
-                <li>Air condition</li>
-                <li>Pets welcome</li>
-                <li>Frames type: Aluminium</li>
-                <li>Painted</li>
-                <li>Solar water heating</li>
-                <li>Secure door</li>
-                <li>Window screens</li>
-            </ul>
+                <h3>External</h3>
+                <ul>
+                    <li>Balcony</li>
+                    <li>Facade</li>
+                    <li>Awning</li>
+                    <li>View</li>
+                </ul>
 
-            <h3>External</h3>
-            <ul>
-                <li>Balcony</li>
-                <li>Facade</li>
-                <li>Awning</li>
-                <li>View</li>
-            </ul>
-
-        </section>
+            </section>
 
         </main>
 
         <hr>
 
-        <footer>
+        <footer id="main_footer">
 
-            <div>
+            <div class="logo">
                 <!-- Logo+SiteName Section -->
                 <h2>Find</h2>
-                <img src="../resources/logo-no-background.png" alt="our Logo">
+                <img class="footer_img" src="../resources/logo-no-background.png" alt="our Logo">
             </div>
-               
+    
             <div>
                 <!-- Section for Contact Details -->
                 <h2>Contact Details</h2>
                 <address>
-                    <a href="mailto:lazaristheo@gmail.com">lazaristheo@gmail.com</a>
-                    <a href="tel:6987470962">6987470962</a>                        
-                    <a href="contactus.html">Technical Support</a>
+                    <ul>
+                        <li><a href="mailto:lazaristheo@gmail.com">lazaristheo@gmail.com</a></li>
+                        <li><a href="tel:6987470962">6987470962</a> </li>
+                        <li><a href="contactus.html">Technical Support</a></li>
+                    </ul>
                 </address>
             </div>
-
+    
             <div>
                 <h2>Find us on Social Media</h2>
-                <ul>
-                    <li><a href="https://www.facebook.com/"><img src="../resources/fb_logo.png" alt="fb_logo"></a></li>                       
-                    <li><a href="https://www.instagram.com/"><img src="../resources/insta_logo.png" alt="insta_logo"></a></li>
-                    <li><a href="https://github.com/Lazaris02"><img src="../resources/git_logo.png"   alt="git_logo"></a></li>
-                </ul>
+    
+                <a href="https://www.facebook.com/"><img class="footer_img" src="../resources/fb_logo.png"
+                        alt="fb_logo"></a>
+                <a href="https://www.instagram.com/"><img class="footer_img" src="../resources/insta_logo.png"
+                        alt="insta_logo"></a>
+                <a href="https://github.com/Lazaris02"><img class="footer_img" src="../resources/git_logo.png"
+                        alt="git_logo"></a>
+                        
             </div>
-
+    
             <hr>
-            <p>&copy;SITENAME.GR ALL RIGHTS RESERVED</p>
+            <p>&copy;FIND.GR ALL RIGHTS RESERVED</p>
         </footer>
 </body>
 

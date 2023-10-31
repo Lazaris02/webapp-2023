@@ -10,25 +10,29 @@
     <meta name="author" content="Thodoris, Antzi">
 
     <link rel="icon" type="image/x-icon" href="../resources/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+
 
 </head>
 
 <body>
 
-    <header>
-        <!-- ADD a PHOTO AS a Background for the Header-->
-        <img   src="../resources/logo-no-background.png"  alt="logo">
-        
-        <nav>
-            <!-- Contains links to the other webpages -->
+    <header class="main_header">
+        <div class="logo">
+            <h1>Find</h1>
+            <img src="../resources/logo-no-background.png" alt="logo">
+        </div>
+
+        <nav class="nav_bar">
+            <!-- Contains links to our other webpages -->
             <ul>
                 <li><a href="index.html">Home</a></li>
 
-                <li><a href="categories.html">Categories</a>
-                    <ul>
-                        <li><a href="house_sales.html">House Sales</a>
-                            <ul>
-                                <li><a href="house_sales_details.html">House Sale AH-001</a></li>
+                <li class="drop-down-1"><a href="categories.html">Categories</a>
+                    <ul class="sub-menu-1">
+                        <li class="drop-down-2"><a href="house_sales.html">House Sales</a>
+                            <ul class="sub-menu-2">
+                                <li><a href="house_sales_details.html" target="_blank">House Sale AH-001</a></li>
                             </ul>
                         </li>
                         <li><a href="car_sales.html">Car Sales</a></li>
@@ -43,43 +47,47 @@
 
     </header>
 
-    <main>
-<!-- ------------------------------------------------------------------------------------------------------------------------------- -->
-        <article>
-            <section>
-                <img src="../resources/car1.png" alt="car1" width="350px" height="200px"> 
-            </section>
+    <main class="sales_page">
 
-            <section>
-                <h3>Volkswagen Beetle 1967</h3> 
-                <h3>Syros, Cyclades</h3>
-                <p>AC-001</p>
-            </section>
-                <ul>
-                    <li>01/1967</li>
-                    <li>60,000 km</li>
-                    <li>1,600 cc</li>
-                    <li>60 bhp</li>
-                    <li>Petrol</li>
-                </ul>
-            <section>
+        <img id="car_sales" src="../resources/car_sales.png" alt="car_sales">
+<!-- -----------------------------------------------------AD No1-------------------------------------------------------------------------- -->
+        <article class="ad">
+            <header>
+                <img src="../resources/car1.png" alt="car1" width="350px" height="200px"> 
+                <h2>Volkswagen Beetle 1967</h2>
+            </header>
+ 
+            <h3>Syros, Cyclades</h3>
+            <p>AC-001</p>
+
+            <ul>
+                <li>01/1967</li>
+                <li>60,000 km</li>
+                <li>1,600 cc</li>
+                <li>60 bhp</li>
+                <li>Petrol</li>
+            </ul>
+
+            <div>
                 <h3>3,000€</h3>
+                <img src="../resources/lowering-price.png" alt="price">
+            </div>
+
+            <footer>
                 <p>Published: 15/06/2023</p>
-            </section>
+            </footer>
         </article>
 
-        <hr>
-<!-- ------------------------------------------------------------------------------------------------------------------------------  -->
-<article>
-    <section>
-        <img src="../resources/car2.png" alt="car2" width="350px" height="200px"> 
-    </section>
+<!-- -----------------------------------------------------AD No2-------------------------------------------------------------------------  -->
+    <article class="ad">
+        <header>
+            <img src="../resources/car2.png" alt="car2" width="350px" height="200px"> 
+            <h2>Fiat 500 1.2 Dualogic '18</h2>
+        </header>
 
-    <section>
-        <h3>Fiat 500 1.2 Dualogic '18</h3> 
         <h3>Thessaloniki</h3>
         <p>AC-002</p>
-    </section>
+
         <ul>
             <li>10/2018</li>
             <li>37,400 km</li>
@@ -88,85 +96,99 @@
             <li>Automatic</li>
             <li>Petrol</li>
         </ul>
-    <section>
-        <h3>13,900€</h3>
-        <p>Published: 21/10/2023</p>
-    </section>
-</article>
 
-<hr>
-<!-- ------------------------------------------------------------------------------------------------------------------------------  -->
-        <article>
-            <section>
+        <div>
+            <h3>13,900€</h3>
+            <img src="../resources/lowering-price.png" alt="price">
+        </div>
+
+        <footer>
+            <p>Published: 21/10/2023</p>
+        </footer>
+    </article>
+
+<!-- -----------------------------------------------------AD No3-------------------------------------------------------------------------  -->
+        <article class="ad">
+            <header>
                 <img src="../resources/car3.png" alt="car3" width="350px" height="200px"> 
-            </section>
+                <h2>Mazda MX-5 2016 2.0 SkyActiv-G | Sport Nav</h2>
+            </header>
 
-            <section>
-                <h3>Mazda MX-5 2016 2.0 SkyActiv-G | Sport Nav</h3> 
-                <h3>Thessaloniki</h3>
-                <p>AC-003</p>
-            </section>
-                <ul>
-                    <li>01/2016</li>
-                    <li>114,900 km</li>
-                    <li>1,998 cc</li>
-                    <li>160 bph</li>
-                    <li>Petrol</li>
-                </ul>
-            <section>
+            <h3>Thessaloniki</h3>
+            <p>AC-003</p>
+
+            <ul>
+                <li>01/2016</li>
+                <li>114,900 km</li>
+                <li>1,998 cc</li>
+                <li>160 bph</li>
+                <li>Petrol</li>
+            </ul>
+
+            <div>
                 <h3>24,500€</h3>
+                <img src="../resources/price-increase.png" alt="price">
+            </div>
+
+            <footer>
                 <p>Published: 12/10/2023</p>
-            </section>
+            </footer>
         </article>
 
-        <hr>
-<!-- ------------------------------------------------------------------------------------------------------------------------------  -->
-        <article>
-            <section>
+<!-- -----------------------------------------------------AD No4-------------------------------------------------------------------------  -->
+        <article class="ad">
+            <header>
                 <img src="../resources/car4.png" alt="car4" width="350px" height="200px"> 
-            </section>
+                <h2>Audi A4 2007 Cabrio</h2>
+            </header>
 
-            <section>
-                <h3>Audi A4 2007 Cabrio</h3> 
-                <h3>Glyfada, Attiki</h3>
-                <p>AC-004</p>
-            </section>
-                <ul>
-                    <li>08/2018</li>
-                    <li>125,000 km</li>
-                    <li>1,498 cc</li>
-                    <li>150 bph</li>
-                    <li>Petrol</li>
-                </ul>
-            <section>
+            <h3>Glyfada, Attiki</h3>
+            <p>AC-004</p>
+
+            <ul>
+                <li>08/2018</li>
+                <li>125,000 km</li>
+                <li>1,498 cc</li>
+                <li>150 bph</li>
+                <li>Petrol</li>
+            </ul>
+
+            <div>
                 <h3>6,700€</h3>
+                <img src="../resources/price-increase.png" alt="price">
+            </div>
+
+            <footer>
                 <p>Published: 02/05/2023</p>
-            </section>
+            </footer>
         </article>
 
-        <hr>
-<!-- ------------------------------------------------------------------------------------------------------------------------------  -->
-        <article>
-            <section>
+<!-- -----------------------------------------------------AD No5-------------------------------------------------------------------------  -->
+        <article class="ad">
+            <header>
                 <img src="../resources/car5.png" alt="car5" width="350px" height="200px"> 
-            </section>
+                <h2>Renault Kadjar 2016 ECO 2</h2>
+            </header>
 
-            <section>
-                <h3>Renault Kadjar 2016 ECO 2</h3> 
-                <h3>Katerini, Pierias</h3>
-                <p>AC-005</p>
-            </section>
-                <ul>
-                    <li>04/2016</li>
-                    <li>139,000 km</li>
-                    <li>1,461 cc</li>
-                    <li>110 bph</li>
-                    <li>Diesel</li>
-                </ul>
-            <section>
+            <h3>Katerini, Pierias</h3>
+            <p>AC-005</p>
+
+            <ul>
+                <li>04/2016</li>
+                <li>139,000 km</li>
+                <li>1,461 cc</li>
+                <li>110 bph</li>
+                <li>Diesel</li>
+            </ul>
+
+            <div>
                 <h3>15,500€</h3>
+                <img src="../resources/price-increase.png" alt="price">
+            </div>
+
+            <footer>
                 <p>Published: 15/08/2023</p>
-            </section>
+            </footer>
         </article>
 <!-- ------------------------------------------------------------------------------------------------------------------------------  -->
     </main>
@@ -174,35 +196,40 @@
 
     <hr>
 
-    <footer>
+    <footer id="main_footer">
 
-        <div>
+        <div class="logo">
             <!-- Logo+SiteName Section -->
             <h2>Find</h2>
-            <img src="../resources/logo-no-background.png" alt="our Logo">
+            <img class="footer_img" src="../resources/logo-no-background.png" alt="our Logo">
         </div>
-           
+
         <div>
             <!-- Section for Contact Details -->
             <h2>Contact Details</h2>
             <address>
-                <a href="mailto:lazaristheo@gmail.com">lazaristheo@gmail.com</a>
-                <a href="tel:6987470962">6987470962</a>                        
-                <a href="contactus.html">Technical Support</a>
+                <ul>
+                    <li><a href="mailto:lazaristheo@gmail.com">lazaristheo@gmail.com</a></li>
+                    <li><a href="tel:6987470962">6987470962</a> </li>
+                    <li><a href="contactus.html">Technical Support</a></li>
+                </ul>
             </address>
         </div>
 
         <div>
             <h2>Find us on Social Media</h2>
-            <ul>
-                <li><a href="https://www.facebook.com/"><img src="../resources/fb_logo.png" alt="fb_logo"></a></li>                       
-                <li><a href="https://www.instagram.com/"><img src="../resources/insta_logo.png" alt="insta_logo"></a></li>
-                <li><a href="https://github.com/Lazaris02"><img src="../resources/git_logo.png"   alt="git_logo"></a></li>
-            </ul>
+
+            <a href="https://www.facebook.com/"><img class="footer_img" src="../resources/fb_logo.png"
+                    alt="fb_logo"></a>
+            <a href="https://www.instagram.com/"><img class="footer_img" src="../resources/insta_logo.png"
+                    alt="insta_logo"></a>
+            <a href="https://github.com/Lazaris02"><img class="footer_img" src="../resources/git_logo.png"
+                    alt="git_logo"></a>
+                    
         </div>
 
         <hr>
-        <p>&copy;SITENAME.GR ALL RIGHTS RESERVED</p>
+        <p>&copy;FIND.GR ALL RIGHTS RESERVED</p>
     </footer>
 </body>
 

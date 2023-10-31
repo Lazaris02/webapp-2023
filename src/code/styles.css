@@ -408,4 +408,188 @@ body {
 }
 
 
-/* ----------------------------Styling for Categories.html ends here----------------------- */
+
+/* ----------------------------Positioning for index html----------------------- */
+
+
+
+
+
+
+/* ----------------------------Styling for house_sales and car_sales html-------------------------- */
+
+.sales_page{
+    background-image: linear-gradient(#e5e4e2d5, rgb(70, 134, 199), #e5e4e2d5);
+}
+
+main > img{
+    width: auto;
+    height: 150px;
+    display: block;
+    margin: auto;
+}
+
+#house_ad, #car_sales{
+    text-decoration: none;
+    color: black;
+}
+
+.ad{
+    padding-bottom: 50px;
+    background-color: rgb(250, 250, 250);
+    border:1px solid black;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.ad img{
+    border-radius: 8px; /*makes the shape rounder*/
+    width: 350px;
+    height: 227px;
+    float: left;
+}
+
+.ad h2{
+    padding: 10px;
+}
+
+.ad li{
+    padding: 10px;
+    display: inline-block; /*makes the list show horizontally*/
+}
+
+.ad{
+    display: block;
+}
+
+.ad:hover{
+    box-shadow: 5px 5px 10px  #727070;
+}
+
+.ad div > img{
+    width: 50px;
+    height: 50px;
+}
+
+.ad div > h3{
+    float: left;
+}
+
+/* .floor{
+    display: list-item;
+    list-style-image: url("floor.png");
+}             Check that to make the bullets of the list how you like*/
+
+
+/* ----------------------------Styling for about_us html---------------------------- */
+
+/* I have still to play with the photos and the descriptions of the team */
+
+#about_us_header{
+    text-align: right;
+    background-image: linear-gradient(to right, #e5e4e2d5, rgb(70, 134, 199));
+}
+
+#about_us_header img{
+    width: 300px;
+    height: 225px;
+}
+
+#about_us_header h2{
+    float: left;
+    font-family: "Agbalumo";
+    font-size: 40px;
+    animation: fadeIn 4s; 
+}
+
+@keyframes fadeIn{
+/* Fade in effect for the text */
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+#find_arc h2{
+    font-size: 35px;
+}
+
+#team_arc img{
+    float: left;
+}
+
+#team_arc h2{
+    text-align: center;
+    font-size: 35px;
+}
+
+#team_arc section{
+    clear: left;
+}
+
+
+/* ----------------------------Styling for house_sales_details html---------------------------- */
+
+.house_ad:hover{
+    box-shadow: 5px 5px 10px  #727070;
+}
+
+.AH-001 > div > img{
+    width: 70px;
+    height: 60px;
+}
+
+.AH-001 > div > h3{
+    float: left;
+    
+}
+
+.ul_basics li{
+    padding: 10px;
+    display: inline-block; /*makes the list show horizontally*/
+}
+
+.AH-001 > section > h3{
+    text-decoration: underline;
+}
+
+.views img {
+    float: left;
+}
+
+.AH-001 section{
+    clear: both;
+}
+
+.AH-001 table{
+    table-layout: fixed;
+    width: 80%;
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+.AH-001 tr, th{
+    /* border-bottom: 1px solid #ddd; */
+    border: 1px solid;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-weight: normal; /*unblod the words of the table*/
+}
+
+.AH-001 tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.AH-001 tr:nth-child(odd) {
+    background-color: #f2f2f2c5;
+}
+
+.AH-001 table > caption{
+    text-decoration: underline;
+}
+
+
+
+
+
+
+
+
