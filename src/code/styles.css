@@ -2,7 +2,7 @@
 @font-face {
     font-family: 'Poppins';
     src: url(../resources/font/Poppins-Light.ttf);
-    font-weight: lighter;
+    font-weight: 300;
     font-style: normal;
 }
 
@@ -41,33 +41,34 @@
     font-style: normal;
 }
 
+
 /* To display our locally saved font for their respective font-weight and font-style */
 
 
-*{
+* {
     /* makes laying out the content easier */
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
 
-.main_header{
+.main_header {
     background-color: #e5e4e2;
 }
 
-ul{
+ul {
     list-style: none;
 }
 
 
-body{
+body {
     /* I set display flex + flex-direction colum so that i make the body container
     (parent of my footer) a flexbox  so that I can set the footer margin-top:auto and
     stick the footer at the bottom of the page*/
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #F2F2F1;
+    background-color: #e5e4e246;
 }
 
 
@@ -76,151 +77,114 @@ body{
 /*-------------------Styling the nav bar-------------- */
 
 
-.nav_bar ul{
-    /* cuts the edges of all ul's border inside nav bar and
-    aligns its elements at the center of the nav-block */
-    border-radius: 30px;
-    text-align: center; 
+
+#nav_bar ul {
+    /* cuts the edges of all ul's border inside nav bar and*/
+    border-radius: 5px;
 }
 
-.nav_bar>ul{
-    /* every ul direct child of items with the class nav_bar will
-    be displayed as blocks that can have other blocks next to them */
+
+#nav_bar>ul li {
+    /* all the list elements that are inside of the direct child of the nav-bar container
+    are displayed as inline blocks(inline elements thar
+     retain block's ability to space from other blocks) */
     display: inline-block;
-    background-color: #e5e4e2;
 }
 
 
-.nav_bar a{
+
+#nav_bar a {
     /* for all anchors in the nav bar it revokes their design
-    applies black color and changes font-weight */
+    applies black color and changes font-weight 
+    the display:block makes it so that it takes up all its parent's container
+    */
+    display: block;
     text-decoration: none;
-    color:#241e1e;
-    font-weight:500;
+    color: #241e1e;
+    font-size: x-large;
+    font-weight: 500;
 }
 
 
-.nav_bar a:hover{
+#nav_bar a:hover {
     /* hovering over an anchor tag inside of an element that has the 
     nav bar class changes the background color to black and the text-color
     to white. Also the black background will have cut edges */
-    background-color:#241e1e;
+    background-color: #241e1e;
     color: white;
-    border-radius:30px ;
-    
+    border-radius: 10px;
+    transition: all 400ms ease;
+
 }
 
-.nav_bar a:active{
+#nav_bar a:active {
     /* when you click on an anchor tag inside an element with the nav_bar
     class the font-size increases to 1.2 times the size it was */
     font-weight: 800;
 }
 
 
-/* nav-bar position */
-
-.nav_bar{
-    /* nav_bar is used as a container in flex-box */
-    display: flex;
-}
-
-.nav_bar ul li{
-    /* all the list elements that are inside of all the lists that */
-    display: inline-block;
-}
 
 
 /* drop-down menu */
 
-.drop-down-1{
-    display: inline-block;
-}
-
-.sub-menu-1{
+.sub-menu-1 {
+    /* makes the categories menu invisible 
+    sets the position to absolute so that it doesn't move other elements
+    gives it a bit of padding and color */
     display: none;
+    position: absolute;
+    padding: 5px;
     background-color: #e5e4e2d5;
 
 }
 
-.drop-down-1:hover .sub-menu-1{
+.drop-down-1:hover .sub-menu-1 {
     display: block;
-    position: absolute;
-    padding-top: 5px;
-
 }
 
-.sub-menu-2{
+.sub-menu-2 {
     display: none;
-    background-color:#e5e4e2; 
-}
-
-.drop-down-2:hover .sub-menu-2{
-    display:block;
     position: absolute;
-    padding-top: 5px;
+    padding: 5px;
+    background-color: #e5e4e2af;
 }
 
+.drop-down-2:hover .sub-menu-2 {
+    display: block;
+}
 
 
 
 /* ------------------Styling the logo----------------*/
 
-.logo{
-    padding: 10px;
+.logo {
+    display: inline-block;
 }
 
 
-.logo img{
-    display: block;
+.logo img {
     height: 25px;
     width: 25px;
+    display: block;
 }
 
 
-.logo>h1,.logo>h2{
-    color:#241e1e;
+.logo>h1,
+.logo>h2 {
+    color: #241e1e;
     float: left;
 }
-
-/* ----------------------Styling for main ---------------------- */
-.main_article{
-    display: inline-block;
-    background-color: rgb(250, 250, 250);
-    text-align: center;
-    border:1px solid black;
-    border-radius: 30px;
-}
-
-.main_article:hover{
-    box-shadow: 5px 5px 10px  #a09f9f;
-    
-}
-
-.main_article img {
-    height: 200px;
-    width: 200px;
-    border-radius: 30px;
-}
-
-.main_article a {
-    color: rgb(0, 140, 140);
-    
-}
-
-.main_article a:hover{
-    font-weight: 500;
-}
-
-
 
 
 /* ------------Styling for footer ----------------*/
 
-#main_footer{
+
+#main_footer {
     /* changes the background color of the footer + margin-top:auto 
     maximizes the space between the above block and the footer so that the footer always
     sticks at the bottom*/
-    background-color:#e5e4e2;
+    background-color: #e5e4e2;
     margin-top: auto;
 }
 
@@ -230,45 +194,218 @@ body{
 }
 
 #main_footer address a:hover {
+    /* when you hover over the anchor tags of the address 
+    element in the footer it gets a bit bolder */
     font-weight: 500;
 }
 
-#main_footer address a:active{
+#main_footer address a:active {
+    /* if i click an adress element it increases in size for a moment */
     font-size: 1.2em;
 }
 
 
-.footer_img{
+.footer_img {
     height: 50px;
     width: 50px;
 }
 
 
 
-.background{
-    /* TODO change to id--> background_img_1 */
+
+.background {
+    /* I need to set the background images in an absolute position
+    and set the behind all the regular content of the page->lower z-axis value 
+    for them */
     position: absolute;
     z-index: -1;
 }
 
-.background#photo_index_1{
+.background#photo_index_1 {
     right: 0;
     bottom: 0;
-    opacity: 100%;
+    opacity: 80%;
 }
 
-.background#photo_index_2{
-    /* overrides the z-index
+.background#photo_index_2 {
+    /* overrides the z-index so that the globe is visibly behind other background images 
+    at z-axis=-1
      */
     z-index: -2;
     overflow-y: hidden;
-    top:0;
+    top: 0;
     opacity: 20%;
 }
 
-/* ----------------------------Styling for index html----------------------- */
+/* ----------------------------General Styling ends here----------------------- */
 
 
+
+
+/* ----------------------Styling for Index.html starts here ---------------------- */
+
+.important_text {
+    /* used to highlight text */
+    color: rgb(0, 140, 140);
+    font-weight: 600;
+}
+
+/* Styling for the intro-section */
+
+#intro_section .intro_info li {
+    /* can display list elements(paragraph like structure list elements) one next to another
+    also gives them color a border radius and all their text is aligned to the center of the 
+    list element */
+    display: inline-block;
+    background-color: #e5e4e263;
+    border-radius: 30px;
+    text-align: center;
+}
+
+#intro_section .intro_info h3 {
+    display: block;
+    color: rgb(0, 140, 140);
+    font-weight: 600;
+}
+
+#intro_section .intro_info p {
+    min-height: 200px;
+    width: 200px;
+}
+
+
+
+
+.main_content_design {
+    /* The general design of the secondary navigation + the news articles of main content:display: 
+    adds a see-through background
+    aligns the text at the center of the container
+    gives them a specific width and height so that they all look the same */
+
+    background-color: #e5e4e263;
+    text-align: center;
+    border-radius: 30px;
+    height: 400px;
+    width: 400px;
+}
+
+.main_content_design:hover {
+    /* gives these elements a nice hover-effect with shadows that transitions-in smoothly*/
+    box-shadow: 5px 5px 10px #a09f9f;
+    transition: all 100ms ease-in;
+}
+
+.main_content_design img {
+    /* we need the main-content images to have a specific height width and cut-edges */
+    height: 200px;
+    width: 200px;
+    border-radius: 30px;
+}
+
+.main_content_design a {
+    /* the anchor tags in the main-content have a nice bluegreen color */
+    color: rgb(0, 140, 140);
+}
+
+.main_content_design a:hover {
+    font-weight: 500;
+}
+
+.main_content_design p {
+    font-weight: 100;
+}
+
+
+
+.index_nav_2 .main_content_design {
+    /* I need to override the height and width of the secondary nav elements */
+    height: 350px;
+    width: 300px;
+}
+
+
+
+/* ----------------------------Styling for Index.html ends here----------------------- */
+
+/* ----------------------------Styling for Categories.html starts here----------------------- */
+#categories-nav>ul>li{
+    display: inline-block;
+    position: relative;
+    height: 250px;
+    width: 250px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+#categories-nav img{
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+
+#categories-nav>ul>li:hover{
+    box-shadow: 5px 5px 10px #a09f9f;
+    transition: all 100ms ease-in;
+}
+
+
+
+@keyframes fadeIn {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+}
+
+#categories-nav .drop-down-categories{
+    position: absolute;
+    display: none;
+}
+
+
+#categories-nav h2{
+    font-size: x-large;
+    font-weight: 500;
+    position: absolute;
+    color: white;
+}
+
+
+#categories-nav>ul>li:hover .drop-down-categories{
+    display: block;
+    position: absolute;
+    right: 30%;
+    bottom: 30%;
+}
+
+.drop-down-categories a {
+    text-decoration: none;
+    color: white;
+    font-weight:600;
+    display: block;
+}
+
+.drop-down-categories a:hover{
+    text-decoration: underline;
+}
+
+.drop-down-categories a:active{
+    font-weight: 700;
+}
+
+.disappear>p{
+    position: absolute;
+    color: white;
+    font-size:x-large;
+    font-weight: 600;
+    right: 30%;
+    bottom: 50%;
+}
+
+#categories-nav>ul>li:hover .disappear>p{ 
+    display: none;
+}
 
 
 
@@ -448,6 +585,7 @@ main > img{
 .AH-001 table > caption{
     text-decoration: underline;
 }
+
 
 
 
