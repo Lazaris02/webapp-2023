@@ -44,6 +44,14 @@
 
 /* To display our locally saved font for their respective font-weight and font-style */
 
+:root{
+    --nav-color:#bcd2e8;
+    --body-mid:#2e5984;
+    --footer-color:#5e86b7b1;
+    --header-text:#014462;
+    --link-color:rgb(0,140,140);
+}
+
 
 * {
     /* makes laying out the content easier */
@@ -53,7 +61,7 @@
 }
 
 .main_header {
-    background-color: #e5e4e2;
+    /* background-color:var(--nav-color); */
 }
 
 ul {
@@ -68,7 +76,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #e5e4e246;
+    background-image: linear-gradient(var(--nav-color),var(--body-mid),var(--nav-color));
 }
 
 
@@ -135,7 +143,7 @@ body {
     display: none;
     position: absolute;
     padding: 5px;
-    background-color: #e5e4e2d5;
+    background-color: var(--nav-color);
 
 }
 
@@ -147,7 +155,7 @@ body {
     display: none;
     position: absolute;
     padding: 5px;
-    background-color: #e5e4e2af;
+    background-color: var(--nav-color);
 }
 
 .drop-down-2:hover .sub-menu-2 {
@@ -184,7 +192,7 @@ body {
     /* changes the background color of the footer + margin-top:auto 
     maximizes the space between the above block and the footer so that the footer always
     sticks at the bottom*/
-    background-color: #e5e4e2;
+    background-color: var(--footer-color);
     margin-top: auto;
 }
 
@@ -246,7 +254,7 @@ body {
 
 .important_text {
     /* used to highlight text */
-    color: rgb(0, 140, 140);
+    color: var(--link-color);
     font-weight: 600;
 }
 
@@ -264,7 +272,7 @@ body {
 
 #intro_section .intro_info h3 {
     display: block;
-    color: rgb(0, 140, 140);
+    color: var(--header-text);
     font-weight: 600;
 }
 
@@ -304,7 +312,7 @@ body {
 
 .main_content_design a {
     /* the anchor tags in the main-content have a nice bluegreen color */
-    color: rgb(0, 140, 140);
+    color: var(--link-color);
 }
 
 .main_content_design a:hover {
@@ -419,7 +427,7 @@ body {
 /* ----------------------------Styling for house_sales and car_sales html-------------------------- */
 
 .sales_page{
-    background-image: linear-gradient(#e5e4e2d5, rgb(70, 134, 199), #e5e4e2d5);
+    /* background-image: linear-gradient(var(--nav-color), var(--body-mid), var(--nav-color)); */
 }
 
 main > img{
@@ -436,7 +444,7 @@ main > img{
 
 .ad{
     padding-bottom: 50px;
-    background-color: rgb(250, 250, 250);
+    background-color: rgba(250,250,250,0.408);
     border:1px solid black;
     border-radius: 8px;
     margin-bottom: 10px;
