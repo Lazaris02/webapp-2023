@@ -391,6 +391,10 @@ main > img{
 
 /* ----------------------------Styling for house_sales_details html---------------------------- */
 
+.house_ad:hover{
+    box-shadow: 5px 5px 10px  #727070;
+}
+
 
 
 
