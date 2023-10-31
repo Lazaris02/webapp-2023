@@ -273,3 +273,88 @@ body{
 
 
 /* ----------------------------Positioning for index html----------------------- */
+
+
+
+
+
+
+/* ----------------------------Styling for house_sales and car_sales html-------------------------- */
+
+main > img{
+    width: auto;
+    height: 150px;
+    display: block;
+    margin: auto;
+}
+
+body main{
+    margin-left: 20px;
+}
+
+#house_ad, #car_sales{
+    text-decoration: none;
+    color: black;
+}
+
+.ad{
+    padding-bottom: 50px;
+    background-color: rgb(250, 250, 250);
+    border:1px solid black;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.ad img{
+    border-radius: 8px; /*makes the shape rounder*/
+    width: 350px;
+    height: 227px;
+    float: left;
+}
+
+.ad h2{
+    padding: 10px;
+}
+
+.ad li{
+    padding: 10px;
+    display: inline-block; /*makes the list show horizontally*/
+}
+
+.ad{
+    display: block;
+}
+
+.ad:hover{
+    box-shadow: 5px 5px 10px  #a09f9f;
+}
+
+.ad div > img{
+    width: 50px;
+    height: 50px;
+}
+
+.ad div > h3{
+    float: left;
+}
+
+/* .floor{
+    display: list-item;
+    list-style-image: url("floor.png");
+}             Check that to make the bullets of the list how you like*/
+
+
+/* ----------------------------Styling for house_sales_details html---------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+

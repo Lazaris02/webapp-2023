@@ -10,6 +10,8 @@
     <meta name="author" content="Thodoris, Antzi">
 
     <link rel="icon" type="image/x-icon" href="../resources/favicon.png">
+    <link rel="stylesheet" href="styles.css">
+
 
     <!-- We also need to add:
          The links to our css code
@@ -23,37 +25,40 @@
         3)main content of the page(differs in every page)
         4)footer(same in every page) -->
             
-        <header>
-            <!-- ADD a PHOTO AS a Background for the Header-->
-            <img   src="../resources/logo-no-background.png"  alt="logo">
-            
-            <nav>
-                <!-- Contains links to the other webpages -->
+        <header class="main_header">
+            <div class="logo">
+                <h1>Find</h1>
+                <img src="../resources/logo-no-background.png" alt="logo">
+            </div>
+    
+            <nav class="nav_bar">
+                <!-- Contains links to our other webpages -->
                 <ul>
                     <li><a href="index.html">Home</a></li>
-
-                    <li><a href="categories.html">Categories</a>
-                        <ul>
-                            <li><a href="house_sales.html">House Sales</a>
-                                <ul>
-                                    <li><a href="house_sales_details.html">House Sale AH-001</a></li>
+    
+                    <li class="drop-down-1"><a href="categories.html">Categories</a>
+                        <ul class="sub-menu-1">
+                            <li class="drop-down-2"><a href="house_sales.html">House Sales</a>
+                                <ul class="sub-menu-2">
+                                    <li><a href="house_sales_details.html" target="_blank">House Sale AH-001</a></li>
                                 </ul>
                             </li>
                             <li><a href="car_sales.html">Car Sales</a></li>
                         </ul>
                     </li>
-
+    
                     <li><a href="aboutus.html">About us</a></li>
-
+    
                     <li><a href="contactus.html">Contact us</a></li>
                 </ul>
             </nav>
-
+    
         </header>
         
         <hr>
 
         <main>
+
             <!-- article for info about the site -->
             <article>
                 <h2>About Find</h2>
@@ -84,35 +89,40 @@
 
         <hr>
 
-        <footer>
+        <footer id="main_footer">
 
-            <div>
+            <div class="logo">
                 <!-- Logo+SiteName Section -->
                 <h2>Find</h2>
-                <img src="../resources/logo-no-background.png" alt="our Logo">
+                <img class="footer_img" src="../resources/logo-no-background.png" alt="our Logo">
             </div>
-               
+    
             <div>
                 <!-- Section for Contact Details -->
                 <h2>Contact Details</h2>
                 <address>
-                    <a href="mailto:lazaristheo@gmail.com">lazaristheo@gmail.com</a>
-                    <a href="tel:6987470962">6987470962</a>                        
-                    <a href="contactus.html">Technical Support</a>
+                    <ul>
+                        <li><a href="mailto:lazaristheo@gmail.com">lazaristheo@gmail.com</a></li>
+                        <li><a href="tel:6987470962">6987470962</a> </li>
+                        <li><a href="contactus.html">Technical Support</a></li>
+                    </ul>
                 </address>
             </div>
-
+    
             <div>
                 <h2>Find us on Social Media</h2>
-                <ul>
-                    <li><a href="https://www.facebook.com/"><img src="../resources/fb_logo.png" alt="fb_logo"></a></li>                       
-                    <li><a href="https://www.instagram.com/"><img src="../resources/insta_logo.png" alt="insta_logo"></a></li>
-                    <li><a href="https://github.com/Lazaris02"><img src="../resources/git_logo.png"   alt="git_logo"></a></li>
-                </ul>
+    
+                <a href="https://www.facebook.com/"><img class="footer_img" src="../resources/fb_logo.png"
+                        alt="fb_logo"></a>
+                <a href="https://www.instagram.com/"><img class="footer_img" src="../resources/insta_logo.png"
+                        alt="insta_logo"></a>
+                <a href="https://github.com/Lazaris02"><img class="footer_img" src="../resources/git_logo.png"
+                        alt="git_logo"></a>
+                        
             </div>
-
+    
             <hr>
-            <p>&copy;SITENAME.GR ALL RIGHTS RESERVED</p>
+            <p>&copy;FIND.GR ALL RIGHTS RESERVED</p>
         </footer>
 </body>
 
