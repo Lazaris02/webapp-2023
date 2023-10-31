@@ -395,6 +395,60 @@ main > img{
     box-shadow: 5px 5px 10px  #727070;
 }
 
+.AH-001 > div > img{
+    width: 70px;
+    height: 60px;
+}
+
+.AH-001 > div > h3{
+    float: left;
+    
+}
+
+.ul_basics li{
+    padding: 10px;
+    display: inline-block; /*makes the list show horizontally*/
+}
+
+.AH-001 > section > h3{
+    text-decoration: underline;
+}
+
+.views img {
+    float: left;
+}
+
+.AH-001 section{
+    clear: both;
+}
+
+.AH-001 table{
+    table-layout: fixed;
+    width: 80%;
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+.AH-001 tr, th{
+    /* border-bottom: 1px solid #ddd; */
+    border: 1px solid;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    font-weight: normal; /*unblod the words of the table*/
+}
+
+.AH-001 tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.AH-001 tr:nth-child(odd) {
+    background-color: #f2f2f2c5;
+}
+
+.AH-001 table > caption{
+    text-decoration: underline;
+}
+
 
 
 
