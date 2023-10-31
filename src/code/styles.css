@@ -45,6 +45,7 @@
 /* To display our locally saved font for their respective font-weight and font-style */
 
 :root{
+    /* so that it is easier to change the main colors */
     --nav-color:#bcd2e8;
     --body-mid:#2e5984;
     --footer-color:#5e86b7b1;
@@ -60,9 +61,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.main_header {
-    /* background-color:var(--nav-color); */
-}
+
 
 ul {
     list-style: none;
@@ -220,31 +219,6 @@ body {
 
 
 
-
-.background {
-    /* I need to set the background images in an absolute position
-    and set the behind all the regular content of the page->lower z-axis value 
-    for them */
-    position: absolute;
-    z-index: -1;
-}
-
-.background#photo_index_1 {
-    right: 0;
-    bottom: 0;
-    opacity: 80%;
-}
-
-.background#photo_index_2 {
-    /* overrides the z-index so that the globe is visibly behind other background images 
-    at z-axis=-1
-     */
-    z-index: -2;
-    overflow-y: hidden;
-    top: 0;
-    opacity: 20%;
-}
-
 /* ----------------------------General Styling ends here----------------------- */
 
 
@@ -254,7 +228,7 @@ body {
 
 .important_text {
     /* used to highlight text */
-    color: var(--link-color);
+    color: var(--header-text);
     font-weight: 600;
 }
 
@@ -495,7 +469,7 @@ main > img{
 
 #about_us_header{
     text-align: right;
-    background-image: linear-gradient(to right, #e5e4e2d5, rgb(70, 134, 199));
+    background-image: linear-gradient(to right, white,#bcd2e800 );
 }
 
 #about_us_header img{
