@@ -281,15 +281,15 @@ body{
 
 /* ----------------------------Styling for house_sales and car_sales html-------------------------- */
 
+.sales_page{
+    background-image: linear-gradient(#e5e4e2d5, rgb(70, 134, 199), #e5e4e2d5);
+}
+
 main > img{
     width: auto;
     height: 150px;
     display: block;
     margin: auto;
-}
-
-body main{
-    margin-left: 20px;
 }
 
 #house_ad, #car_sales{
@@ -326,7 +326,7 @@ body main{
 }
 
 .ad:hover{
-    box-shadow: 5px 5px 10px  #a09f9f;
+    box-shadow: 5px 5px 10px  #727070;
 }
 
 .ad div > img{
@@ -344,10 +344,49 @@ body main{
 }             Check that to make the bullets of the list how you like*/
 
 
-/* ----------------------------Styling for house_sales_details html---------------------------- */
+/* ----------------------------Styling for about_us html---------------------------- */
 
+/* I have still to play with the photos and the descriptions of the team */
 
+#about_us_header{
+    text-align: right;
+    background-image: linear-gradient(to right, #e5e4e2d5, rgb(70, 134, 199));
+}
 
+#about_us_header img{
+    width: 300px;
+    height: 225px;
+}
+
+#about_us_header h2{
+    float: left;
+    font-family: "Agbalumo";
+    font-size: 40px;
+    animation: fadeIn 4s; 
+}
+
+@keyframes fadeIn{
+/* Fade in effect for the text */
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+#find_arc h2{
+    font-size: 35px;
+}
+
+#team_arc img{
+    float: left;
+}
+
+#team_arc h2{
+    text-align: center;
+    font-size: 35px;
+}
+
+#team_arc section{
+    clear: left;
+}
 
 
 
