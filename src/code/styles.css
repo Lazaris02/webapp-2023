@@ -48,9 +48,13 @@
     /* so that it is easier to change the main colors */
     --nav-color:#bcd2e8;
     --body-mid:#2e5984;
-    --footer-color:#5e86b7b1;
+    --footer-color:#5e86b7c0;
     --header-text:#014462;
     --link-color:rgb(0,140,140);
+    --no-color:rgba(255, 255, 255, 0);
+    --smoky-black:#241e1e;
+    --article-color:rgba(250, 250, 250, 0.5);
+    --hover-shadow:#014362d5;
 }
 
 
@@ -81,7 +85,7 @@ body {
 
 
 
-/*-------------------Styling the nav bar-------------- */
+/*-------------------Styling the header-------------- */
 
 
 
@@ -107,7 +111,7 @@ body {
     */
     display: block;
     text-decoration: none;
-    color: #241e1e;
+    color: var(--smoky-black);
     font-size: x-large;
     font-weight: 500;
 }
@@ -117,10 +121,11 @@ body {
     /* hovering over an anchor tag inside of an element that has the 
     nav bar class changes the background color to black and the text-color
     to white. Also the black background will have cut edges */
-    background-color: #241e1e;
+    background-color: var(--footer-color);
+    font-weight: 600;
     color: white;
     border-radius: 10px;
-    transition: all 400ms ease;
+    transition: all 100ms ease;
 
 }
 
@@ -161,6 +166,32 @@ body {
     display: block;
 }
 
+/* for the header banner */
+
+@keyframes fadeIn{
+    /* Fade in effect for the text */
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+
+#header_banner{
+    background-image: linear-gradient(to right, white,#bcd2e800 );
+}
+
+#header_banner img{
+    width: 300px;
+    height: 225px;
+}
+
+#header_banner h2{
+    font-family: "Agbalumo";
+    font-size: xx-large;
+    animation: fadeIn 4s;
+}
+
+
+
+
 
 
 /* ------------------Styling the logo----------------*/
@@ -179,7 +210,7 @@ body {
 
 .logo>h1,
 .logo>h2 {
-    color: #241e1e;
+    color: var(--smoky-black);
     float: left;
 }
 
@@ -197,7 +228,7 @@ body {
 
 #main_footer a {
     text-decoration: none;
-    color: #241e1e;
+    color: var(--smoky-black);
 }
 
 #main_footer address a:hover {
@@ -210,6 +241,52 @@ body {
     /* if i click an adress element it increases in size for a moment */
     font-size: 1.2em;
 }
+
+#news_letter form{
+    font-weight: 800;
+}
+
+#news_letter form button{
+    color: var(--smoky-black);
+    font-weight: 800;
+    background-color: var(--no-color);
+    border: none;
+    text-transform: uppercase;
+}
+
+#news_letter form button:hover{
+    background-color: var(--footer-color);
+    transition: 150ms ease;
+}
+
+#news_letter form button:active{
+    color: var(--article-color);
+}
+
+#news_letter form input{
+    background-color: var(--footer-color);
+    text-align: center;
+    border: none;
+    border-radius: 10px;
+    font-weight: 800;
+    color: var(--smoky-black);
+}
+
+#news_letter form input:hover{
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: 150ms ease;
+}
+
+
+#news_letter form input::placeholder{
+    background-color: rgba(255, 255, 255, 0.418);
+    color: var(--smoky-black);
+    opacity: 50%;
+}
+
+
+
+
 
 
 .footer_img {
@@ -239,7 +316,7 @@ body {
     also gives them color a border radius and all their text is aligned to the center of the 
     list element */
     display: inline-block;
-    background-color: #e5e4e263;
+    background-color: var(--article-color);
     border-radius: 30px;
     text-align: center;
 }
@@ -264,7 +341,7 @@ body {
     aligns the text at the center of the container
     gives them a specific width and height so that they all look the same */
 
-    background-color: #e5e4e263;
+    background-color: var(--article-color);
     text-align: center;
     border-radius: 30px;
     height: 400px;
@@ -273,7 +350,7 @@ body {
 
 .main_content_design:hover {
     /* gives these elements a nice hover-effect with shadows that transitions-in smoothly*/
-    box-shadow: 5px 5px 10px #a09f9f;
+    box-shadow: 5px 5px 10px var(--hover-shadow);
     transition: all 100ms ease-in;
 }
 
@@ -325,20 +402,16 @@ body {
     position: absolute;
     border-radius: 10px;
     z-index: -1;
+    opacity: 50%;
 }
 
 
 #categories-nav>ul>li:hover{
-    box-shadow: 5px 5px 10px #a09f9f;
-    transition: all 100ms ease-in;
+    box-shadow: 5px 5px 10px var(--hover-shadow);
 }
 
 
 
-@keyframes fadeIn {
-    0%{opacity: 0;}
-    100%{opacity: 1;}
-}
 
 #categories-nav .drop-down-categories{
     position: absolute;
@@ -350,7 +423,7 @@ body {
     font-size: x-large;
     font-weight: 500;
     position: absolute;
-    color: white;
+    color: var(--smoky-black);
 }
 
 
@@ -363,7 +436,7 @@ body {
 
 .drop-down-categories a {
     text-decoration: none;
-    color: white;
+    color: var(--smoky-black);
     font-weight:600;
     display: block;
 }
@@ -378,7 +451,7 @@ body {
 
 .disappear>p{
     position: absolute;
-    color: white;
+    color: var(--smoky-black);
     font-size:x-large;
     font-weight: 600;
     right: 30%;
@@ -484,11 +557,7 @@ main > img{
     animation: fadeIn 4s; 
 }
 
-@keyframes fadeIn{
-/* Fade in effect for the text */
-    0% { opacity: 0; }
-    100% { opacity: 1; }
-}
+
 
 #find_arc h2{
     font-size: 35px;
