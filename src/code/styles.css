@@ -540,22 +540,7 @@ main > img{
 
 /* I have still to play with the photos and the descriptions of the team */
 
-#about_us_header{
-    text-align: right;
-    background-image: linear-gradient(to right, white,#bcd2e800 );
-}
 
-#about_us_header img{
-    width: 300px;
-    height: 225px;
-}
-
-#about_us_header h2{
-    float: left;
-    font-family: "Agbalumo";
-    font-size: 40px;
-    animation: fadeIn 4s; 
-}
 
 
 
