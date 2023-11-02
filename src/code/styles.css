@@ -469,24 +469,31 @@ body {
 /* Styling for contactus.html */
 
 #help_form{
-    background-color:#86bef581;
-    border-radius: 10px;
-    font-weight: 600;
+    /* I give the help form a total height and width using border box
+     (height and width includes all aspects of the box model) 
+     gives all the form's text a font-weight of 600*/
     box-sizing: border-box;
     height: 600px;
     width: 300px;
+    background-color:#86bef581;
+    border-radius: 10px;
+    font-weight: 600;
     text-align: center;
 }
 
 
 #help_form fieldset{
+    /*removes the border around the fieldsets */
     border: none;
 }
 
 
 #help_form legend{
+    /* the Category */
     font-weight: 800;
+    font-size: larger;
     color: var(--smoky-black);
+    text-transform: uppercase;
 }
 
 
@@ -497,8 +504,9 @@ body {
 
 
 #help_form input,#help_form textarea,#help_form button{
+    /* adds some common properties that these form-elements all share
+    which are the color the width the padding-left(visual improvement), the font-weight */
    background-color:rgba(255, 255, 255, 0.397);
-   height: auto;
    width: 200px;
    border: none;
    border-radius: 5px;
@@ -508,26 +516,32 @@ body {
 }
 
 
-#help_form input::placeholder,#help_form textarea::placeholder{
+#help_form ::placeholder{
+    /* styles the placeholder of all the elements in the form
+    (decreased opacity , color , font weight */
     color: var(--smoky-black);
     opacity: 50%;
     font-weight: 600;
 }
 
-#help_form input:hover{
+#help_form input:hover, #help_form button:hover{
     background-color: rgba(255, 255, 255, 0.8);
-    transition: all 200ms ease-in;
+    transition: 200ms ease-in;
 }
 
 
-#help_form textarea{
-}
 
 #help_form button{
     text-transform:uppercase;
     padding: 0;
     width: 80px;
 }
+
+#help_form button:active{
+    color: var(--link-color);
+    transition: 100ms;
+}
+
 
 
 
