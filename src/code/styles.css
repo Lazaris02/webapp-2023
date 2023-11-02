@@ -622,6 +622,15 @@ main > img{
     text-decoration: underline;
 }
 
+.no{
+    text-decoration-line: line-through;
+}
+
+.properties{
+    padding-left: 20px;
+    list-style-type: circle;
+}
+
 
 
 
