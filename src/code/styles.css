@@ -466,6 +466,71 @@ body {
 
 /* ----------------------------Positioning for index html----------------------- */
 
+/* Styling for contactus.html */
+
+#help_form{
+    background-color:#86bef581;
+    border-radius: 10px;
+    font-weight: 600;
+    box-sizing: border-box;
+    height: 600px;
+    width: 300px;
+    text-align: center;
+}
+
+
+#help_form fieldset{
+    border: none;
+}
+
+
+#help_form legend{
+    font-weight: 800;
+    color: var(--smoky-black);
+}
+
+
+
+#help_form label{
+    display: block;
+}
+
+
+#help_form input,#help_form textarea,#help_form button{
+   background-color:rgba(255, 255, 255, 0.397);
+   height: auto;
+   width: 200px;
+   border: none;
+   border-radius: 5px;
+   font-weight: 800;
+   padding-left: 5px;
+   color: var(--smoky-black);
+}
+
+
+#help_form input::placeholder,#help_form textarea::placeholder{
+    color: var(--smoky-black);
+    opacity: 50%;
+    font-weight: 600;
+}
+
+#help_form input:hover{
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: all 200ms ease-in;
+}
+
+
+#help_form textarea{
+}
+
+#help_form button{
+    text-transform:uppercase;
+    padding: 0;
+    width: 80px;
+}
+
+
+
 
 
 
@@ -473,9 +538,7 @@ body {
 
 /* ----------------------------Styling for house_sales and car_sales html-------------------------- */
 
-.sales_page{
-    /* background-image: linear-gradient(var(--nav-color), var(--body-mid), var(--nav-color)); */
-}
+
 
 main > img{
     width: auto;
