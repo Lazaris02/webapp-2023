@@ -607,10 +607,6 @@ main > img{
     float: left;
 }
 
-/* .floor{
-    display: list-item;
-    list-style-image: url("floor.png");
-}             Check that to make the bullets of the list how you like*/
 
 
 /* ----------------------------Styling for about_us html---------------------------- */
@@ -699,8 +695,25 @@ main > img{
     text-decoration: underline;
 }
 
+.no{
+    text-decoration-line: line-through;
+}
 
+.properties{
+    padding-left: 40px;
+}
 
+.no{
+    list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23000000"><path d="m13.41 12 6.29-6.29c.94-.94-.48-2.35-1.41-1.41L12 10.59 5.71 4.3c-.93-.93-2.35.48-1.41 1.41L10.59 12 4.3 18.29c-.94.94.48 2.35 1.41 1.41L12 13.41c6.12 6.12 6.74 7.26 7.71 6.29a.996.996 0 0 0 0-1.41L13.42 12Z"></path></svg>');
+}
+
+.properties:not(.no){
+    list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23000000"><path d="M9 19c-.26 0-.51-.1-.71-.29l-6-6A.996.996 0 1 1 3.7 11.3l5.29 5.29L20.28 5.3a.996.996 0 1 1 1.41 1.41l-12 12c-.2.2-.45.29-.71.29Z"></path></svg>');
+}
+
+.properties li::marker{
+    font-size: 2em;
+}
 
 
 
