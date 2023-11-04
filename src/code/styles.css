@@ -44,17 +44,17 @@
 
 /* To display our locally saved font for their respective font-weight and font-style */
 
-:root{
-    /* so that it is easier to change the main colors */
-    --nav-color:#bcd2e8;
-    --body-mid:#2e5984;
-    --footer-color:#5e86b7c0;
-    --header-text:#014462;
-    --link-color:rgb(0,140,140);
-    --no-color:rgba(255, 255, 255, 0);
-    --smoky-black:#241e1e;
-    --article-color:rgba(250, 250, 250, 0.5);
-    --hover-shadow:#014362d5;
+:root {
+    /* so that it is easier to change the main-frequently used colors*/
+    --nav-color: #bcd2e8;
+    --body-mid: #2e5984;
+    --footer-color: #5e86b7c0;
+    --header-text: #014462;
+    --link-color: rgb(0, 140, 140);
+    --no-color: rgba(255, 255, 255, 0);
+    --smoky-black: #241e1e;
+    --article-color: rgba(250, 250, 250, 0.5);
+    --hover-shadow: #014362d5;
 }
 
 
@@ -68,18 +68,20 @@
 
 
 ul {
+    /* to most our lists we don't need them to have bullets */
     list-style: none;
 }
 
 
 body {
-    /* I set display flex + flex-direction colum so that i make the body container
+    /* I set display flex + flex-direction colum so that I make the body container
     (parent of my footer) a flexbox  so that I can set the footer margin-top:auto and
-    stick the footer at the bottom of the page*/
+    stick the footer at the bottom of the page* The margin auto makes it so that the footer constantly
+    has maximum margin space from its previous sibling*/
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-image: linear-gradient(var(--nav-color),var(--body-mid),var(--nav-color));
+    background-image: linear-gradient(var(--nav-color), var(--body-mid), var(--nav-color));
 }
 
 
@@ -98,7 +100,8 @@ body {
 #nav_bar>ul li {
     /* all the list elements that are inside of the direct child of the nav-bar container
     are displayed as inline blocks(inline elements thar
-     retain block's ability to space from other blocks) */
+     retain block's ability to space from other blocks)
+     So that the list elements are displayed one next to the other */
     display: inline-block;
 }
 
@@ -106,8 +109,9 @@ body {
 
 #nav_bar a {
     /* for all anchors in the nav bar it revokes their design
-    applies black color and changes font-weight 
-    the display:block makes it so that it takes up all its parent's container
+    applies black color and changes font-weight +font-size
+    the display:block makes it so that the element takes up all the space of its father
+    -->the link can be clicked easier
     */
     display: block;
     text-decoration: none;
@@ -119,8 +123,9 @@ body {
 
 #nav_bar a:hover {
     /* hovering over an anchor tag inside of an element that has the 
-    nav bar class changes the background color to black and the text-color
-    to white. Also the black background will have cut edges */
+    nav bar id changes the background color to black and the text-color
+    to white. Also the black background will have cut edges and the whole hover animation
+    will last 100ms in total (both in and out) */
     background-color: var(--footer-color);
     font-weight: 600;
     color: white;
@@ -131,7 +136,7 @@ body {
 
 #nav_bar a:active {
     /* when you click on an anchor tag inside an element with the nav_bar
-    class the font-size increases to 1.2 times the size it was */
+    class the font-weight increases making it more distinguishable*/
     font-weight: 800;
 }
 
@@ -142,7 +147,8 @@ body {
 
 .sub-menu-1 {
     /* makes the categories menu invisible 
-    sets the position to absolute so that it doesn't move other elements
+    sets the position to absolute so that it doesn't move 
+    other elements when it reappears
     gives it a bit of padding and color */
     display: none;
     position: absolute;
@@ -152,10 +158,17 @@ body {
 }
 
 .drop-down-1:hover .sub-menu-1 {
+    /* when I hover over the categories list element which has the drop-down class
+    then the sub-menu-1 class element that is a successor of the drop-down-1 element will reapear and take
+    up a block of space */
     display: block;
 }
 
 .sub-menu-2 {
+    /* makes the sub-category menu invisible 
+    sets the position to absolute so that it doesn't move 
+    other elements when it reappears
+    gives it a bit of padding and color */
     display: none;
     position: absolute;
     padding: 5px;
@@ -163,27 +176,48 @@ body {
 }
 
 .drop-down-2:hover .sub-menu-2 {
+    /* same logic as the drop-down-1 hover but for the second menu
+    when I hover over a subcategory in the nav-bar -->its subcategories appear
+    as a block element */
     display: block;
 }
 
 /* for the header banner */
 
-@keyframes fadeIn{
-    /* Fade in effect for the text */
-        0% { opacity: 0; }
-        100% { opacity: 1; }
+@keyframes fadeIn {
+
+    /* Fade in effect for the text,
+    starts from opacity 0% and goes all the way up to 100% 
+    we later use the animation property and we also set how long this
+    transition should take*/
+    0% {
+        opacity: 0;
     }
 
-#header_banner{
-    background-image: linear-gradient(to right, white,#bcd2e800 );
+    100% {
+        opacity: 1;
+    }
 }
 
-#header_banner img{
+#header_banner {
+    /* our header-color starts from white - all the
+     way to the right and ends up as the second 
+    color all the way to the left 
+    we use a banner in all our pages with different image and text.*/
+    background-image: linear-gradient(to right, white, #bcd2e800);
+}
+
+#header_banner img {
+    /* the img contained in the element with the header-banner id 
+    is given specific width+height */
     width: 300px;
     height: 225px;
 }
 
-#header_banner h2{
+#header_banner h2 {
+    /* we give the header-banner h2 a new font-family
+    size and the fade - in animation which lasts for 4s when I enter or refresh the page
+     */
     font-family: "Agbalumo";
     font-size: xx-large;
     animation: fadeIn 4s;
@@ -197,19 +231,23 @@ body {
 /* ------------------Styling the logo----------------*/
 
 .logo {
+    /* so that it can be placed next to other elements if I want it to */
     display: inline-block;
 }
 
 
 .logo img {
+    /*I give the image specific width+height  */
     height: 25px;
     width: 25px;
-    display: block;
 }
 
 
 .logo>h1,
 .logo>h2 {
+    /* we give the logo h1 (If it is the main logo) and the
+    logo h2 (If it is the footer header) a color and we 
+    also make it float on the left of its father container */
     color: var(--smoky-black);
     float: left;
 }
@@ -224,9 +262,11 @@ body {
     sticks at the bottom*/
     background-color: var(--footer-color);
     margin-top: auto;
+    border: 1px solid var(--body-mid);
 }
 
 #main_footer a {
+    /* changes the decoration of the links in the footer */
     text-decoration: none;
     color: var(--smoky-black);
 }
@@ -242,11 +282,12 @@ body {
     font-size: 1.2em;
 }
 
-#news_letter form{
+#news_letter form {
     font-weight: 800;
 }
 
-#news_letter form button{
+#news_letter form button {
+    /* the button of the news-letter form */
     color: var(--smoky-black);
     font-weight: 800;
     background-color: var(--no-color);
@@ -254,16 +295,20 @@ body {
     text-transform: uppercase;
 }
 
-#news_letter form button:hover{
+#news_letter form button:hover {
+    /* when you hover over the submit button it gets highlighted
+    and all the highlight animation lasts for 150ms */
     background-color: var(--footer-color);
     transition: 150ms ease;
 }
 
-#news_letter form button:active{
+#news_letter form button:active {
     color: var(--article-color);
 }
 
-#news_letter form input{
+#news_letter form input {
+    /* the design for the input of the footer news-letter
+    affects the font-weight the color , the border etc.. */
     background-color: var(--footer-color);
     text-align: center;
     border: none;
@@ -272,13 +317,16 @@ body {
     color: var(--smoky-black);
 }
 
-#news_letter form input:hover{
+#news_letter form input:hover {
+    /* hover animation of the form */
     background-color: rgba(255, 255, 255, 0.5);
     transition: 150ms ease;
 }
 
 
-#news_letter form input::placeholder{
+#news_letter form input::placeholder {
+    /* the styling of the news-letter placeholder 
+    we make it less visible and change the color of the letters and the background */
     background-color: rgba(255, 255, 255, 0.418);
     color: var(--smoky-black);
     opacity: 50%;
@@ -286,10 +334,9 @@ body {
 
 
 
-
-
-
 .footer_img {
+    /* alk the images in the footer are given this class
+    --> specific size */
     height: 50px;
     width: 50px;
 }
@@ -322,21 +369,28 @@ body {
 }
 
 #intro_section .intro_info h3 {
+    /* all h3 descendants of the intro_info class that are descendants of the
+    intro_section id are given display blocks so that they are alone in a line,also
+    they are given a color and a font weight  */
     display: block;
     color: var(--header-text);
     font-weight: 600;
 }
 
 #intro_section .intro_info p {
-    min-height: 200px;
-    width: 200px;
+    /* gives the paragraphs of the intro-info a max width and max-height
+    also a padding so that the height and weight doesnt surpass a certain
+    size */
+    max-height: 200px;
+    max-width: 250px;
+    padding: 5px;
 }
 
 
 
 
 .main_content_design {
-    /* The general design of the secondary navigation + the news articles of main content:display: 
+    /* The general design of the secondary navigation + the news articles of main content: 
     adds a see-through background
     aligns the text at the center of the container
     gives them a specific width and height so that they all look the same */
@@ -346,6 +400,7 @@ body {
     border-radius: 30px;
     height: 400px;
     width: 400px;
+    padding: 0.5em;
 }
 
 .main_content_design:hover {
@@ -387,16 +442,24 @@ body {
 /* ----------------------------Styling for Index.html ends here----------------------- */
 
 /* ----------------------------Styling for Categories.html starts here----------------------- */
-#categories-nav>ul>li{
+#categories-nav>ul>li {
+    /* the direct child of the nav bar with this id will grant 
+    its direct li descendants a inline block display so I can put the one next to the other
+    a relative position because I use absolute position inside the list items and
+    the absolute position will position these items relative to the first non static position
+    predecessor. I also give it border-box property for it to have a total height and 
+    width of 250px including padding margin and all its contents.*/
     display: inline-block;
     position: relative;
+    box-sizing: border-box;
     height: 250px;
     width: 250px;
-    box-sizing: border-box;
     border-radius: 10px;
 }
 
-#categories-nav img{
+#categories-nav img {
+    /* I make the background image of the secondary nav elements take up all the list item
+    space(250x250) and style it so that it is a background(position absolute+lower opacity + z-index=-1) */
     height: 250px;
     width: 250px;
     position: absolute;
@@ -406,28 +469,41 @@ body {
 }
 
 
-#categories-nav>ul>li:hover{
+#categories-nav>ul>li:hover {
+    /* when I hover over the secondary nav list items, they have a shadow */
     box-shadow: 5px 5px 10px var(--hover-shadow);
 }
 
 
 
 
-#categories-nav .drop-down-categories{
+#categories-nav .drop-down-categories {
+    /* the secondary nav have some categories each that I need them to be
+    displayed only when I hover over the list item itself , so in general I need it to
+    have an absolute position so that it doesnt move other items when it appears + a display of none */
     position: absolute;
     display: none;
 }
 
 
-#categories-nav h2{
+
+
+#categories-nav h2 {
+    /* The styling of the titles of the secondary nav menu
+    it affects the text size color and weight  the absolute position
+    removes the title from the main flow so that it doesnt increase the size of the container and
+    doesnt move the other li items in a weird way.*/
+    position: absolute;
     font-size: x-large;
     font-weight: 500;
-    position: absolute;
     color: var(--smoky-black);
 }
 
 
-#categories-nav>ul>li:hover .drop-down-categories{
+#categories-nav>ul>li:hover .drop-down-categories {
+    /* when I hover over the direct child li item of the direct ul child 
+    of the categories nav-bar (namely the box-like thing in our page) the subcategories of
+    the category displayed appear in the center of the category box*/
     display: block;
     position: absolute;
     right: 30%;
@@ -435,30 +511,48 @@ body {
 }
 
 .drop-down-categories a {
+    /* the links inside the sublists of each box-like category in the 
+    categories secondary nav-bar are styled so that it looks like plain text
+    the display block is so that it fills all the space of it's li father
+    so that it can be clicked easier*/
+    display: block;
     text-decoration: none;
     color: var(--smoky-black);
-    font-weight:600;
+    font-weight: 500;
     display: block;
 }
 
-.drop-down-categories a:hover{
+.drop-down-categories a:hover {
+    /* when you hover over the links of the categories menu their
+    color changes and they also get underlined
+    the transition makes it so that these effects are smooth */
     text-decoration: underline;
+    color: var(--link-color);
+    transition: 200ms ease;
 }
 
-.drop-down-categories a:active{
-    font-weight: 700;
+.drop-down-categories a:active {
+    /* when I click on one of the links of the the category menu its font-size is 
+    increased  */
+    font-weight:600;
 }
 
-.disappear>p{
+.disappear>p {
+    /* the p that is the direct child of the disappear class ("Discover" text)
+    is styled (black text font-size,font-weight) and positioned with
+    the position absolute and given right and bottom property so that
+    I can center it in the middle of the list element  */
     position: absolute;
     color: var(--smoky-black);
-    font-size:x-large;
+    font-size: x-large;
     font-weight: 600;
     right: 30%;
     bottom: 50%;
 }
 
-#categories-nav>ul>li:hover .disappear>p{ 
+#categories-nav>ul>li:hover .disappear>p {
+    /* when I hover over a category in the categories secondary nav-bar
+    the "Discover" text disappears */
     display: none;
 }
 
@@ -468,28 +562,29 @@ body {
 
 /* Styling for contactus.html */
 
-#help_form{
+#help_form {
     /* I give the help form a total height and width using border box
      (height and width includes all aspects of the box model) 
      gives all the form's text a font-weight of 600*/
     box-sizing: border-box;
     height: 600px;
     width: 300px;
-    background-color:#86bef581;
+    background-color: #86bef581;
     border-radius: 10px;
     font-weight: 600;
     text-align: center;
 }
 
 
-#help_form fieldset{
+#help_form fieldset {
     /*removes the border around the fieldsets */
     border: none;
 }
 
 
-#help_form legend{
-    /* the Category */
+#help_form legend {
+    /* the legend caption is styled(font-weight,size,text color)
+    and also gets the text transformed into uppercase */
     font-weight: 800;
     font-size: larger;
     color: var(--smoky-black);
@@ -498,25 +593,27 @@ body {
 
 
 
-#help_form label{
+#help_form label {
     display: block;
 }
 
 
-#help_form input,#help_form textarea,#help_form button{
+#help_form input,
+#help_form textarea,
+#help_form button {
     /* adds some common properties that these form-elements all share
     which are the color the width the padding-left(visual improvement), the font-weight */
-   background-color:rgba(255, 255, 255, 0.397);
-   width: 200px;
-   border: none;
-   border-radius: 5px;
-   font-weight: 800;
-   padding-left: 5px;
-   color: var(--smoky-black);
+    background-color: rgba(255, 255, 255, 0.397);
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    font-weight: 800;
+    padding-left: 5px;
+    color: var(--smoky-black);
 }
 
 
-#help_form ::placeholder{
+#help_form ::placeholder {
     /* styles the placeholder of all the elements in the form
     (decreased opacity , color , font weight */
     color: var(--smoky-black);
@@ -524,25 +621,69 @@ body {
     font-weight: 600;
 }
 
-#help_form input:hover, #help_form button:hover{
+#help_form input:hover,
+#help_form button:hover {
+    /* when you hover over the input and the buttons 
+    in the form the background changed color and 
+    has a smooth transition of 200ms */
     background-color: rgba(255, 255, 255, 0.8);
     transition: 200ms ease-in;
 }
 
 
 
-#help_form button{
-    text-transform:uppercase;
+#help_form button {
+    /* makes the button text uppercase 
+    removes the padding it inherits from the above classes
+    for visual reasons, also gives it a width in pixels */
+    text-transform: uppercase;
     padding: 0;
     width: 80px;
 }
 
-#help_form button:active{
+#help_form button:active {
+    /* when you click on the help_form buttons
+    their color changes smoothly */
     color: var(--link-color);
     transition: 100ms;
 }
 
+/* for the left part of the form */
 
+#form_description {
+    /* box-sizing border box because I need the total
+    container to have a specific size and border-box makes
+    it much easier.Also changes the height,width,background-color and radius */
+    box-sizing: border-box;
+    height: 600px;
+    width: 300px;
+    background-color: rgba(86, 86, 182, 0.329);
+    border-radius: 10px;
+}
+
+
+#form_description h2 {
+    /* changes the h2  size,weight and aligns the text 
+    to the center of the h2 container*/
+    font-size: x-large;
+    font-weight: 800;
+    text-align: center;
+}
+
+#form_description p {
+    /* aligns the text to center of the p container
+    also changes their font-weight */
+    text-align: center;
+    font-weight: 500;
+}
+
+#form_description img {
+    /* gives the form_img a height and width also cuts its edges
+    for stylistic purposes. */
+    height: 350px;
+    width: 300px;
+    border-radius: 10px;
+}
 
 
 
@@ -554,56 +695,59 @@ body {
 
 
 
-main > img{
+main>img {
     width: auto;
     height: 150px;
     display: block;
     margin: auto;
 }
 
-#house_ad, #car_sales{
+#house_ad,
+#car_sales {
     text-decoration: none;
     color: black;
 }
 
-.ad{
+.ad {
     padding-bottom: 50px;
-    background-color: rgba(250,250,250,0.408);
-    border:1px solid black;
+    background-color: rgba(250, 250, 250, 0.408);
+    border: 1px solid black;
     border-radius: 8px;
     margin-bottom: 10px;
 }
 
-.ad img{
-    border-radius: 8px; /*makes the shape rounder*/
+.ad img {
+    border-radius: 8px;
+    /*makes the shape rounder*/
     width: 350px;
     height: 227px;
     float: left;
 }
 
-.ad h2{
+.ad h2 {
     padding: 10px;
 }
 
-.ad li{
+.ad li {
     padding: 10px;
-    display: inline-block; /*makes the list show horizontally*/
+    display: inline-block;
+    /*makes the list show horizontally*/
 }
 
-.ad{
+.ad {
     display: block;
 }
 
-.ad:hover{
-    box-shadow: 5px 5px 10px  #727070;
+.ad:hover {
+    box-shadow: 5px 5px 10px #727070;
 }
 
-.ad div > img{
+.ad div>img {
     width: 50px;
     height: 50px;
 }
 
-.ad div > h3{
+.ad div>h3 {
     float: left;
 }
 
@@ -617,46 +761,47 @@ main > img{
 
 
 
-#find_arc h2{
+#find_arc h2 {
     font-size: 35px;
 }
 
-#team_arc img{
+#team_arc img {
     float: left;
 }
 
-#team_arc h2{
+#team_arc h2 {
     text-align: center;
     font-size: 35px;
 }
 
-#team_arc section{
+#team_arc section {
     clear: left;
 }
 
 
 /* ----------------------------Styling for house_sales_details html---------------------------- */
 
-.house_ad:hover{
-    box-shadow: 5px 5px 10px  #727070;
+.house_ad:hover {
+    box-shadow: 5px 5px 10px #727070;
 }
 
-.AH-001 > div > img{
+.AH-001>div>img {
     width: 70px;
     height: 60px;
 }
 
-.AH-001 > div > h3{
+.AH-001>div>h3 {
     float: left;
-    
+
 }
 
-.ul_basics li{
+.ul_basics li {
     padding: 10px;
-    display: inline-block; /*makes the list show horizontally*/
+    display: inline-block;
+    /*makes the list show horizontally*/
 }
 
-.AH-001 > section > h3{
+.AH-001>section>h3 {
     text-decoration: underline;
 }
 
@@ -664,23 +809,25 @@ main > img{
     float: left;
 }
 
-.AH-001 section{
+.AH-001 section {
     clear: both;
 }
 
-.AH-001 table{
+.AH-001 table {
     table-layout: fixed;
     width: 80%;
     border: 1px solid;
     border-collapse: collapse;
 }
 
-.AH-001 tr, th{
+.AH-001 tr,
+th {
     /* border-bottom: 1px solid #ddd; */
     border: 1px solid;
     text-align: center;
     border-bottom: 1px solid #ddd;
-    font-weight: normal; /*unblod the words of the table*/
+    font-weight: normal;
+    /*unblod the words of the table*/
 }
 
 .AH-001 tr:nth-child(even) {
@@ -691,31 +838,26 @@ main > img{
     background-color: #f2f2f2c5;
 }
 
-.AH-001 table > caption{
+.AH-001 table>caption {
     text-decoration: underline;
 }
 
-.no{
+.no {
     text-decoration-line: line-through;
 }
 
-.properties{
+.properties {
     padding-left: 40px;
 }
 
-.no{
+.no {
     list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23000000"><path d="m13.41 12 6.29-6.29c.94-.94-.48-2.35-1.41-1.41L12 10.59 5.71 4.3c-.93-.93-2.35.48-1.41 1.41L10.59 12 4.3 18.29c-.94.94.48 2.35 1.41 1.41L12 13.41c6.12 6.12 6.74 7.26 7.71 6.29a.996.996 0 0 0 0-1.41L13.42 12Z"></path></svg>');
 }
 
-.properties:not(.no){
+.properties:not(.no) {
     list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23000000"><path d="M9 19c-.26 0-.51-.1-.71-.29l-6-6A.996.996 0 1 1 3.7 11.3l5.29 5.29L20.28 5.3a.996.996 0 1 1 1.41 1.41l-12 12c-.2.2-.45.29-.71.29Z"></path></svg>');
 }
 
-.properties li::marker{
+.properties li::marker {
     font-size: 2em;
 }
-
-
-
-
-
