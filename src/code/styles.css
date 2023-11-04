@@ -85,6 +85,27 @@ body {
 }
 
 
+#grid_wrap{
+    /* this is the wrapper of the body sections of 
+    our html code that will be used to set the
+    general layout of our pages */
+    display: grid;
+    gap: 50px;
+    grid-template-areas:
+    "main_header"
+    "main_content"
+    "main_footer";
+}
+
+#main_header{
+    grid-area: "main_header";
+}
+
+#main_content{
+    grid-area: "main_content";
+}
+
+
 
 
 /*-------------------Styling the header-------------- */
@@ -262,6 +283,7 @@ body {
     sticks at the bottom*/
     background-color: var(--footer-color);
     margin-top: auto;
+    grid-area:"main_footer" ;
 }
 
 #main_footer a {
