@@ -161,7 +161,7 @@ body {
     /* when I hover over the categories list element which has the drop-down class
     then the sub-menu-1 class element that is a successor of the drop-down-1 element will reapear and take
     up a block of space */
-    display:block;
+    display: block;
 }
 
 .sub-menu-2 {
@@ -185,6 +185,7 @@ body {
 /* for the header banner */
 
 @keyframes fadeIn {
+
     /* Fade in effect for the text,
     starts from opacity 0% and goes all the way up to 100% 
     we later use the animation property and we also set how long this
@@ -261,6 +262,7 @@ body {
     sticks at the bottom*/
     background-color: var(--footer-color);
     margin-top: auto;
+    border: 1px solid var(--body-mid);
 }
 
 #main_footer a {
@@ -388,7 +390,7 @@ body {
 
 
 .main_content_design {
-    /* The general design of the secondary navigation + the news articles of main content:display: 
+    /* The general design of the secondary navigation + the news articles of main content: 
     adds a see-through background
     aligns the text at the center of the container
     gives them a specific width and height so that they all look the same */
@@ -398,6 +400,7 @@ body {
     border-radius: 30px;
     height: 400px;
     width: 400px;
+    padding: 0.5em;
 }
 
 .main_content_design:hover {
@@ -440,15 +443,23 @@ body {
 
 /* ----------------------------Styling for Categories.html starts here----------------------- */
 #categories-nav>ul>li {
+    /* the direct child of the nav bar with this id will grant 
+    its direct li descendants a inline block display so I can put the one next to the other
+    a relative position because I use absolute position inside the list items and
+    the absolute position will position these items relative to the first non static position
+    predecessor. I also give it border-box property for it to have a total height and 
+    width of 250px including padding margin and all its contents.*/
     display: inline-block;
     position: relative;
+    box-sizing: border-box;
     height: 250px;
     width: 250px;
-    box-sizing: border-box;
     border-radius: 10px;
 }
 
 #categories-nav img {
+    /* I make the background image of the secondary nav elements take up all the list item
+    space(250x250) and style it so that it is a background(position absolute+lower opacity + z-index=-1) */
     height: 250px;
     width: 250px;
     position: absolute;
@@ -459,6 +470,7 @@ body {
 
 
 #categories-nav>ul>li:hover {
+    /* when I hover over the secondary nav list items, they have a shadow */
     box-shadow: 5px 5px 10px var(--hover-shadow);
 }
 
@@ -466,20 +478,32 @@ body {
 
 
 #categories-nav .drop-down-categories {
+    /* the secondary nav have some categories each that I need them to be
+    displayed only when I hover over the list item itself , so in general I need it to
+    have an absolute position so that it doesnt move other items when it appears + a display of none */
     position: absolute;
     display: none;
 }
 
 
+
+
 #categories-nav h2 {
+    /* The styling of the titles of the secondary nav menu
+    it affects the text size color and weight  the absolute position
+    removes the title from the main flow so that it doesnt increase the size of the container and
+    doesnt move the other li items in a weird way.*/
+    position: absolute;
     font-size: x-large;
     font-weight: 500;
-    position: absolute;
     color: var(--smoky-black);
 }
 
 
 #categories-nav>ul>li:hover .drop-down-categories {
+    /* when I hover over the direct child li item of the direct ul child 
+    of the categories nav-bar (namely the box-like thing in our page) the subcategories of
+    the category displayed appear in the center of the category box*/
     display: block;
     position: absolute;
     right: 30%;
@@ -487,21 +511,37 @@ body {
 }
 
 .drop-down-categories a {
+    /* the links inside the sublists of each box-like category in the 
+    categories secondary nav-bar are styled so that it looks like plain text
+    the display block is so that it fills all the space of it's li father
+    so that it can be clicked easier*/
+    display: block;
     text-decoration: none;
     color: var(--smoky-black);
-    font-weight: 600;
+    font-weight: 500;
     display: block;
 }
 
 .drop-down-categories a:hover {
+    /* when you hover over the links of the categories menu their
+    color changes and they also get underlined
+    the transition makes it so that these effects are smooth */
     text-decoration: underline;
+    color: var(--link-color);
+    transition: 200ms ease;
 }
 
 .drop-down-categories a:active {
-    font-weight: 700;
+    /* when I click on one of the links of the the category menu its font-size is 
+    increased  */
+    font-weight:600;
 }
 
 .disappear>p {
+    /* the p that is the direct child of the disappear class ("Discover" text)
+    is styled (black text font-size,font-weight) and positioned with
+    the position absolute and given right and bottom property so that
+    I can center it in the middle of the list element  */
     position: absolute;
     color: var(--smoky-black);
     font-size: x-large;
@@ -511,6 +551,8 @@ body {
 }
 
 #categories-nav>ul>li:hover .disappear>p {
+    /* when I hover over a category in the categories secondary nav-bar
+    the "Discover" text disappears */
     display: none;
 }
 
@@ -541,7 +583,8 @@ body {
 
 
 #help_form legend {
-    /* the Category */
+    /* the legend caption is styled(font-weight,size,text color)
+    and also gets the text transformed into uppercase */
     font-weight: 800;
     font-size: larger;
     color: var(--smoky-black);
