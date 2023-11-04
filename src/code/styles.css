@@ -262,7 +262,6 @@ body {
     sticks at the bottom*/
     background-color: var(--footer-color);
     margin-top: auto;
-    border: 1px solid var(--body-mid);
 }
 
 #main_footer a {
