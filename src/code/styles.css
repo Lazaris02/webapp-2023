@@ -99,11 +99,30 @@ body {
 
 #main_header{
     grid-area: "main_header";
+    display: flex;
+    flex-flow: column wrap;
+    
 }
 
 #main_content{
     grid-area: "main_content";
 }
+
+
+/* flexbox for header */
+.logo_nav_wrap{
+    display:inline-flex;
+    flex-flow:row nowrap;
+    align-items: flex-start;
+}
+
+#nav_bar{
+    z-index: 3;
+    margin: auto;
+}
+
+
+
 
 
 
