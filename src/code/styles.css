@@ -85,6 +85,10 @@ body {
 }
 
 
+
+/* NEWLY ADDED WRAPPERS FOR EXC3++ */
+
+
 #grid_wrap{
     /* this is the wrapper of the body sections of 
     our html code that will be used to set the
@@ -98,6 +102,11 @@ body {
 }
 
 #main_header{
+    /* I have named this area for the grid-template-areas
+    so that the grid wrap can identify it
+    display flex+column wrap is because I want vertical
+    positioning in our header
+    (logo+nav-bar above the banner) */
     grid-area: "main_header";
     display: flex;
     flex-flow: column wrap;
@@ -105,24 +114,67 @@ body {
 }
 
 #main_content{
+    /* I gave this class the grid-area main_content
+    for it to be recognized from the grid_wrap I used on all the body */
     grid-area: "main_content";
 }
 
 
 /* flexbox for header */
 .logo_nav_wrap{
+    /* I wrapped the logo and the nav-bar in a div
+    using this class so that they count as 1 element for the flex
+    I also set the display to inline-flex + flex-flow row wrap
+     because I want the logo to be displayed next to the navigation bar
+     and I want the logo and the nav-bar (a row)
+     I also want the items to start on the left of the page (flex-start) */
     display:inline-flex;
-    flex-flow:row nowrap;
+    flex-flow:row wrap;
     align-items: flex-start;
 }
 
 #nav_bar{
+    /* the nav-bar has z-index 3 because I want it to be displayed on top of the
+    fadeIn animation so that it is clickable(it wasnt before) */
     z-index: 3;
-    margin: auto;
+    margin:0 auto 0 auto;
+}
+
+
+#nav_bar>ul{
+    /* makes the direct nav_bar descendant a flexbox
+    and its contents (the nav_bar>ul>li ) are displayed 
+    horizontally not vertically */
+    display: flex;
 }
 
 
 
+#top_footer{
+    /* makes the content wrapped around the top_footer wrapper
+    (all footer elements above the hr) be displayed in a row 
+    adding equal space between them */
+    display: flex;
+    justify-content: space-between;
+}
+
+#social_list{
+    /* makes it so that there is
+    even space between our social media icons
+    in the footer */
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#bottom_footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+/* THE WRAPPERS FOR EXC 3 END HERE */
 
 
 
@@ -137,14 +189,6 @@ body {
 }
 
 
-#nav_bar>ul li {
-    /* all the list elements that are inside of the direct child of the nav-bar container
-    are displayed as inline blocks(inline elements thar
-     retain block's ability to space from other blocks)
-     So that the list elements are displayed one next to the other */
-    display: inline-block;
-}
-
 
 
 #nav_bar a {
@@ -152,8 +196,10 @@ body {
     applies black color and changes font-weight +font-size
     the display:block makes it so that the element takes up all the space of its father
     -->the link can be clicked easier
+    + a bit of padding for better spacing between the links
     */
     display: block;
+    padding:0.4em;
     text-decoration: none;
     color: var(--smoky-black);
     font-size: x-large;
@@ -192,16 +238,17 @@ body {
     gives it a bit of padding and color */
     display: none;
     position: absolute;
-    padding: 5px;
     background-color: var(--nav-color);
 
 }
 
 .drop-down-1:hover .sub-menu-1 {
     /* when I hover over the categories list element which has the drop-down class
-    then the sub-menu-1 class element that is a successor of the drop-down-1 element will reapear and take
-    up a block of space */
-    display: block;
+    then the sub-menu-1 class element that is a successor of the drop-down-1 
+    element will reapear  one next to the other because display flex
+    makes the .submenu-1 list elements have an automatic flex-direction of row
+    so they will be displayed one next to the other */
+    display: flex;
 }
 
 .sub-menu-2 {
@@ -211,7 +258,7 @@ body {
     gives it a bit of padding and color */
     display: none;
     position: absolute;
-    padding: 5px;
+    left: 0;
     background-color: var(--nav-color);
 }
 
@@ -219,7 +266,7 @@ body {
     /* same logic as the drop-down-1 hover but for the second menu
     when I hover over a subcategory in the nav-bar -->its subcategories appear
     as a block element */
-    display: block;
+    display: flex;
 }
 
 /* for the header banner */
@@ -245,6 +292,11 @@ body {
     color all the way to the left 
     we use a banner in all our pages with different image and text.*/
     background-image: linear-gradient(to right, white, #bcd2e800);
+    display: flex;
+    flex-direction: row-reverse;
+    /* display flex so that I can set the flex-direction to row-reverse and 
+    make the h2 and the image move to the right easily
+    instead of using text align etc */
 }
 
 #header_banner img {
@@ -302,8 +354,10 @@ body {
     sticks at the bottom*/
     background-color: var(--footer-color);
     margin-top: auto;
-    grid-area:"main_footer" ;
+    grid-area:"main_footer";
 }
+
+
 
 #main_footer a {
     /* changes the decoration of the links in the footer */
@@ -313,14 +367,12 @@ body {
 
 #main_footer address a:hover {
     /* when you hover over the anchor tags of the address 
-    element in the footer it gets a bit bolder */
-    font-weight: 500;
+    element in the footer it changes color and
+    it does so smoothly with the transition propery */
+    color:var(--article-color);
+    transition: all 150ms ease-in;
 }
 
-#main_footer address a:active {
-    /* if i click an adress element it increases in size for a moment */
-    font-size: 1.2em;
-}
 
 #news_letter form {
     font-weight: 800;
@@ -375,12 +427,18 @@ body {
 
 
 .footer_img {
-    /* alk the images in the footer are given this class
+    /* all the images in the footer are given this class
     --> specific size */
     height: 50px;
     width: 50px;
 }
 
+#main_footer>p{
+    /* makes the copyright claim at the
+    bottom of the footer stand out */
+    font-weight: 600;
+    color: var(--header-text);
+}
 
 
 /* ----------------------------General Styling ends here----------------------- */
@@ -724,6 +782,7 @@ body {
     width: 300px;
     border-radius: 10px;
 }
+
 
 
 
