@@ -167,10 +167,26 @@ body {
 }
 
 #bottom_footer{
+    /* the bottom part of the footer
+    is displayed in one row with the
+    copyright fully on the left and
+    the newsletter fully on the right */
     display: flex;
     justify-content: space-between;
 }
 
+#total_form{
+    /* the 2 parts of the form are
+    displayed one next to the other
+    they cannot fold if the screen
+    shrinks (nowrap) and they are
+    aligned at the center both 
+    at the vertical and the cross axis */
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+}
 
 
 
