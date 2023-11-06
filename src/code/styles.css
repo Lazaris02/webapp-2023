@@ -189,6 +189,16 @@ body {
     justify-content: flex-end;
 }
 
+/* index wrappers */
+.intro_info{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+}
+
+
+
 
 /* contactus wrappers */
 #total_form {
@@ -500,10 +510,14 @@ body {
     /* can display list elements(paragraph like structure list elements) one next to another
     also gives them color a border radius and all their text is aligned to the center of the 
     list element */
+    /* added some margin and padding for the flex-box
+    makes them more visually appealing */
     display: inline-block;
     background-color: var(--article-color);
     border-radius: 30px;
     text-align: center;
+    padding: 1.2em;
+    margin:1.2em;
 }
 
 #intro_section .intro_info h3 {
@@ -523,6 +537,23 @@ body {
     max-width: 250px;
     padding: 5px;
 }
+
+#intro_section h2,
+#intro_section p{
+    text-align: center;
+}
+
+#intro_section>p{
+    /* the intro paragraph is
+    uppercase which makes it distinguishable
+    also has a bit of padding and margin
+    for better visual effect */
+    padding: 20px;
+    margin: 2em;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
 
 
 
