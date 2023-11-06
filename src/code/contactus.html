@@ -10,6 +10,7 @@
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="Thodoris, Antzi">
 
+    <link rel="icon" type="image/x-icon" href="../resources/logo-no-background.png">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
 
@@ -51,14 +52,24 @@
 
 
     <main>
+        <div id="form_description">
+            <h2>Talk to us!</h2>
+            <p>Give us your personal information and a thorough description of the problem
+                and we will get back to you within a few days. Our reply will be sent to the Email
+                you will fill in the form , so you should double check that it is the correct one!
+            </p>
+            <img src="../resources/contactus/contactus_img.png" alt="form_img">
+        </div>
         <form action="" method="post" id="help_form" name="help_form">
+
+
             <fieldset>
                 <legend>Customer Details</legend>
                 <label for="name">Name:</label>
-                <input type="text" name="name" id="name" size="30" required>
+                <input type="text" name="name" id="name" maxlength="30" required>
 
                 <label for="surname">Surname:</label>
-                <input type="text" name="surname" id="surname" size="30" required>
+                <input type="text" name="surname" id="surname" maxlength="30" required>
 
                 <label for="email">Email:</label>
                 <input type="email" name="email" id="email" required>
@@ -95,6 +106,14 @@
             <!-- Logo+SiteName Section -->
             <h2>Find</h2>
             <img class="footer_img" src="../resources/logo-no-background.png" alt="our Logo">
+        </div>
+
+        <div id="news_letter">
+            <form action="" method="post">
+                <label for="news-letter">Our Newsletter:</label>
+                <input type="email" id="news-letter" name="news-letter" placeholder="Enter your Email" required>
+                <button type="submit">Subscribe</button>
+            </form>
         </div>
 
         <div>
