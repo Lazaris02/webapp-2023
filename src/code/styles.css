@@ -74,13 +74,7 @@ ul {
 
 
 body {
-    /* I set display flex + flex-direction colum so that I make the body container
-    (parent of my footer) a flexbox  so that I can set the footer margin-top:auto and
-    stick the footer at the bottom of the page* The margin auto makes it so that the footer constantly
-    has maximum margin space from its previous sibling*/
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
+    /* gives the whole body this nice gradient blueish color */
     background-image: linear-gradient(var(--nav-color), var(--body-mid), var(--nav-color));
 }
 
@@ -89,19 +83,25 @@ body {
 /* NEWLY ADDED WRAPPERS FOR EXC3++ */
 
 
-#grid_wrap{
+#grid_wrap {
     /* this is the wrapper of the body sections of 
     our html code that will be used to set the
     general layout of our pages */
+    /*  I can set the footer margin-top:auto and 
+    with min-height 100vh on the parent of the footer I can
+    stick the footer at the bottom of the page* 
+    The margin auto makes it so that the footer constantly
+    has maximum margin space */
+    min-height: 100vh;
     display: grid;
     gap: 50px;
     grid-template-areas:
-    "main_header"
-    "main_content"
-    "main_footer";
+        "main_header"
+        "main_content"
+        "main_footer";
 }
 
-#main_header{
+#main_header {
     /* I have named this area for the grid-template-areas
     so that the grid wrap can identify it
     display flex+column wrap is because I want vertical
@@ -110,10 +110,10 @@ body {
     grid-area: "main_header";
     display: flex;
     flex-flow: column wrap;
-    
+
 }
 
-#main_content{
+#main_content {
     /* I gave this class the grid-area main_content
     for it to be recognized from the grid_wrap I used on all the body */
     grid-area: "main_content";
@@ -121,27 +121,26 @@ body {
 
 
 /* flexbox for header */
-.logo_nav_wrap{
+.logo_nav_wrap {
     /* I wrapped the logo and the nav-bar in a div
     using this class so that they count as 1 element for the flex
     I also set the display to inline-flex + flex-flow row wrap
      because I want the logo to be displayed next to the navigation bar
      and I want the logo and the nav-bar (a row)
      I also want the items to start on the left of the page (flex-start) */
-    display:inline-flex;
-    flex-flow:row wrap;
-    align-items: flex-start;
+    display: flex;
+    flex-flow: column wrap;
 }
 
-#nav_bar{
+#nav_bar {
     /* the nav-bar has z-index 3 because I want it to be displayed on top of the
     fadeIn animation so that it is clickable(it wasnt before) */
     z-index: 3;
-    margin:0 auto 0 auto;
+    margin: auto;
 }
 
 
-#nav_bar>ul{
+#nav_bar>ul {
     /* makes the direct nav_bar descendant a flexbox
     and its contents (the nav_bar>ul>li ) are displayed 
     horizontally not vertically */
@@ -150,7 +149,7 @@ body {
 
 
 
-#top_footer{
+#top_footer {
     /* makes the content wrapped around the top_footer wrapper
     (all footer elements above the hr) be displayed in a row 
     adding equal space between them */
@@ -158,7 +157,7 @@ body {
     justify-content: space-between;
 }
 
-#social_list{
+#social_list {
     /* makes it so that there is
     even space between our social media icons
     in the footer */
@@ -166,27 +165,45 @@ body {
     justify-content: space-evenly;
 }
 
-#bottom_footer{
-    /* the bottom part of the footer
-    is displayed in one row with the
-    copyright fully on the left and
-    the newsletter fully on the right */
+.middle_footer {
+    /* I wrapped the logo and the 
+    newsletter together so I can positon them
+    relative to each other  as a column with max space between them
+    vertically , position relative is so that the logo
+    with position absolute sticks to the top of this container */
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
 }
 
-#total_form{
+
+
+#bottom_footer {
+    /* the bottom part of the footer
+    is displayed in one row(default) with the
+    copyright fully on the right
+     */
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/* contactus wrappers */
+#total_form {
     /* the 2 parts of the form are
     displayed one next to the other
     they cannot fold if the screen
     shrinks (nowrap) and they are
     aligned at the center both 
-    at the vertical and the cross axis */
+    at the normal and the cross axis */
     display: flex;
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
 }
+
 
 
 
@@ -215,7 +232,7 @@ body {
     + a bit of padding for better spacing between the links
     */
     display: block;
-    padding:0.4em;
+    padding: 0.4em;
     text-decoration: none;
     color: var(--smoky-black);
     font-size: x-large;
@@ -339,8 +356,10 @@ body {
 /* ------------------Styling the logo----------------*/
 
 .logo {
-    /* so that it can be placed next to other elements if I want it to */
-    display: inline-block;
+    /* removes it from the regular flow
+    considered as background-doesn't affect main flow elements */
+    position: absolute;
+    top: 0;
 }
 
 
@@ -370,7 +389,7 @@ body {
     sticks at the bottom*/
     background-color: var(--footer-color);
     margin-top: auto;
-    grid-area:"main_footer";
+    grid-area: "main_footer";
 }
 
 
@@ -385,7 +404,7 @@ body {
     /* when you hover over the anchor tags of the address 
     element in the footer it changes color and
     it does so smoothly with the transition propery */
-    color:var(--article-color);
+    color: var(--article-color);
     transition: all 150ms ease-in;
 }
 
@@ -449,13 +468,18 @@ body {
     width: 50px;
 }
 
-#main_footer>p{
+#main_footer>p {
     /* makes the copyright claim at the
     bottom of the footer stand out */
     font-weight: 600;
     color: var(--header-text);
 }
 
+.contact_details {
+    /* adds a bit of left margin on the contact-details
+    of the footer */
+    margin-left: 0.4em;
+}
 
 /* ----------------------------General Styling ends here----------------------- */
 
@@ -648,7 +672,7 @@ body {
 .drop-down-categories a:active {
     /* when I click on one of the links of the the category menu its font-size is 
     increased  */
-    font-weight:600;
+    font-weight: 600;
 }
 
 .disappear>p {
