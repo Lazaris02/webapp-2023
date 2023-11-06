@@ -626,12 +626,20 @@ main > img{
 }
 
 #team_arc section{
+    /* customizing the sections of the team members' description */
     clear: left;
     background-color: var(--article-color);
-    border:1px solid black;
-    display: block;
-    border-radius: 8px;
+    border-radius: 30px;
+    height: 300px;
+    width: 600px;
+}
 
+#team_arc section > h3{
+    text-align: center;
+    font-weight: 800;
+    font-size: larger;
+    color: var(--smoky-black);
+    text-transform: uppercase;
 }
 
 #team_arc section img{
