@@ -694,25 +694,31 @@ body {
 
 
 
+
 main>img {
+  /* size and display of the image at the top */
     width: auto;
     height: 150px;
     display: block;
     margin: auto;
 }
 
-#house_ad,
-#car_sales {
+
+#house_ad {
+    /* making the first ad of house sales which is the one that we have with more detail not look like a link*/
     text-decoration: none;
     color: black;
 }
 
+
 .ad {
+     /* customizing the ads */
     padding-bottom: 50px;
-    background-color: rgba(250, 250, 250, 0.408);
-    border: 1px solid black;
+    background-color: var(--article-color);
+    border:1px solid black;
     border-radius: 8px;
     margin-bottom: 10px;
+    display: block;
 }
 
 .ad img {
@@ -733,12 +739,13 @@ main>img {
     /*makes the list show horizontally*/
 }
 
-.ad {
-    display: block;
-}
+
+
+
 
 .ad:hover {
-    box-shadow: 5px 5px 10px #727070;
+     /* gives an effect of shadow when the cursor is on an ad */
+    box-shadow: 5px 5px 10px  var(--hover-shadow);
 }
 
 .ad div>img {
@@ -754,13 +761,11 @@ main>img {
 
 /* ----------------------------Styling for about_us html---------------------------- */
 
-/* I have still to play with the photos and the descriptions of the team */
-
-
 
 
 
 #find_arc h2 {
+  /* I have still to play with the photos and the descriptions of the team */
     font-size: 35px;
 }
 
@@ -773,15 +778,48 @@ main>img {
     font-size: 35px;
 }
 
+
 #team_arc section {
+  /* customizing the sections of the team members' description */
     clear: left;
+    background-color: var(--article-color);
+    border-radius: 30px;
+    height: 300px;
+    width: 600px;
 }
 
+#team_arc section > h3{
+    text-align: center;
+    font-weight: 800;
+    font-size: larger;
+    color: var(--smoky-black);
+    text-transform: uppercase;
+}
+
+#team_arc section img{
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
 
 /* ----------------------------Styling for house_sales_details html---------------------------- */
 
+
+#house_ad_main{
+    /* gives size to the main photo of the ad */
+    width: 350px;
+    height: 200px;
+}
+
+.house_ad{
+    /* goves size to the others photos of the ad */
+    width: 200px;
+    height: 100px;
+}
+
+
 .house_ad:hover {
-    box-shadow: 5px 5px 10px #727070;
+    box-shadow: 5px 5px 10px  var(--hover-shadow);
 }
 
 .AH-001>div>img {
@@ -794,7 +832,9 @@ main>img {
 
 }
 
+
 .ul_basics li {
+   /* customizing the list of the main characteristics of the apartment */
     padding: 10px;
     display: inline-block;
     /*makes the list show horizontally*/
@@ -812,16 +852,18 @@ main>img {
     clear: both;
 }
 
+
 .AH-001 table {
+  /* customizing the table with the infos */
     table-layout: fixed;
     width: 80%;
     border: 1px solid;
     border-collapse: collapse;
 }
 
-.AH-001 tr,
-th {
-    /* border-bottom: 1px solid #ddd; */
+
+.AH-001 tr, th {
+  /* border-bottom: 1px solid #ddd; */
     border: 1px solid;
     text-align: center;
     border-bottom: 1px solid #ddd;
@@ -830,14 +872,24 @@ th {
 }
 
 .AH-001 tr:nth-child(even) {
+    /* gives the rows og the table with even number a specific color */
     background-color: #f2f2f2;
 }
 
 .AH-001 tr:nth-child(odd) {
+    /* gives the rows of the table with odd number a specific color */
     background-color: #f2f2f2c5;
 }
 
-.AH-001 table>caption {
+
+.AH-001 tr > th:first-child{
+    /* customizing the left column of the table */
+    color: var(--header-text);
+    font-weight: 500;
+}
+
+
+.AH-001 table > caption {
     text-decoration: underline;
 }
 
@@ -849,14 +901,19 @@ th {
     padding-left: 40px;
 }
 
-.no {
+
+
+.no{
+    /* gives to some elements of the list a custom bullet point */
     list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23000000"><path d="m13.41 12 6.29-6.29c.94-.94-.48-2.35-1.41-1.41L12 10.59 5.71 4.3c-.93-.93-2.35.48-1.41 1.41L10.59 12 4.3 18.29c-.94.94.48 2.35 1.41 1.41L12 13.41c6.12 6.12 6.74 7.26 7.71 6.29a.996.996 0 0 0 0-1.41L13.42 12Z"></path></svg>');
 }
 
-.properties:not(.no) {
+.properties:not(.no){
+    /* gives to all the othes elements of that list a custom bullet point */
     list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23000000"><path d="M9 19c-.26 0-.51-.1-.71-.29l-6-6A.996.996 0 1 1 3.7 11.3l5.29 5.29L20.28 5.3a.996.996 0 1 1 1.41 1.41l-12 12c-.2.2-.45.29-.71.29Z"></path></svg>');
 }
 
 .properties li::marker {
+  /* making that custom bullet point bigger */
     font-size: 2em;
 }
