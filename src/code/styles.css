@@ -135,7 +135,7 @@ body {
 #nav_bar {
     /* the nav-bar has z-index 3 because I want it to be displayed on top of the
     fadeIn animation so that it is clickable(it wasnt before) */
-    z-index: 3;
+    z-index: 2;
     margin: auto;
 }
 
