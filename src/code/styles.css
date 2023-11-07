@@ -189,7 +189,7 @@ body {
 }
 
 /* index wrappers */
-.intro_info{
+.intro_info {
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -200,6 +200,7 @@ body {
 
 
 /* contactus wrappers */
+
 #total_form {
     /* the 2 parts of the form are
     displayed one next to the other
@@ -214,7 +215,46 @@ body {
 }
 
 
+.index_nav_2>ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: minmax(100px, auto);
+    justify-items: center;
+}
 
+#news_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+}
+
+#news_section>* {
+    /* I give all the articles in
+    the news-section a bit of top and bottom margin */
+    margin: 1em 0 2em 0;
+}
+
+#news_section>h2 {
+    /* the h2 will take up a whole row
+    of space*/
+    grid-column: 1/-1;
+
+}
+
+
+/* categories wrappers */
+
+#categories-nav>ul {
+    /* makes the categories nav a flex-box
+    sets display wrap so that it can wrap if
+    the screen gets too small
+    and it also aligns all the items in the center both vertically
+    and horizontally */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
 
 /* THE WRAPPERS FOR EXC 3 END HERE */
 
@@ -522,7 +562,7 @@ body {
     border-radius: 30px;
     text-align: center;
     padding: 1.2em;
-    margin:1.2em;
+    margin: 1.2em;
 }
 
 #intro_section .intro_info h3 {
@@ -544,11 +584,11 @@ body {
 }
 
 #intro_section h2,
-#intro_section p{
+#intro_section p {
     text-align: center;
 }
 
-#intro_section>p{
+#intro_section>p {
     /* the intro paragraph is
     uppercase which makes it distinguishable
     also has a bit of padding and margin
@@ -572,8 +612,8 @@ body {
     background-color: var(--article-color);
     text-align: center;
     border-radius: 30px;
-    height: 400px;
-    width: 400px;
+    max-height: 400px;
+    max-width: 400px;
     padding: 0.5em;
 }
 
@@ -611,6 +651,12 @@ body {
     width: 300px;
 }
 
+.index_nav_2>ul>li {
+    /* adds a bit of bottom margin in the list items
+    of the second  nav in index*/
+    margin: 2em 0 2em 0;
+}
+
 
 
 /* ----------------------------Styling for Index.html ends here----------------------- */
@@ -623,12 +669,12 @@ body {
     the absolute position will position these items relative to the first non static position
     predecessor. I also give it border-box property for it to have a total height and 
     width of 250px including padding margin and all its contents.*/
-    display: inline-block;
     position: relative;
     box-sizing: border-box;
     height: 250px;
     width: 250px;
     border-radius: 10px;
+    margin: 2em;
 }
 
 #categories-nav img {
@@ -639,7 +685,7 @@ body {
     position: absolute;
     border-radius: 10px;
     z-index: -1;
-    opacity: 50%;
+    opacity: 60%;
 }
 
 
@@ -666,8 +712,12 @@ body {
     /* The styling of the titles of the secondary nav menu
     it affects the text size color and weight  the absolute position
     removes the title from the main flow so that it doesnt increase the size of the container and
-    doesnt move the other li items in a weird way.*/
+    doesnt move the other li items in a weird way.Also it is
+     given left+translate(-50%) for it to be centered 
+    in the container horizontally*/
     position: absolute;
+    left: 50%;
+    transform: translate(-50%);
     font-size: x-large;
     font-weight: 500;
     color: var(--smoky-black);
@@ -677,11 +727,14 @@ body {
 #categories-nav>ul>li:hover .drop-down-categories {
     /* when I hover over the direct child li item of the direct ul child 
     of the categories nav-bar (namely the box-like thing in our page) the subcategories of
-    the category displayed appear in the center of the category box*/
+    the category displayed appear in the center of the category box.Also it
+    is given left+top+translate() for it to be centered 
+    in the container in both axis*/
     display: block;
     position: absolute;
-    right: 30%;
-    bottom: 30%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .drop-down-categories a {
@@ -714,14 +767,15 @@ body {
 .disappear>p {
     /* the p that is the direct child of the disappear class ("Discover" text)
     is styled (black text font-size,font-weight) and positioned with
-    the position absolute and given right and bottom property so that
-    I can center it in the middle of the list element  */
+    the position absolute and given left+top+translate() for it to be centered 
+    in the container in both axis  */
     position: absolute;
     color: var(--smoky-black);
     font-size: x-large;
     font-weight: 600;
-    right: 30%;
-    bottom: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #categories-nav>ul>li:hover .disappear>p {
@@ -872,7 +926,7 @@ body {
 
 
 main>img {
-  /* adjusting the image on the top of the page */
+    /* adjusting the image on the top of the page */
     width: auto;
     height: 150px;
     display: block;
@@ -888,10 +942,10 @@ main>img {
 
 
 .ad {
-     /* customizing the appereance of the ads */
+    /* customizing the appereance of the ads */
     padding-bottom: 50px;
     background-color: var(--article-color);
-    border:1px solid black;
+    border: 1px solid black;
     border-radius: 8px;
     margin-bottom: 10px;
     display: block;
@@ -923,8 +977,8 @@ main>img {
 
 
 .ad:hover {
-     /* gives an effect of shadow when the cursor is on an ad */
-    box-shadow: 5px 5px 10px  var(--hover-shadow);
+    /* gives an effect of shadow when the cursor is on an ad */
+    box-shadow: 5px 5px 10px var(--hover-shadow);
 }
 
 .ad div>img {
@@ -947,7 +1001,7 @@ main>img {
 
 
 #find_arc h2 {
-  /* makes the size of the h2's glyphs bigger on the article find_arc */
+    /* makes the size of the h2's glyphs bigger on the article find_arc */
     font-size: 35px;
 }
 
@@ -964,7 +1018,7 @@ main>img {
 
 
 #team_arc section {
-  /* customizing the sections of the team members' description */
+    /* customizing the sections of the team members' description */
     clear: left;
     background-color: var(--article-color);
     border-radius: 30px;
@@ -972,7 +1026,7 @@ main>img {
     width: 600px;
 }
 
-#team_arc section > h3{
+#team_arc section>h3 {
     /* customizing the h3 of the sections in the team_arc article */
     text-align: center;
     font-weight: 800;
@@ -981,7 +1035,7 @@ main>img {
     text-transform: uppercase;
 }
 
-#team_arc section img{
+#team_arc section img {
     /* adjusting the size of images of the member teams and make them appear round */
     width: 250px;
     height: 250px;
@@ -991,13 +1045,13 @@ main>img {
 /* ----------------------------Styling for house_sales_details html---------------------------- */
 
 
-#house_ad_main{
+#house_ad_main {
     /* adjusting the size of the main photo of the ad */
     width: 350px;
     height: 200px;
 }
 
-.house_ad{
+.house_ad {
     /* adjusting the size of the others photos of the ad */
     width: 200px;
     height: 100px;
@@ -1006,7 +1060,7 @@ main>img {
 
 .house_ad:hover {
     /* gives an effect of shadow when the cursor in on any image of the ad */
-    box-shadow: 5px 5px 10px  var(--hover-shadow);
+    box-shadow: 5px 5px 10px var(--hover-shadow);
 }
 
 .AH-001>div>img {
@@ -1025,7 +1079,7 @@ main>img {
 
 
 .ul_basics li {
-   /* customizing the list of the main characteristics of the apartment */
+    /* customizing the list of the main characteristics of the apartment */
     padding: 10px;
     display: inline-block;
     /*makes the list show horizontally*/
@@ -1048,7 +1102,7 @@ main>img {
 
 
 .AH-001 table {
-  /* customizing the table with the infos */
+    /* customizing the table with the infos */
     table-layout: fixed;
     width: 80%;
     border: 1px solid;
@@ -1056,7 +1110,8 @@ main>img {
 }
 
 
-.AH-001 tr, th {
+.AH-001 tr,
+th {
     /* customizing the content of the table */
     border: 1px solid;
     text-align: center;
@@ -1076,14 +1131,14 @@ main>img {
 }
 
 
-.AH-001 tr > th:first-child{
+.AH-001 tr>th:first-child {
     /* customizing the left column of the table */
     color: var(--header-text);
     font-weight: 500;
 }
 
 
-.AH-001 table > caption {
+.AH-001 table>caption {
     /* underlines the word "Features" */
     text-decoration: underline;
 }
@@ -1101,17 +1156,17 @@ main>img {
 
 
 
-.no{
+.no {
     /* gives to some elements of the list a custom bullet point */
     list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23000000"><path d="m13.41 12 6.29-6.29c.94-.94-.48-2.35-1.41-1.41L12 10.59 5.71 4.3c-.93-.93-2.35.48-1.41 1.41L10.59 12 4.3 18.29c-.94.94.48 2.35 1.41 1.41L12 13.41c6.12 6.12 6.74 7.26 7.71 6.29a.996.996 0 0 0 0-1.41L13.42 12Z"></path></svg>');
 }
 
-.properties:not(.no){
+.properties:not(.no) {
     /* gives to all the othes elements of that list a custom bullet point */
     list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23000000"><path d="M9 19c-.26 0-.51-.1-.71-.29l-6-6A.996.996 0 1 1 3.7 11.3l5.29 5.29L20.28 5.3a.996.996 0 1 1 1.41 1.41l-12 12c-.2.2-.45.29-.71.29Z"></path></svg>');
 }
 
 .properties li::marker {
-  /* making that custom bullet point bigger */
+    /* making that custom bullet point bigger */
     font-size: 2em;
 }
