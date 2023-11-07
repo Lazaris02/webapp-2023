@@ -233,6 +233,14 @@ body {
 }
 
 
+#nav_bar>ul li {
+    /* all the list elements that are inside of the direct child of the nav-bar container
+    are displayed as inline blocks(inline elements thar
+     retain block's ability to space from other blocks)
+     So that the list elements are displayed one next to the other */
+    display: inline-block;
+}
+
 
 
 #nav_bar a {
@@ -240,7 +248,7 @@ body {
     applies black color and changes font-weight +font-size
     the display:block makes it so that the element takes up all the space of its father
     -->the link can be clicked easier
-    + a bit of padding for better spacing between the links
++ a bit of padding for better spacing between the links
     */
     display: block;
     padding: 0.4em;
@@ -284,6 +292,7 @@ body {
     banner so that is clickable when the animation starts*/
     display: none;
     position: absolute;
+    padding: 5px;
     background-color: var(--nav-color);
     z-index: 2;
 
@@ -308,7 +317,7 @@ body {
     left: 0;
     background-color: var(--nav-color);
     z-index: 2;
-}
+    }
 
 .drop-down-2:hover .sub-menu-2 {
     /* same logic as the drop-down-1 hover but for the second menu
@@ -405,7 +414,7 @@ body {
     background-color: var(--footer-color);
     margin-top: auto;
     grid-area: "main_footer";
-}
+    }
 
 
 
@@ -515,7 +524,7 @@ body {
     /* can display list elements(paragraph like structure list elements) one next to another
     also gives them color a border radius and all their text is aligned to the center of the 
     list element */
-    /* added some margin and padding for the flex-box
+/* added some margin and padding for the flex-box
     makes them more visually appealing */
     display: inline-block;
     background-color: var(--article-color);
