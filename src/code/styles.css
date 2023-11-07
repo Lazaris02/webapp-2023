@@ -94,7 +94,7 @@ body {
     has maximum margin space */
     min-height: 100vh;
     display: grid;
-    gap: 50px;
+    gap: 20px;
     grid-template-areas:
         "main_header"
         "main_content"
@@ -133,9 +133,7 @@ body {
 }
 
 #nav_bar {
-    /* the nav-bar has z-index 3 because I want it to be displayed on top of the
-    fadeIn animation so that it is clickable(it wasnt before) */
-    z-index: 2;
+    /* centers the nav-bar in the middle of the page */
     margin: auto;
 }
 
@@ -145,6 +143,7 @@ body {
     and its contents (the nav_bar>ul>li ) are displayed 
     horizontally not vertically */
     display: flex;
+    flex-wrap: wrap;
 }
 
 
@@ -278,10 +277,13 @@ body {
     /* makes the categories menu invisible 
     sets the position to absolute so that it doesn't move 
     other elements when it reappears
-    gives it a bit of padding and color */
+    gives it a bit of padding and color 
+    z-index makes it place on top of the header
+    banner so that is clickable when the animation starts*/
     display: none;
     position: absolute;
     background-color: var(--nav-color);
+    z-index: 2;
 
 }
 
@@ -303,6 +305,7 @@ body {
     position: absolute;
     left: 0;
     background-color: var(--nav-color);
+    z-index: 2;
 }
 
 .drop-down-2:hover .sub-menu-2 {
