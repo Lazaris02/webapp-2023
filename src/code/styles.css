@@ -696,7 +696,7 @@ body {
 
 
 main>img {
-  /* size and display of the image at the top */
+  /* adjusting the image on the top of the page */
     width: auto;
     height: 150px;
     display: block;
@@ -705,14 +705,14 @@ main>img {
 
 
 #house_ad {
-    /* making the first ad of house sales which is the one that we have with more detail not look like a link*/
+    /* making the first ad of house sales, which is the one that we have with more detail, not look like a link*/
     text-decoration: none;
     color: black;
 }
 
 
 .ad {
-     /* customizing the ads */
+     /* customizing the appereance of the ads */
     padding-bottom: 50px;
     background-color: var(--article-color);
     border:1px solid black;
@@ -722,6 +722,8 @@ main>img {
 }
 
 .ad img {
+    /* giving shape to the images of every ad and let them float on the left
+       so that the description of every ad can appear on the right*/
     border-radius: 8px;
     /*makes the shape rounder*/
     width: 350px;
@@ -730,13 +732,14 @@ main>img {
 }
 
 .ad h2 {
+    /* gives some space to make the ads appear more evenly overall */
     padding: 10px;
 }
 
 .ad li {
+    /* make the list of basic info appear horizontally */
     padding: 10px;
     display: inline-block;
-    /*makes the list show horizontally*/
 }
 
 
@@ -749,11 +752,14 @@ main>img {
 }
 
 .ad div>img {
+    /* adjusting the size of the image which show if the price has increased or decreased */
     width: 50px;
     height: 50px;
 }
 
 .ad div>h3 {
+    /* makes the price to float on the left so that the image of the price and the date of publication
+       can appear on the right of the same line */
     float: left;
 }
 
@@ -765,15 +771,17 @@ main>img {
 
 
 #find_arc h2 {
-  /* I have still to play with the photos and the descriptions of the team */
+  /* makes the size of the h2's glyphs bigger on the article find_arc */
     font-size: 35px;
 }
 
 #team_arc img {
+    /* makes the image on the article team_arc float to the left so the paragraph can appear on the right and "hug" the photo */
     float: left;
 }
 
 #team_arc h2 {
+    /* makes  the h2 of the team_arc article appear in the center and the size of the glyphs bigger*/
     text-align: center;
     font-size: 35px;
 }
@@ -789,6 +797,7 @@ main>img {
 }
 
 #team_arc section > h3{
+    /* customizing the h3 of the sections in the team_arc article */
     text-align: center;
     font-weight: 800;
     font-size: larger;
@@ -797,6 +806,7 @@ main>img {
 }
 
 #team_arc section img{
+    /* adjusting the size of images of the member teams and make them appear round */
     width: 250px;
     height: 250px;
     border-radius: 50%;
@@ -806,28 +816,33 @@ main>img {
 
 
 #house_ad_main{
-    /* gives size to the main photo of the ad */
+    /* adjusting the size of the main photo of the ad */
     width: 350px;
     height: 200px;
 }
 
 .house_ad{
-    /* goves size to the others photos of the ad */
+    /* adjusting the size of the others photos of the ad */
     width: 200px;
     height: 100px;
 }
 
 
 .house_ad:hover {
+    /* gives an effect of shadow when the cursor in on any image of the ad */
     box-shadow: 5px 5px 10px  var(--hover-shadow);
 }
 
 .AH-001>div>img {
+    /* adjusting the size of the images that are direct childs of a div that are direct childs of the elements 
+       with the AH-001 class */
     width: 70px;
     height: 60px;
 }
 
 .AH-001>div>h3 {
+    /* makes the h3 that is a direct child of a div that is a direct child of the AH-001 float to the left in order for the image
+       to appear on the right of the same row */
     float: left;
 
 }
@@ -841,14 +856,17 @@ main>img {
 }
 
 .AH-001>section>h3 {
+    /* underliens the word "Description" */
     text-decoration: underline;
 }
 
 .views img {
+    /* lets the image of the eye float on the left so that the number of views can appear on its right */
     float: left;
 }
 
 .AH-001 section {
+    /* doesn't let the sections get affected by the floats */
     clear: both;
 }
 
@@ -863,16 +881,16 @@ main>img {
 
 
 .AH-001 tr, th {
-  /* border-bottom: 1px solid #ddd; */
+    /* customizing the content of the table */
     border: 1px solid;
     text-align: center;
     border-bottom: 1px solid #ddd;
     font-weight: normal;
-    /*unblod the words of the table*/
+    /*unbold the words of the table*/
 }
 
 .AH-001 tr:nth-child(even) {
-    /* gives the rows og the table with even number a specific color */
+    /* gives the rows of the table with even number a specific color */
     background-color: #f2f2f2;
 }
 
@@ -890,14 +908,18 @@ main>img {
 
 
 .AH-001 table > caption {
+    /* underlines the word "Features" */
     text-decoration: underline;
 }
 
 .no {
+    /* gives a line through the words of the list that are in the class .no
+       in order to show that this house doesn't have these features */
     text-decoration-line: line-through;
 }
 
 .properties {
+    /* gives some space to the left of the list elements so that the bullet points can appear */
     padding-left: 40px;
 }
 
