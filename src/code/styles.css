@@ -89,6 +89,11 @@ body {
 
 /*-------------------Styling the header-------------- */
 
+#nav_bar{
+    /* in order to center it a bit */
+    margin-left: 30%;
+}
+
 
 
 #nav_bar ul {
@@ -154,7 +159,7 @@ body {
     position: absolute;
     padding: 5px;
     background-color: var(--nav-color);
-
+    z-index: 3;
 }
 
 .drop-down-1:hover .sub-menu-1 {
@@ -173,6 +178,7 @@ body {
     position: absolute;
     padding: 5px;
     background-color: var(--nav-color);
+    z-index: 3;
 }
 
 .drop-down-2:hover .sub-menu-2 {
