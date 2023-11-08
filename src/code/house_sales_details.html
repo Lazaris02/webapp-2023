@@ -13,277 +13,274 @@
     <link rel="icon" type="image/x-icon" href="../resources/logo-no-background.png">
     <link rel="stylesheet" href="styles.css">
 
-
-    <!-- We also need to add:
-         The links to our css code
-         The links to our javascript code
-         The links to our google fonts here-->
 </head>
 
 <body>
-    <!-- The format we need to follow:
-        1)header:contains our logo and nav bar(same in every page)
-        3)main content of the page(differs in every page)
-        4)footer(same in every page) -->
+    <div id="grid_wrap">
+        <header id="main_header">
+            <div class="logo_nav_wrap">
+                <div class="logo">
+                    <h1>Find</h1>
+                    <img src="../resources/logo-no-background.png" alt="logo">
+                </div>
 
-    <header class="main_header">
-        <div class="logo">
-            <h1>Find</h1>
-            <img src="../resources/logo-no-background.png" alt="logo">
-        </div>
+                <nav id="nav_bar">
+                    <!-- Contains links to our other webpages -->
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
 
-        <nav id="nav_bar">
-            <!-- Contains links to our other webpages -->
-            <ul>
-                <li><a href="index.html">Home</a></li>
-
-                <li class="drop-down-1"><a href="categories.html">Categories</a>
-                    <ul class="sub-menu-1">
-                        <li class="drop-down-2"><a href="house_sales.html">House Sales</a>
-                            <ul class="sub-menu-2">
-                                <li><a href="house_sales_details.html" target="_blank">House Sale AH-001</a></li>
+                        <li class="drop-down-1"><a href="categories.html">Categories</a>
+                            <ul class="sub-menu-1">
+                                <li class="drop-down-2"><a href="house_sales.html">House Sales</a>
+                                    <ul class="sub-menu-2">
+                                        <li><a href="house_sales_details.html" target="_blank">House Sale AH-001</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="car_sales.html">Car Sales</a></li>
                             </ul>
                         </li>
-                        <li><a href="car_sales.html">Car Sales</a></li>
+
+                        <li><a href="aboutus.html">About us</a></li>
+
+                        <li><a href="contactus.html">Contact us</a></li>
                     </ul>
-                </li>
+                </nav>
+            </div>
 
-                <li><a href="aboutus.html">About us</a></li>
-
-                <li><a href="contactus.html">Contact us</a></li>
-            </ul>
-        </nav>
-
-    </header>
-
-    <hr>
-
-    <main class="sales_page AH-001">
-
-        <section>
-            <!-- Section for the images of the ad -->
-            <img id="house_ad_main" src="../resources/house_ad/house1.png" alt="image1">
-            <img class="house_ad" src="../resources/house_ad/house2.png" alt="image2">
-            <img class="house_ad" src="../resources/house_ad/house3.png" alt="image3">
-            <img class="house_ad" src="../resources/house_ad/house4.png" alt="image4">
-            <img class="house_ad" src="../resources/house_ad/house5.png" alt="image5">
-            <img class="house_ad" src="../resources/house_ad/house6.png" alt="image6">
-            <img class="house_ad" src="../resources/house_ad/house7.png" alt="image7">
-            <img class="house_ad" src="../resources/house_ad/house8.png" alt="image8">
-            <img class="house_ad" src="../resources/house_ad/house9.png" alt="image9">
-            <img class="house_ad" src="../resources/house_ad/house10.png" alt="image10">
-        </section>
-
-        <div>
-            <!-- Section for the basic info -->
-            <h2>Apartment, 105m&sup2;</h2>
-            <p>AH-001</p>
-            <p>Ano Kypseli, Attiki</p>
-        </div>
-
-        <div>
-            <h3>400,000€</h3>
-            <img id="price_house_ad" src="../resources/ad/price-increase.png" alt="price">
-        </div>
-
-
-        <ul class="ul_basics">
-            <li>2nd floor</li>
-            <li>2 bedrooms</li>
-            <li>1 bathroom</li>
-        </ul>
-
-        <section>
-            <!-- Section for the description of the house -->
-            <h3>Description</h3>
-            <p>Luxurious 105sqm 2nd floor apartment in Ano Kypseli Attica, built in 2023, with an excellent view of the
-                Acropolis.
-                It consists of 2 bedrooms, one master, living room, kitchen and 2 bathrooms.
-                It has aluminum frames with double glazing, security door, alarm, screens, awnings, solar water heater,
-                hidden lighting.
-                It is located 5 minutes from Psychiko and from the center of Athens with a car and is served by many
-                means of mass transport.</p>
-        </section>
-
-        <p>Published: 27/07/2023</p>
-
-        <div class="views">
-            <!-- Mini section for the views of the ad -->
-            <img src="../resources/ad/eye.png" alt="eye">
-            <p>1,857 views</p>
-        </div>
-
-        <table>
-            <caption>
-                <h3>Features</h3>
-            </caption>
-            <tr>
-                <th>Category</th>
-                <th>House Sale</th>
-            </tr>
-            <tr>
-                <th>Code</th>
-                <th>AH-001</th>
-            </tr>
-            <tr>
-                <th>Price</th>
-                <th>400,000€</th>
-            </tr>
-            <tr>
-                <th>Price per m&sup2;</th>
-                <th>3,809.52€</th>
-            </tr>
-            <tr>
-                <th>Surface</th>
-                <th>105m&sup2;</th>
-            </tr>
-            <tr>
-                <th>Surface</th>
-                <th>105m&sup2;</th>
-            </tr>
-            <tr>
-                <th>Levels</th>
-                <th>1</th>
-            </tr>
-            <tr>
-                <th>Floor</th>
-                <th>2nd</th>
-            </tr>
-            <tr>
-                <th>Kitchens</th>
-                <th>1</th>
-            </tr>
-            <tr>
-                <th>Bathrooms</th>
-                <th>1</th>
-            </tr>
-            <tr>
-                <th>Living Rooms</th>
-                <th>1</th>
-            </tr>
-            <tr>
-                <th>Heatind System</th>
-                <th>Autonomous</th>
-            </tr>
-            <tr>
-                <th>Energy Class</th>
-                <th>A+</th>
-            </tr>
-            <tr>
-                <th>Construction Year</th>
-                <th>2023</th>
-            </tr>
-            <tr>
-                <th>Levels</th>
-                <th>1</th>
-            </tr>
-            <tr>
-                <th>Availability</th>
-                <th>Available now</th>
-            </tr>
-            <tr>
-                <th>Contact Phone</th>
-                <th>+30 6987238723</th>
-            </tr>
-            <tr>
-                <th>Published</th>
-                <th>27/07/2023</th>
-            </tr>
-            <tr>
-                <th>Last Updated</th>
-                <th>10/10/2023</th>
-            </tr>
-
-        </table>
-
-        <section>
-            <!-- Section for more internal and external infos displayed in lists -->
-            <h3>Internal</h3>
-            <ul class="properties">
-                <li>Internal staircase</li>
-                <li>Floor type: Wood</li>
-                <li>Alarm</li>
-                <li>Airy</li>
-                <li class="no">Furnished</li>
-                <li class="no">Night power</li>
-                <li class="no">Playroom</li>
-                <li>Air condition</li>
-                <li>Pets welcome</li>
-                <li>Frames type: Aluminium</li>
-                <li>Painted</li>
-                <li class="no">Fireplace</li>
-                <li class="no">Storage space</li>
-                <li class="no">Satellite receiver</li>
-                <li>Solar water heating</li>
-                <li>Secure door</li>
-                <li>Window screens</li>
-                <li class="no">Elevator</li>
-                <li class="no">Underfloor heating</li>
-                <li class="no">Atic</li>
-            </ul>
-
-            <h3>External</h3>
-            <ul class="properties">
-                <li>Balcony</li>
-                <li>Facade</li>
-                <li class="no">Access for people with disabilities</li>
-                <li>Awning</li>
-                <li class="no">Parking space</li>
-                <li class="no">Swimming pool</li>
-                <li>View</li>
-                <li class="no">Garden</li>
-                <li class="no">Corner</li>
-            </ul>
-
-        </section>
-
-    </main>
-
-
-
-    <footer id="main_footer">
-
-        <div class="logo">
-            <!-- Logo+SiteName Section -->
-            <h2>Find</h2>
-            <img class="footer_img" src="../resources/logo-no-background.png" alt="our Logo">
-        </div>
-
-        <div id="news_letter">
-            <form action="#" method="post">
-                <label for="news-letter">Our Newsletter:</label>
-                <input type="email" id="news-letter" name="news-letter" placeholder="Enter your Email" required>
-                <button type="submit">Subscribe</button>
-            </form>
-        </div>
-
-        <div>
-            <!-- Section for Contact Details -->
-            <h2>Contact Details</h2>
-            <address>
-                <ul>
-                    <li><a href="mailto:lazaristheo@gmail.com">lazaristheo@gmail.com</a></li>
-                    <li><a href="tel:6987470962">6987470962</a> </li>
-                    <li><a href="contactus.html">Technical Support</a></li>
-                </ul>
-            </address>
-        </div>
-
-        <div>
-            <h2>Find us on Social Media</h2>
-
-            <a href="https://www.facebook.com/"><img class="footer_img" src="../resources/fb_logo.png"
-                    alt="fb_logo"></a>
-            <a href="https://www.instagram.com/"><img class="footer_img" src="../resources/insta_logo.png"
-                    alt="insta_logo"></a>
-            <a href="https://github.com/Lazaris02"><img class="footer_img" src="../resources/git_logo.png"
-                    alt="git_logo"></a>
-
-        </div>
+        </header>
 
         <hr>
-        <p>&copy;FIND.GR ALL RIGHTS RESERVED</p>
-    </footer>
+
+        <main id="main_content" class="sales_page AH-001">
+
+            <section>
+                <!-- Section for the images of the ad -->
+                <img id="house_ad_main" src="../resources/house_ad/house1.png" alt="image1">
+                <img class="house_ad" src="../resources/house_ad/house2.png" alt="image2">
+                <img class="house_ad" src="../resources/house_ad/house3.png" alt="image3">
+                <img class="house_ad" src="../resources/house_ad/house4.png" alt="image4">
+                <img class="house_ad" src="../resources/house_ad/house5.png" alt="image5">
+                <img class="house_ad" src="../resources/house_ad/house6.png" alt="image6">
+                <img class="house_ad" src="../resources/house_ad/house7.png" alt="image7">
+                <img class="house_ad" src="../resources/house_ad/house8.png" alt="image8">
+                <img class="house_ad" src="../resources/house_ad/house9.png" alt="image9">
+                <img class="house_ad" src="../resources/house_ad/house10.png" alt="image10">
+            </section>
+
+            <div>
+                <!-- Section for the basic info -->
+                <h2>Apartment, 105m&sup2;</h2>
+                <p>AH-001</p>
+                <p>Ano Kypseli, Attiki</p>
+            </div>
+
+            <div>
+                <h3>400,000€</h3>
+                <img id="price_house_ad" src="../resources/ad/price-increase.png" alt="price">
+            </div>
+
+
+            <ul class="ul_basics">
+                <li>2nd floor</li>
+                <li>2 bedrooms</li>
+                <li>1 bathroom</li>
+            </ul>
+
+            <section>
+                <!-- Section for the description of the house -->
+                <h3>Description</h3>
+                <p>Luxurious 105sqm 2nd floor apartment in Ano Kypseli Attica, built in 2023, with an excellent view of the
+                    Acropolis.
+                    It consists of 2 bedrooms, one master, living room, kitchen and 2 bathrooms.
+                    It has aluminum frames with double glazing, security door, alarm, screens, awnings, solar water heater,
+                    hidden lighting.
+                    It is located 5 minutes from Psychiko and from the center of Athens with a car and is served by many
+                    means of mass transport.</p>
+            </section>
+
+            <p>Published: 27/07/2023</p>
+
+            <div class="views">
+                <!-- Mini section for the views of the ad -->
+                <img src="../resources/ad/eye.png" alt="eye">
+                <p>1,857 views</p>
+            </div>
+
+            <table>
+                <caption>
+                    <h3>Features</h3>
+                </caption>
+                <tr>
+                    <th>Category</th>
+                    <th>House Sale</th>
+                </tr>
+                <tr>
+                    <th>Code</th>
+                    <th>AH-001</th>
+                </tr>
+                <tr>
+                    <th>Price</th>
+                    <th>400,000€</th>
+                </tr>
+                <tr>
+                    <th>Price per m&sup2;</th>
+                    <th>3,809.52€</th>
+                </tr>
+                <tr>
+                    <th>Surface</th>
+                    <th>105m&sup2;</th>
+                </tr>
+                <tr>
+                    <th>Surface</th>
+                    <th>105m&sup2;</th>
+                </tr>
+                <tr>
+                    <th>Levels</th>
+                    <th>1</th>
+                </tr>
+                <tr>
+                    <th>Floor</th>
+                    <th>2nd</th>
+                </tr>
+                <tr>
+                    <th>Kitchens</th>
+                    <th>1</th>
+                </tr>
+                <tr>
+                    <th>Bathrooms</th>
+                    <th>1</th>
+                </tr>
+                <tr>
+                    <th>Living Rooms</th>
+                    <th>1</th>
+                </tr>
+                <tr>
+                    <th>Heatind System</th>
+                    <th>Autonomous</th>
+                </tr>
+                <tr>
+                    <th>Energy Class</th>
+                    <th>A+</th>
+                </tr>
+                <tr>
+                    <th>Construction Year</th>
+                    <th>2023</th>
+                </tr>
+                <tr>
+                    <th>Levels</th>
+                    <th>1</th>
+                </tr>
+                <tr>
+                    <th>Availability</th>
+                    <th>Available now</th>
+                </tr>
+                <tr>
+                    <th>Contact Phone</th>
+                    <th>+30 6987238723</th>
+                </tr>
+                <tr>
+                    <th>Published</th>
+                    <th>27/07/2023</th>
+                </tr>
+                <tr>
+                    <th>Last Updated</th>
+                    <th>10/10/2023</th>
+                </tr>
+
+            </table>
+
+            <section>
+                <!-- Section for more internal and external infos displayed in lists -->
+                <h3>Internal</h3>
+                <ul class="properties">
+                    <li>Internal staircase</li>
+                    <li>Floor type: Wood</li>
+                    <li>Alarm</li>
+                    <li>Airy</li>
+                    <li class="no">Furnished</li>
+                    <li class="no">Night power</li>
+                    <li class="no">Playroom</li>
+                    <li>Air condition</li>
+                    <li>Pets welcome</li>
+                    <li>Frames type: Aluminium</li>
+                    <li>Painted</li>
+                    <li class="no">Fireplace</li>
+                    <li class="no">Storage space</li>
+                    <li class="no">Satellite receiver</li>
+                    <li>Solar water heating</li>
+                    <li>Secure door</li>
+                    <li>Window screens</li>
+                    <li class="no">Elevator</li>
+                    <li class="no">Underfloor heating</li>
+                    <li class="no">Atic</li>
+                </ul>
+
+                <h3>External</h3>
+                <ul class="properties">
+                    <li>Balcony</li>
+                    <li>Facade</li>
+                    <li class="no">Access for people with disabilities</li>
+                    <li>Awning</li>
+                    <li class="no">Parking space</li>
+                    <li class="no">Swimming pool</li>
+                    <li>View</li>
+                    <li class="no">Garden</li>
+                    <li class="no">Corner</li>
+                </ul>
+
+            </section>
+
+        </main>
+
+
+
+        <footer id="main_footer">
+            <div id="top_footer">
+                <div class="contact_details">
+                    <!-- Section for Contact Details -->
+                    <h2>Contact Details</h2>
+                    <address>
+                        <ul>
+                            <li><a href="contactus.html">Technical Support</a></li>
+                            <li><a href="mailto:lazaristheo@gmail.com">lazaristheo@gmail.com</a></li>
+                            <li><a href="tel:6987470962">telephone:6987470962</a> </li>
+                        </ul>
+                    </address>
+                </div>
+                <div class="middle_footer">
+                    <div class="logo">
+                        <!-- Logo+SiteName Section -->
+                        <h2>Find</h2>
+                        <img class="footer_img" src="../resources/logo-no-background.png" alt="our Logo">
+                    </div>
+
+                    <div id="news_letter">
+                        <form action="#" method="post">
+                            <label for="news-letter">Our Newsletter:</label>
+                            <input type="email" id="news-letter" name="news-letter" placeholder="Enter your Email"
+                                required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <div>
+                    <h2>Find us on Social Media</h2>
+                    <div id="social_list">
+                        <a href="https://www.facebook.com/"><img class="footer_img" src="../resources/fb_logo.png"
+                                alt="fb_logo"></a>
+                        <a href="https://www.instagram.com/"><img class="footer_img" src="../resources/insta_logo.png"
+                                alt="insta_logo"></a>
+                        <a href="https://github.com/Lazaris02"><img class="footer_img" src="../resources/git_logo.png"
+                                alt="git_logo"></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div id="bottom_footer">
+                <p>&copy;FIND.GR ALL RIGHTS RESERVED</p>
+            </div>
+        </footer>
+    </div>
 </body>
 
 </html>
