@@ -1173,3 +1173,74 @@ th {
     /* making that custom bullet point bigger */
     font-size: 2em;
 }
+
+
+
+
+/* media queries start here */
+
+
+@media (max-width: 650px){
+    /* media queries for phone view 
+    Any container I used grid on
+    I want it to be displayed as 1 column*/
+    .index_nav_2>ul{
+        grid-template-columns: 1fr;
+    }
+
+    #news_section{
+        grid-template-columns: 1fr;
+    }
+
+    .logo{
+        display: none;
+    }
+
+    #nav_bar a{
+        font-size: medium;
+        font-weight: 600;
+    }
+
+
+    #header_banner h2{
+        font-size: x-large;
+    }
+
+    #main_footer h2{
+        font-size: larger;
+        text-align: center;
+    }
+
+
+    #top_footer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #top_footer li{
+        text-align: center;
+    }
+
+    #top_footer>*{
+        margin-top: 0.5em;
+    }
+    .middle_footer{
+        align-items: start;
+        margin-left: 0.4em;
+    }
+
+    #news_letter>form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #bottom_footer{
+        justify-content: center;
+    }    
+
+
+}
+
+
+/* media queries end here */
