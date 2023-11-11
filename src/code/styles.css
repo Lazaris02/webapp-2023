@@ -1062,8 +1062,11 @@ main>img {
 }
 
 .AH-001>section>h3 {
-    /* underliens the word "Description" */
+    /* underliens the word "Description", "Internal" and "External" */
     text-decoration: underline;
+}
+
+.description h3{
     text-align: center;
 }
 
@@ -1198,7 +1201,7 @@ th {
 }
 
 .ad header{
-    /* because the img and the h2 iz inside a header we cant reach them */
+    /* because the img and the h2 is inside a header we cant reach them */
     /* so we will handle with a flex at the same time */
     display: flex;
     flex-direction: row;
@@ -1210,6 +1213,7 @@ th {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
     justify-self: start;
+
 }
 
 .ad > p{
@@ -1271,12 +1275,23 @@ th {
     gap: 20px;
 }
 
+.AH-001_price{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.AH-001_price h3{
+    margin-top: 20px;
+}
+
 .publish_date{
     align-self: end;
     margin-right: 20px;
 }
 
 .views{
+    /* positioning the views */
     display: flex;
     flex-direction: row;
     align-self: end;
@@ -1289,4 +1304,10 @@ th {
 
 .AH-001_table{
     align-self: center;
+}
+
+.properties{
+    /* positioning the uls of internal and external properties in 3 rows */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
