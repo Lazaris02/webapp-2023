@@ -952,7 +952,6 @@ main>img {
 
 .ad {
     /* customizing the appereance of the ads */
-    padding-bottom: 50px;
     background-color: var(--article-color);
     border: 1px solid black;
     border-radius: 8px;
@@ -961,18 +960,12 @@ main>img {
 }
 
 .ad img {
-    /* giving shape to the images of every ad and let them float on the left
-       so that the description of every ad can appear on the right*/
+    /* giving shape to the images of every ad */
     border-radius: 8px;
     /*makes the shape rounder*/
     width: 350px;
-    height: 227px;
-    float: left;
-}
-
-.ad h2 {
-    /* gives some space to make the ads appear more evenly overall */
-    padding: 10px;
+    height: 250px;
+    margin-right: 10px;
 }
 
 .ad li {
@@ -980,10 +973,6 @@ main>img {
     padding: 10px;
     display: inline-block;
 }
-
-
-
-
 
 .ad:hover {
     /* gives an effect of shadow when the cursor is on an ad */
@@ -996,17 +985,9 @@ main>img {
     height: 50px;
 }
 
-.ad div>h3 {
-    /* makes the price to float on the left so that the image of the price and the date of publication
-       can appear on the right of the same line */
-    float: left;
-}
-
 
 
 /* ----------------------------Styling for about_us html---------------------------- */
-
-
 
 
 #find_arc h2 {
@@ -1014,21 +995,15 @@ main>img {
     font-size: 35px;
 }
 
-#team_arc img {
-    /* makes the image on the article team_arc float to the left so the paragraph can appear on the right and "hug" the photo */
-    float: left;
-}
-
 #team_arc h2 {
-    /* makes  the h2 of the team_arc article appear in the center and the size of the glyphs bigger*/
-    text-align: center;
+    /* makes the size of the glyphs bigger in the h2 of the team_arc article and the h2 go to the center*/
     font-size: 35px;
+    text-align: center;
 }
 
 
 #team_arc section {
     /* customizing the sections of the team members' description */
-    clear: left;
     background-color: var(--article-color);
     border-radius: 30px;
     height: 300px;
@@ -1046,8 +1021,8 @@ main>img {
 
 #team_arc section img {
     /* adjusting the size of images of the member teams and make them appear round */
-    width: 250px;
-    height: 250px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
 }
 
@@ -1079,14 +1054,6 @@ main>img {
     height: 60px;
 }
 
-.AH-001>div>h3 {
-    /* makes the h3 that is a direct child of a div that is a direct child of the AH-001 float to the left in order for the image
-       to appear on the right of the same row */
-    float: left;
-
-}
-
-
 .ul_basics li {
     /* customizing the list of the main characteristics of the apartment */
     padding: 10px;
@@ -1097,18 +1064,8 @@ main>img {
 .AH-001>section>h3 {
     /* underliens the word "Description" */
     text-decoration: underline;
+    text-align: center;
 }
-
-.views img {
-    /* lets the image of the eye float on the left so that the number of views can appear on its right */
-    float: left;
-}
-
-.AH-001 section {
-    /* doesn't let the sections get affected by the floats */
-    clear: both;
-}
-
 
 .AH-001 table {
     /* customizing the table with the infos */
@@ -1163,8 +1120,6 @@ th {
     padding-left: 40px;
 }
 
-
-
 .no {
     /* gives to some elements of the list a custom bullet point */
     list-style-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23000000"><path d="m13.41 12 6.29-6.29c.94-.94-.48-2.35-1.41-1.41L12 10.59 5.71 4.3c-.93-.93-2.35.48-1.41 1.41L10.59 12 4.3 18.29c-.94.94.48 2.35 1.41 1.41L12 13.41c6.12 6.12 6.74 7.26 7.71 6.29a.996.996 0 0 0 0-1.41L13.42 12Z"></path></svg>');
@@ -1178,4 +1133,160 @@ th {
 .properties li::marker {
     /* making that custom bullet point bigger */
     font-size: 2em;
+}
+
+
+
+/* ---------------------------!!!!!!!!! Antzi Positioning Starts Here !!!!!!!!!!------------------------------- */
+
+/* positioning for about us */
+
+#find_arc{
+    /* makes the elements of the article appear vertical and in the center */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#team_arc {
+    /* i am making the team article a display grid in order to handle */
+    /* the 4 elements of the article. I am making 2 columns and 2 rows.  */
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr 1fr;
+    grid-column-gap: 20px;
+}
+
+.member_description{
+    /* i am making the member description part grid in order to display better the 3 elements */
+    display: grid;
+    grid-template-rows: 0.3fr 2fr;
+    grid-template-columns: 1.2fr 2fr;
+}
+
+.member_description h3{
+    /* placing the h3 in the grid */
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+}
+
+.member_description img{
+    /* placing the image in the grid */
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    align-self: center;
+    padding-left: 10px;
+}
+
+.member_description p{
+    /* placing the paragraph in the grid */
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------- */
+
+/* positioning for house sales and car sales */
+
+.ad{
+    /* creating the main grid of the ad */
+    display: grid;
+    grid-template-columns: 0.4fr 1fr;
+    grid-template-rows: 50px 50px 50px 50px 50px;
+
+}
+
+.ad header{
+    /* because the img and the h2 iz inside a header we cant reach them */
+    /* so we will handle with a flex at the same time */
+    display: flex;
+    flex-direction: row;
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
+}
+
+.ad > h3{
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    justify-self: start;
+}
+
+.ad > p{
+    /* positioning the code of the ad */
+    grid-column: 2 / 3;
+    grid-row: 2 /3;
+    margin-top: 3px;
+    align-items: stretch;
+    justify-self: end;
+    margin-right: 20px;
+}
+
+.ad ul{
+    /* positioning the list */
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    
+}
+
+.ad div h3{
+    margin-top: 15px;
+}
+
+.ad div{
+    /* positioning the price with the price img the same way we do with the header */
+    display: flex;
+    flex-direction: row;
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    justify-content: flex-end;
+    margin-right: 20px;
+ 
+}
+
+.ad footer{
+    /* positioning the day of the publication */
+    grid-column: 2 / 3;
+    grid-row: 5 / 6;
+    place-self: center end;
+    margin-right: 30px;
+}
+
+/* ------------------------------------------------------------------------------------------------ */
+
+/* positioning for house details AH-OO1 */
+
+.AH-001{
+    /* making the ad flex */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+    margin-left: 20px;
+}
+
+.AH-001_details{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.publish_date{
+    align-self: end;
+    margin-right: 20px;
+}
+
+.views{
+    display: flex;
+    flex-direction: row;
+    align-self: end;
+    margin-right: 20px;
+}
+
+.views p{
+    margin-top: 18px;
+}
+
+.AH-001_table{
+    align-self: center;
 }
