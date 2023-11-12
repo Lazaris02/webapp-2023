@@ -96,9 +96,9 @@ body {
     display: grid;
     gap: 20px;
     grid-template-areas:
-        "main_header"
-        "main_content"
-        "main_footer";
+        "header"
+        "content"
+        "footer";
 }
 
 #main_header {
@@ -107,7 +107,7 @@ body {
     display flex+column wrap is because I want vertical
     positioning in our header
     (logo+nav-bar above the banner) */
-    grid-area: "main_header";
+    grid-area: header;
     display: flex;
     flex-flow: column wrap;
 
@@ -116,7 +116,7 @@ body {
 #main_content {
     /* I gave this class the grid-area main_content
     for it to be recognized from the grid_wrap I used on all the body */
-    grid-area: "main_content";
+    grid-area: content;
 }
 
 
@@ -449,7 +449,7 @@ body {
     sticks at the bottom*/
     background-color: var(--footer-color);
     margin-top: auto;
-    grid-area: "main_footer";
+    grid-area: footer;
 }
 
 
