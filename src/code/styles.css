@@ -934,18 +934,6 @@ body {
 
 /* ----------------------------Styling for house_sales and car_sales html-------------------------- */
 
-
-
-
-main>img {
-    /* adjusting the image on the top of the page */
-    width: auto;
-    height: 150px;
-    display: block;
-    margin: auto;
-}
-
-
 #house_ad {
     /* making the first ad of house sales, which is the one that we have with more detail, not look like a link*/
     text-decoration: none;
@@ -1222,13 +1210,7 @@ th {
 /* positioning for house sales and car sales */
 
 .sales_page{
-    /* making the child elements of the sales_page display with flex vertically */
-    display: flex;
-    flex-direction: column;
-}
-
-.ads_part{
-    /* making the part of the page which has the ads display with flex */
+    /* displaying the part of the page which has the ads display with flex */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
