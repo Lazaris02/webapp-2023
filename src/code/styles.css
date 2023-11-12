@@ -963,9 +963,8 @@ main>img {
     /* giving shape to the images of every ad */
     border-radius: 8px;
     /*makes the shape rounder*/
-    width: 350px;
+    width: 440px;
     height: 250px;
-    margin-right: 10px;
 }
 
 .ad li {
@@ -1022,8 +1021,12 @@ main>img {
 #team_arc section img {
     /* adjusting the size of images of the member teams and make them appear round */
     width: 200px;
-    height: 200px;
+    height: 250px;
     border-radius: 50%;
+}
+
+#team_arc > img{
+    width: 500px;
 }
 
 /* ----------------------------Styling for house_sales_details html---------------------------- */
@@ -1142,118 +1145,123 @@ th {
 
 /* ---------------------------!!!!!!!!! Antzi Positioning Starts Here !!!!!!!!!!------------------------------- */
 
-/* positioning for about us */
-
-#find_arc{
-    /* makes the elements of the article appear vertical and in the center */
+#about_us_main{
+    /* i am making the childs of the about_us_main which are the 2 articles display in a flex vertically */
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
-#team_arc {
-    /* i am making the team article a display grid in order to handle */
-    /* the 4 elements of the article. I am making 2 columns and 2 rows.  */
+#team_arc{
+    /* i am making the childs of the team_arc which are an image, a div and 2 sections */
+    /* display in a grid */
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-template-rows: 1fr 1fr;
-    grid-column-gap: 20px;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 35% 15% 50%;
 }
 
-.member_description{
-    /* i am making the member description part grid in order to display better the 3 elements */
-    display: grid;
-    grid-template-rows: 0.3fr 2fr;
-    grid-template-columns: 1.2fr 2fr;
-}
-
-.member_description h3{
-    /* placing the h3 in the grid */
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-
-}
-
-.member_description img{
-    /* placing the image in the grid */
+#team_arc img{
+    /* positioning the image of the team_arc article */
     grid-column: 1 / 2;
-    grid-row: 1 / -1;
-    align-self: center;
-    padding-left: 10px;
+    grid-row: 1 / 2;
 }
 
-.member_description p{
-    /* placing the paragraph in the grid */
-    grid-column: 2 / 3;
+#team_arc div{
+    /* positioning the div of team_arc */
+    grid-column: 2 / 4;
+    grid-row: 1 / 2;
+}
+
+#team_arc section:first-child{
+    /* positioning the first section of the team_arc */
+    grid-column: 1 / 3;
     grid-row: 2 / 3;
 }
 
+#team_arc section:last-child{
+    /* positioning the 2nd section of the team_arc */
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+}
+
+.member_description{
+    /* displaying the section that has the photo and the description of the team member in a grid */
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 15% 90%;
+}
+
+.member_description img{
+    /* positioning the image of the member_description section */
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    justify-self: center;
+}
+
+.member_description h3{
+    /* positioning the h3 of the member_description */
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.member_description p{
+    /* positioning the p of the member_description */
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
 /* ------------------------------------------------------------------------------------------------------------------------- */
 
 /* positioning for house sales and car sales */
 
-.ad{
-    /* creating the main grid of the ad */
-    display: grid;
-    grid-template-columns: 0.4fr 1fr;
-    grid-template-rows: 50px 50px 50px 50px 50px;
-
+.sales_page{
+    /* making the child elements of the sales_page display with felx vertically */
+    display: flex;
+    flex-direction: column;
 }
 
-.ad header{
-    /* because the img and the h2 is inside a header we cant reach them */
-    /* so we will handle with a flex at the same time */
-    display: flex;
-    flex-direction: row;
-    grid-column: 1 / -1;
+.ad{
+    /* making the ads display as a grid to handle the different elements that they have */
+    display: grid;
+    grid-template-columns: 35% 45% 20%;
+    grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+.ad img{
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    object-fit: cover;
+}
+
+.ad h2{
+    grid-column: 2 / 3;
     grid-row: 1 / 2;
 }
 
-.ad > h3{
-    grid-column: 2 / 3;
+.ad h3{
+    grid-column: 2 / 4;
     grid-row: 2 / 3;
-    justify-self: start;
-
 }
 
-.ad > p{
-    /* positioning the code of the ad */
-    grid-column: 2 / 3;
-    grid-row: 2 /3;
-    margin-top: 3px;
-    align-items: stretch;
-    justify-self: end;
-    margin-right: 20px;
+.ad p{
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+    justify-self: center;
+    align-self: end;
 }
 
 .ad ul{
-    /* positioning the list */
-    grid-column: 2 / 3;
+    grid-column: 2 / 4;
     grid-row: 3 / 4;
-    
-}
-
-.ad div h3{
-    margin-top: 15px;
 }
 
 .ad div{
-    /* positioning the price with the price img the same way we do with the header */
-    display: flex;
-    flex-direction: row;
-    grid-column: 2 / 3;
-    grid-row: 4 / 5;
-    justify-content: flex-end;
-    margin-right: 20px;
- 
+    grid-column: 2 / 4;
+    grid-row: 4 / 6;
 }
 
 .ad footer{
-    /* positioning the day of the publication */
-    grid-column: 2 / 3;
+    grid-column: 3 / 4;
     grid-row: 5 / 6;
-    place-self: center end;
-    margin-right: 30px;
+    justify-self: center;
 }
 
 /* ------------------------------------------------------------------------------------------------ */
