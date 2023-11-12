@@ -96,9 +96,9 @@ body {
     display: grid;
     gap: 20px;
     grid-template-areas:
-        "main_header"
-        "main_content"
-        "main_footer";
+        "header"
+        "content"
+        "footer";
 }
 
 #main_header {
@@ -107,7 +107,7 @@ body {
     display flex+column wrap is because I want vertical
     positioning in our header
     (logo+nav-bar above the banner) */
-    grid-area: "main_header";
+    grid-area: header;
     display: flex;
     flex-flow: column wrap;
 
@@ -116,7 +116,7 @@ body {
 #main_content {
     /* I gave this class the grid-area main_content
     for it to be recognized from the grid_wrap I used on all the body */
-    grid-area: "main_content";
+    grid-area: content;
 }
 
 
@@ -453,8 +453,8 @@ body {
     sticks at the bottom*/
     background-color: var(--footer-color);
     margin-top: auto;
-    grid-area: "main_footer";
-    }
+    grid-area: footer;
+}
 
 
 
@@ -956,6 +956,8 @@ main>img {
     border: 1px solid black;
     border-radius: 8px;
     margin-bottom: 10px;
+    height: 250px;
+    width: 1000px;
     display: block;
 }
 
@@ -983,6 +985,7 @@ main>img {
     width: 50px;
     height: 50px;
 }
+
 
 
 
@@ -1163,6 +1166,7 @@ th {
     /* positioning the image of the team_arc article */
     grid-column: 1 / 2;
     grid-row: 1 / 2;
+    justify-self: center;
 }
 
 #team_arc div{
@@ -1171,16 +1175,18 @@ th {
     grid-row: 1 / 2;
 }
 
-#team_arc section:first-child{
-    /* positioning the first section of the team_arc */
-    grid-column: 1 / 3;
-    grid-row: 2 / 3;
+#team_arc section{
+    /* positioning the 1st section of the team_arc */
+    grid-column: 1/3;
+    grid-row: 2/3;
+    justify-self: center;
 }
 
 #team_arc section:last-child{
     /* positioning the 2nd section of the team_arc */
     grid-column: 3 / 4;
     grid-row: 2 / 3;
+    justify-self: center;
 }
 
 .member_description{
@@ -1213,56 +1219,78 @@ th {
 /* positioning for house sales and car sales */
 
 .sales_page{
-    /* making the child elements of the sales_page display with felx vertically */
+    /* making the child elements of the sales_page display with flex vertically */
     display: flex;
     flex-direction: column;
 }
 
+.ads_part{
+    /* making the part of the page which has the ads display with flex */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
 .ad{
-    /* making the ads display as a grid to handle the different elements that they have */
+    /* making the elements of the ad class appear horizontically with flex */
+    display: flex;
+    flex-direction: row;
+}
+
+.ad_wrapper{
+    /* i wrapped the infos of the ad besides the image to position them accordingly with grid */
     display: grid;
-    grid-template-columns: 35% 45% 20%;
-    grid-template-rows: 20% 20% 20% 20% 20%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: repeat(5, 20%);
 }
 
-.ad img{
-    grid-column: 1 / 2;
-    grid-row: 1 / -1;
-    object-fit: cover;
+.ad_wrapper h2{
+    /* positioning the title of the ad */
+    grid-column: 1/3;
+    grid-row: 1/2;
 }
 
-.ad h2{
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
+.ad_wrapper h3{
+    /* positioning the area city of the ad */
+    grid-column: 1/-1;
+    grid-row: 2/3;
 }
 
-.ad h3{
-    grid-column: 2 / 4;
-    grid-row: 2 / 3;
+.ad_wrapper p{
+    /* positioning the code of the ad */
+    grid-column: 2/3;
+    grid-row: 2/3;
+    justify-self: end;
 }
 
-.ad p{
-    grid-column: 3 / 4;
-    grid-row: 4 / 5;
+.ad_wrapper ul{
+    /* positioning the list of the ad */
+    grid-column: 1/-1;
+    grid-row: 3/4;
+    justify-self: center;
+}
+
+.ad_wrapper div{
+    /* positioning the price and price image of the ad and because these 2 elements */
+    /* are inside a div and i want them to appear the one next to the other i display them with a flex */
+    grid-column: 1/-1;
+    grid-row: 4/5;
+    justify-self: center;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.ad_wrapper footer{
+    /* positioning the published date of the ad */
+    grid-column: 1/-1;
+    grid-row: 5/6;
     justify-self: center;
     align-self: end;
 }
 
-.ad ul{
-    grid-column: 2 / 4;
-    grid-row: 3 / 4;
-}
-
-.ad div{
-    grid-column: 2 / 4;
-    grid-row: 4 / 6;
-}
-
-.ad footer{
-    grid-column: 3 / 4;
-    grid-row: 5 / 6;
-    justify-self: center;
-}
 
 /* ------------------------------------------------------------------------------------------------ */
 
