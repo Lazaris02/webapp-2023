@@ -78,6 +78,9 @@ body {
     background-image: linear-gradient(var(--nav-color), var(--body-mid), var(--nav-color));
 }
 
+img{
+    max-width: 100%;
+}
 
 
 /* NEWLY ADDED WRAPPERS FOR EXC3++ */
@@ -397,12 +400,7 @@ body {
     instead of using text align etc */
 }
 
-#header_banner img {
-    /* the img contained in the element with the header-banner id 
-    is given specific width+height */
-    width: 300px;
-    height: 225px;
-}
+
 
 #header_banner h2 {
     /* we give the header-banner h2 a new font-family
@@ -411,6 +409,7 @@ body {
     font-family: "Agbalumo";
     font-size: xx-large;
     animation: fadeIn 4s;
+    text-wrap: wrap;
 }
 
 
