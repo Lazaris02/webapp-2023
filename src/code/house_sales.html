@@ -17,251 +17,255 @@
 </head>
 
 <body>
-
-    <header class="main_header">
-        <div class="logo">
-            <h1>Find</h1>
-            <img src="../resources/logo-no-background.png" alt="logo">
-        </div>
-
-        <nav id="nav_bar">
-            <!-- Contains links to our other webpages -->
-            <ul>
-                <li><a href="index.html">Home</a></li>
-
-                <li class="drop-down-1"><a href="categories.html">Categories</a>
-                    <ul class="sub-menu-1">
-                        <li class="drop-down-2"><a href="house_sales.html">House Sales</a>
-                            <ul class="sub-menu-2">
-                                <li><a href="house_sales_details.html" target="_blank">House Sale AH-001</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="car_sales.html">Car Sales</a></li>
-                    </ul>
-                </li>
-
-                <li><a href="aboutus.html">About us</a></li>
-
-                <li><a href="contactus.html">Contact us</a></li>
-            </ul>
-        </nav>
-        <div id="header_banner">
-
-        </div>
-
-    </header>
-
-    <main class="sales_page">
-        <img id="house_sales" src="../resources/house_sales.png" alt="house_sales">
-
-
-        <a id="house_ad" href="house_sales_details.html">
-
-            <article class="ad">
-                <header>
-                    <img src="../resources/house_ad/house1.png" alt="house1">
-                    <h2>Apartment, 105m&sup2;</h2>
-                </header>
-
-                <h3>Ano Kypseli, Attiki</h3>
-                <p>AH-001</p>
-
-                <ul class="infos">
-                    <li>2nd floor</li>
-                    <li>2 bedrooms</li>
-                    <li>1 bathroom</li>
-                </ul>
-
-                <div>
-                    <h3>400,000€</h3>
-                    <img src="../resources/ad/price-increase.png" alt="price">
+    <div id="grid_wrap">
+        <header id="main_header">
+            <div class="logo_nav_wrap">
+                <div class="logo">
+                    <h1>Find</h1>
+                    <img src="../resources/logo-no-background.png" alt="logo">
                 </div>
 
-                <footer>
-                    <p>Published: 27-07-2023</p>
-                </footer>
-            </article>
+                <nav id="nav_bar">
+                    <!-- Contains links to our other webpages -->
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
 
-        </a>
+                        <li class="drop-down-1"><a href="categories.html">Categories</a>
+                            <ul class="sub-menu-1">
+                                <li class="drop-down-2"><a href="house_sales.html">House Sales</a>
+                                    <ul class="sub-menu-2">
+                                        <li><a href="house_sales_details.html" target="_blank">House Sale AH-001</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="car_sales.html">Car Sales</a></li>
+                            </ul>
+                        </li>
 
-        <article class="ad">
-            <header>
-                <img src="../resources/ad/house2.png" alt="house2">
-                <h2>Apartment, 124m&sup2;</h2>
-            </header>
+                        <li><a href="aboutus.html">About us</a></li>
 
-            <h3>Pagkrati, Attiki</h3>
-            <p>AH-002</p>
+                        <li><a href="contactus.html">Contact us</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="header_banner">
 
-            <ul class="infos">
-                <li>3nd floor</li>
-                <li>2 bedrooms</li>
-                <li>1 bathroom</li>
-            </ul>
-
-            <div>
-                <h3>370,000€</h3>
-                <img src="../resources/ad/lowering-price.png" alt="price">
             </div>
 
-            <footer>
-                <p>Published: 19/10/2023</p>
-            </footer>
-        </article>
+        </header>
+
+        <main id="main_content" class="sales_page">
+            <img id="house_sales" src="../resources/house_sales.png" alt="house_sales">
+
+            <div class="ads_part">
+                <a id="house_ad" href="house_sales_details.html">
+
+                    <article class="ad">
+                        <img src="../resources/house_ad/house1.png" alt="house1">
+                        <div class="ad_wrapper">
+                            <h2>Apartment, 105m&sup2;</h2>
+                            
+                            <h3>Ano Kypseli, Attiki</h3>
+                            <p>AH-001</p>
+                            
+                            <ul class="infos">
+                                <li>2nd floor</li>
+                                <li>2 bedrooms</li>
+                                <li>1 bathroom</li>
+                            </ul>
+
+                            <div>
+                                <h3>400,000€</h3>
+                                <img src="../resources/ad/price-increase.png" alt="price">
+                            </div>
+
+                            <footer>
+                                <p>Published: 27-07-2023</p>
+                            </footer>
+                        </div>
+                    </article>
+
+                </a>
+
+                <article class="ad">
+                    <img src="../resources/ad/house2.png" alt="house2">
+                    <div class="ad_wrapper">
+                        <h2>Apartment, 124m&sup2;</h2>
+
+                        <h3>Pagkrati, Attiki</h3>
+                        <p>AH-002</p>
+
+                        <ul class="infos">
+                            <li>3nd floor</li>
+                            <li>2 bedrooms</li>
+                            <li>1 bathroom</li>
+                        </ul>
+
+                        <div>
+                            <h3>370,000€</h3>
+                            <img src="../resources/ad/lowering-price.png" alt="price">
+                        </div>
+
+                        <footer>
+                            <p>Published: 19/10/2023</p>
+                        </footer>
+                    </div>
+                </article>
 
 
-        <article class="ad">
-            <header>
-                <img src="../resources/ad/house3.png" alt="house3">
-                <h2>Maisonette, 222m&sup2;</h2>
-            </header>
+                <article class="ad">
+                    <img src="../resources/ad/house3.png" alt="house3">
+                    <div class="ad_wrapper">
+                        <h2>Maisonette, 222m&sup2;</h2>
 
-            <h3>Kolonaki-Lykavittos, Attiki</h3>
-            <p>AH-003</p>
+                        <h3>Kolonaki-Lykavittos, Attiki</h3>
+                        <p>AH-003</p>
 
-            <ul class="infos">
-                <li>5th floor</li>
-                <li>3 bedrooms</li>
-                <li>3 bathrooms</li>
-            </ul>
-            <div>
-                <h3>1,650,000€</h3>
-                <img src="../resources/ad/price-increase.png" alt="price">
+                        <ul class="infos">
+                            <li>5th floor</li>
+                            <li>3 bedrooms</li>
+                            <li>3 bathrooms</li>
+                        </ul>
+                        <div>
+                            <h3>1,650,000€</h3>
+                            <img src="../resources/ad/price-increase.png" alt="price">
+                        </div>
+
+                        <footer>
+                            <p>Published: 03/09/2023</p>
+                        </footer>
+                    </div>
+                </article>
+
+
+                <article class="ad">
+
+                    <img src="../resources/ad/house4.png" alt="house4">
+                    <div class="ad_wrapper">
+                        <h2>Apartment, 52m&sup2;</h2>
+
+
+                        <h3>Gkyzi-Arios Pagos, Attiki</h3>
+                        <p>AH-004</p>
+
+                        <ul class="infos">
+                            <li>3rd floor</li>
+                            <li>1 bedroom</li>
+                            <li>1 bathroom</li>
+                        </ul>
+
+                        <div>
+                            <h3>100,000€</h3>
+                            <img src="../resources/ad/lowering-price.png" alt="price">
+                        </div>
+
+                        <footer>
+                            <p>Published: 18/06/2023</p>
+                        </footer>
+                    </div>
+                </article>
+
+                <article class="ad">
+                    <img src="../resources/ad/house5.png" alt="house5">
+                    <div class="ad_wrapper">
+                        <h2>Apartment, 107m&sup2;</h2>
+
+                        <h3>Exarcheia, Attiki</h3>
+                        <p>AH-005</p>
+
+                        <ul class="infos">
+                            <li>3rd floor</li>
+                            <li>2 bedrooms</li>
+                            <li>2 bathrooms</li>
+                        </ul>
+
+                        <div>
+                            <h3>239,000€</h3>
+                            <img src="../resources/ad/lowering-price.png" alt="price">
+                        </div>
+
+                        <footer>
+                            <p>Published: 06/11/2023</p>
+                        </footer>
+                    </div>
+                </article>
+
+                <article class="ad">
+                    <img src="../resources/ad/house6.png" alt="house6">
+                    <div class="ad_wrapper">
+                        <h2>Maisonette, 168m&sup2;</h2>
+
+                        <h3>Panormou, Attiki</h3>
+                        <p>AH-006</p>
+
+                        <ul class="infos">
+                            <li>6th floor</li>
+                            <li>3 bedrooms</li>
+                            <li>2 bathrooms</li>
+                        </ul>
+
+                        <div>
+                            <h3>580,000€</h3>
+                            <img src="../resources/ad/price-increase.png" alt="price">
+                        </div>
+
+                        <footer>
+                            <p>Published: 17/09/2023</p>
+                        </footer>
+                    </div>
+                </article>
             </div>
 
-            <footer>
-                <p>Published: 03/09/2023</p>
-            </footer>
-        </article>
+        </main>
 
 
-        <article class="ad">
-            <header>
-                <img src="../resources/ad/house4.png" alt="house4">
-                <h2>Apartment, 52m&sup2;</h2>
-            </header>
+        <footer id="main_footer">
+            <div id="top_footer">
+                <div class="contact_details">
+                    <!-- Section for Contact Details -->
+                    <h2>Contact Details</h2>
+                    <address>
+                        <ul>
+                            <li><a href="contactus.html">Technical Support</a></li>
+                            <li><a href="mailto:lazaristheo@gmail.com">lazaristheo@gmail.com</a></li>
+                            <li><a href="tel:6987470962">telephone:6987470962</a> </li>
+                        </ul>
+                    </address>
+                </div>
+                <div class="middle_footer">
+                    <div class="logo">
+                        <!-- Logo+SiteName Section -->
+                        <h2>Find</h2>
+                        <img class="footer_img" src="../resources/logo-no-background.png" alt="our Logo">
+                    </div>
 
-            <h3>Gkyzi-Arios Pagos, Attiki</h3>
-            <p>AH-004</p>
-
-            <ul class="infos">
-                <li>3rd floor</li>
-                <li>1 bedroom</li>
-                <li>1 bathroom</li>
-            </ul>
-
-            <div>
-                <h3>100,000€</h3>
-                <img src="../resources/ad/lowering-price.png" alt="price">
+                    <div id="news_letter">
+                        <form action="#" method="post">
+                            <label for="news-letter">Our Newsletter:</label>
+                            <input type="email" id="news-letter" name="news-letter" placeholder="Enter your Email"
+                                required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <div>
+                    <h2>Find us on Social Media</h2>
+                    <div id="social_list">
+                        <a href="https://www.facebook.com/"><img class="footer_img" src="../resources/fb_logo.png"
+                                alt="fb_logo"></a>
+                        <a href="https://www.instagram.com/"><img class="footer_img" src="../resources/insta_logo.png"
+                                alt="insta_logo"></a>
+                        <a href="https://github.com/Lazaris02"><img class="footer_img" src="../resources/git_logo.png"
+                                alt="git_logo"></a>
+                    </div>
+                </div>
             </div>
-
-            <footer>
-                <p>Published: 18/06/2023</p>
-            </footer>
-        </article>
-
-        <hr>
-
-        <article class="ad">
-            <header>
-                <img src="../resources/ad/house5.png" alt="house5">
-                <h2>Apartment, 107m&sup2;</h2>
-            </header>
-
-            <h3>Exarcheia, Attiki</h3>
-            <p>AH-005</p>
-
-            <ul class="infos">
-                <li>3rd floor</li>
-                <li>2 bedrooms</li>
-                <li>2 bathrooms</li>
-            </ul>
-
-            <div>
-                <h3>239,000€</h3>
-                <img src="../resources/ad/lowering-price.png" alt="price">
+            <hr>
+            <div id="bottom_footer">
+                <p>&copy;FIND.GR ALL RIGHTS RESERVED</p>
             </div>
+        </footer>
 
-            <footer>
-                <p>Published: 06/11/2023</p>
-            </footer>
-        </article>
-
-        <hr>
-
-        <article class="ad">
-            <header>
-                <img src="../resources/ad/house6.png" alt="house6">
-                <h2>Maisonette, 168m&sup2;</h2>
-            </header>
-
-            <h3>Panormou, Attiki</h3>
-            <p>AH-006</p>
-
-            <ul class="infos">
-                <li>6th floor</li>
-                <li>3 bedrooms</li>
-                <li>2 bathrooms</li>
-            </ul>
-
-            <div>
-                <h3>580,000€</h3>
-                <img src="../resources/ad/price-increase.png" alt="price">
-            </div>
-
-            <footer>
-                <p>Published: 17/09/2023</p>
-            </footer>
-        </article>
-
-    </main>
-
-
-    <footer id="main_footer">
-
-        <div class="logo">
-            <!-- Logo+SiteName Section -->
-            <h2>Find</h2>
-            <img class="footer_img" src="../resources/logo-no-background.png" alt="our Logo">
-        </div>
-
-        <div id="news_letter">
-            <form action="#" method="post">
-                <label for="news-letter">Our Newsletter:</label>
-                <input type="email" id="news-letter" name="news-letter" placeholder="Enter your Email" required>
-                <button type="submit">Subscribe</button>
-            </form>
-        </div>
-
-        <div>
-            <!-- Section for Contact Details -->
-            <h2>Contact Details</h2>
-            <address>
-                <ul>
-                    <li><a href="mailto:lazaristheo@gmail.com">lazaristheo@gmail.com</a></li>
-                    <li><a href="tel:6987470962">6987470962</a> </li>
-                    <li><a href="contactus.html">Technical Support</a></li>
-                </ul>
-            </address>
-        </div>
-
-        <div>
-            <h2>Find us on Social Media</h2>
-
-            <a href="https://www.facebook.com/"><img class="footer_img" src="../resources/fb_logo.png"
-                    alt="fb_logo"></a>
-            <a href="https://www.instagram.com/"><img class="footer_img" src="../resources/insta_logo.png"
-                    alt="insta_logo"></a>
-            <a href="https://github.com/Lazaris02"><img class="footer_img" src="../resources/git_logo.png"
-                    alt="git_logo"></a>
-
-        </div>
-
-        <hr>
-        <p>&copy;FIND.GR ALL RIGHTS RESERVED</p>
-    </footer>
-
-
+    </div>
 </body>
 
 </html>
