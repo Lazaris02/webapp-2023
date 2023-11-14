@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Find</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Index Page">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="author" content="Thodoris, Antzi">
+
+    <link rel="icon" type="image/x-icon" href="../resources/logo-no-background.png">
+    <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="grid_wrap">
+        <header id="main_header">
+            <div class="logo_nav_wrap">
+                <div class="logo">
+                    <h1>Find</h1>
+                    <img src="../resources/logo-no-background.png" alt="logo">
+                </div>
+                <nav id="nav_bar">
+                    <!-- Contains links to our other webpages -->
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+
+                        <li class="drop-down-1"><a href="categories.html">Categories</a>
+                            <ul class="sub-menu-1">
+                                <li class="drop-down-2"><a href="house_sales.html">House Sales</a>
+                                    <ul class="sub-menu-2">
+                                        <li><a href="house_sales_details.html" target="_blank">House Sale AH-001</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li><a href="car_sales.html">Car Sales</a></li>
+                            </ul>
+                        </li>
+
+                        <li><a href="aboutus.html">About us</a></li>
+
+                        <li><a href="contactus.html">Contact us</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div id="header_banner">
+                <h2>Welcome to Find!</h2>
+                <img srcset="../resources/head/index_head.png 650w" sizes="(max-width:650px) 50vw,
+                        (max-width:1300px) 25vw,250px" src="../resources/head/index_head.png"
+                    alt="about_us_background">
+            </div>
+        </header>
+
+
+        <main id="main_content">
+            <h2>Sign Up!</h2>
+
+            <form action="#" method="post" id="signup_form" name="signup_form">
+                <p>Requried fields are marked by <span aria-label="required">*</span>.</p>
+
+                <fieldset>
+                    <legend>Personal Info</legend>
+                    <label for="p_name">Name: <span aria-label="required">*</span></label>
+                    <input type="text" id="p_name" name="p_name" pattern="[A-Za-z]{1,30}" required>
+                    <label for="p_surname">Surname: <span aria-label="required">*</span></label>
+                    <input type="text" id="p_surname" name="p_surname" pattern="[A-Za-z]{1,30}" required>
+
+                    <label for="p_email">Email: <span aria-label="required">*</span></label>
+                    <input type="email" id="p_email" name="p_email" required>
+
+                    <fieldset>
+                        <legend>Address</legend>
+                        <label for="p_street">Street Name: <span aria-label="required">*</span></label>
+                        <input type="text" id="p_street" name="p_street" pattern="[A-Za-z]{1,50}"
+                            title="contains only english characters" required>
+                        <label for="p_street_num">Number: <span aria-label="required">*</span></label>
+                        <input type="number" min="1" max="999" step="1" required>
+                        <label for="zip_code">Zip Code: <span aria-label="required">*</span></label>
+                        <input type="number" pattern="[1-9]{5}" step="1" placeholder="f.e 1312"
+                            title="contains exactly 5 numbers" required>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Date of Birth</legend>
+
+                        <label for="day">DD <span aria-label="required">*</span></label>
+                        <input type="number" id="day" name="day" min="1" max="31" step="1" placeholder="day" required>
+
+                        <label for="month">MM <span aria-label="required">*</span></label>
+                        <input type="number" id="month" name="month" min="1" max="12" step="1" placeholder="month"
+                            required>
+
+                        <label for="year">YY <span aria-label="required">*</span></label>
+                        <input type="number" id="year" name="year" min="1920" max="2006" placeholder="year" required>
+
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Phone Numbers</legend>
+
+                        <label for="phone_1">Phone 1: <span aria-label="required">*</span></label>
+                        <input type="tel" id="phone_1" name="phone_1" pattern="[0-9]{10}" placeholder="primary number"
+                            title="contains exactly 10 digits" required>
+
+                        <label for="phone_2">Phone 2:</label>
+                        <input type="tel" id="phone_2" name="phone_2" pattern="[0-9]{10}" placeholder="optional number"
+                            title="contains exactly 10 digits">
+
+                    </fieldset>
+
+                    <label for="gender_select">Gender:</label>
+                    <select name="gender" id="gender_select">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Account Info</legend>
+
+                    <label for="username">UserName: <span aria-label="required">*</span></label>
+                    <input type="text" id="username" name="username" maxlength="20" placeholder="displayed name"
+                        required>
+
+                    <label for="password">Password: <span aria-label="required">*</span></label>
+                    <input type="password" id="password" name="password" minlength="10" maxlength="40" title="must contain at least one number, one capital letter and one 
+                     special character while also being between 10 and 40 characters long" placeholder="your password"
+                        required>
+
+                    <label for="password_repeat"> Confirm Password: <span aria-label="required">*</span></label>
+                    <input type="password" id="password_repeat" name="password_repeat" minlength="10" maxlength="40"
+                        title="must be the same as the previous one" placeholder="re-enter password" required>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Shrot Q&A</legend>
+
+                    <label for="q1">Where would you like to live?</label>
+                    <textarea name="q1" id="q1" cols="30" rows="10" placeholder="mention some places!" minlength="10"
+                        maxlength="500" required></textarea>
+
+                    <label for="q2">In which field would you like to work in?</label>
+                    <textarea name="q2" id="q2" cols="30" rows="10" minlength="10" maxlength="500" required
+                        placeholder="Mention the fields and give some detail if needed!"></textarea>
+
+                    <label for="q3">What type of car do you feel suits your needs?</label>
+                    <textarea name="q3" id="q3" cols="30" rows="10"
+                        placeholder="you can mention both the type and the brand of the cars you have in mind!"
+                        minlength="10" maxlength="500" required></textarea>
+
+                    <label for="q4">What type of devices are you in search of?</label>
+                    <textarea name="q4" id="q4" cols="30" rows="10"
+                        placeholder="you can mention specific device types or brands if you wish!" minlength="10"
+                        maxlength="500" required></textarea>
+
+                    <label for="q5">Are you interested in any other services our site doesn't provide? </label>
+                    <textarea name="q5" id="q5" cols="30" rows="10" minlength="10" maxlength="500"
+                        placeholder="it can be anything you would like us to provide you with!" required></textarea>
+
+                </fieldset>
+
+                <fieldset>
+                    <legend>Would you like to receive new offers?</legend>
+
+                    <label for="sms">SMS</label>
+                    <input type="checkbox" id="sms" name="ads">
+
+                    <label for="viber">Viber</label>
+                    <input type="checkbox" id="viber" name="ads">
+
+                    <label for="whatsup">WhatsUp</label>
+                    <input type="checkbox" id="whatsup" name="ads">
+
+                    <label for="email_ads">Email</label>
+                    <input type="checkbox" id="email_ads" name="ads">
+
+                </fieldset>
+
+                <footer>
+                    <input type="checkbox" id="terms"  title="You need to read and accept our terms of service!" required>
+                    <label for="terms">Terms&Condtions <span aria-label="required">*</span></label>                    
+
+                    <button type="submit" id="signup_submit" name="signup_submit">Submit</button>
+                    <button type="reset">Clear</button>
+
+                </footer>
+            </form>
+        </main>
+
+
+        <footer id="main_footer">
+            <div id="top_footer">
+                <div class="contact_details">
+                    <!-- Section for Contact Details -->
+                    <h2>Contact Details</h2>
+                    <address>
+                        <ul>
+                            <li><a href="contactus.html">Technical Support</a></li>
+                            <li><a href="mailto:lazaristheo@gmail.com">lazaristheo@gmail.com</a></li>
+                            <li><a href="tel:6987470962">telephone:6987470962</a> </li>
+                        </ul>
+                    </address>
+                </div>
+                <div class="middle_footer">
+                    <div class="logo">
+                        <!-- Logo+SiteName Section -->
+                        <h2>Find</h2>
+                        <img class="footer_img" src="../resources/logo-no-background.png" alt="our Logo">
+                    </div>
+
+                    <div id="news_letter">
+                        <form action="#" method="post">
+                            <label for="news-letter">Our Newsletter:</label>
+                            <input type="email" id="news-letter" name="news-letter" placeholder="Enter your Email"
+                                required>
+                            <button type="submit">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+                <div>
+                    <h2>Find us on Social Media</h2>
+                    <div id="social_list">
+                        <a href="https://www.facebook.com/"><img class="footer_img" src="../resources/fb_logo.png"
+                                alt="fb_logo"></a>
+                        <a href="https://www.instagram.com/"><img class="footer_img" src="../resources/insta_logo.png"
+                                alt="insta_logo"></a>
+                        <a href="https://github.com/Lazaris02"><img class="footer_img" src="../resources/git_logo.png"
+                                alt="git_logo"></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div id="bottom_footer">
+                <p>&copy;FIND.GR ALL RIGHTS RESERVED</p>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
