@@ -13,6 +13,7 @@
     <link rel="icon" type="image/x-icon" href="../resources/logo-no-background.png">
     <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
@@ -82,7 +83,7 @@
                     <fieldset>
                         <legend>Address</legend>
                         <label for="p_street">Street Name: <span aria-label="required">*</span></label>
-                        <input type="text" id="p_street" name="p_street" pattern="[A-Za-z]{1,50} "
+                        <input type="text" id="p_street" name="p_street" pattern="[A-Za-z]{1,30}"
                             title="contains only english characters" required>
                         <label for="p_street_num">Number: <span aria-label="required">*</span></label>
                         <input type="number" min="1" max="999" step="1" required>
@@ -103,7 +104,7 @@
                             autocomplete="bday-month" required>
 
                         <label for="year">YY <span aria-label="required">*</span></label>
-                        <input type="number" id="year" name="year" min="1920" max="2006" placeholder="year"
+                        <input type="number" id="year" name="year" min="1920"  placeholder="year"
                             autocomplete="bday-year" required>
 
                     </fieldset>
@@ -163,26 +164,26 @@
                     <legend>Shrot Q&A</legend>
 
                     <label for="q1">Where would you like to live?</label>
-                    <textarea name="q1" id="q1" cols="30" rows="10" placeholder="mention some places!" minlength="10"
-                        maxlength="500" required></textarea>
+                    <textarea name="q1" id="q1" cols="30" rows="10" placeholder="mention some places!" 
+                        maxlength="500"></textarea>
 
                     <label for="q2">In which field would you like to work in?</label>
-                    <textarea name="q2" id="q2" cols="30" rows="10" minlength="10" maxlength="500" required
+                    <textarea name="q2" id="q2" cols="30" rows="10"  maxlength="500" 
                         placeholder="Mention the fields and give some detail if needed!"></textarea>
 
                     <label for="q3">What type of car do you feel suits your needs?</label>
                     <textarea name="q3" id="q3" cols="30" rows="10"
                         placeholder="you can mention both the type and the brand of the cars you have in mind!"
-                        minlength="10" maxlength="500" required></textarea>
+                        maxlength="500"></textarea>
 
                     <label for="q4">What type of devices are you in search of?</label>
                     <textarea name="q4" id="q4" cols="30" rows="10"
-                        placeholder="you can mention specific device types or brands if you wish!" minlength="10"
-                        maxlength="500" required></textarea>
+                        placeholder="you can mention specific device types or brands if you wish!"
+                        maxlength="500"></textarea>
 
                     <label for="q5">Are you interested in any other services our site doesn't provide? </label>
-                    <textarea name="q5" id="q5" cols="30" rows="10" minlength="10" maxlength="500"
-                        placeholder="it can be anything you would like us to provide you with!" required></textarea>
+                    <textarea name="q5" id="q5" cols="30" rows="10"  maxlength="500"
+                        placeholder="it can be anything you would like us to provide you with!"></textarea>
 
                 </fieldset>
 
@@ -263,6 +264,7 @@
             </div>
         </footer>
     </div>
+    <script src="app.js"></script>
 </body>
 
 </html>
