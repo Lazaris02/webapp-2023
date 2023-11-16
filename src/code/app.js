@@ -14,7 +14,7 @@ form.addEventListener("submit",function(e){
 
     e.preventDefault();
     console.log("Passwords don't match");
-    alert("the two passwords don't match!");
+    pw1.setCustomValidity("Passwords don't match!");
     pw1.value ='';
     pw2.value ='';
 
@@ -43,7 +43,7 @@ form.addEventListener("submit",function(e){
     // This event listener checks that the date
     //is ok for example 31-2 is not allowed obviously
     const thirty = [4,6,9,11];
-
+    
     let month = parseInt(document.querySelector('#month').value);
     let day = parseInt(document.querySelector('#day').value);
     let year = parseInt(document.querySelector('#year').value);
