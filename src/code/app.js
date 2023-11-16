@@ -17,6 +17,9 @@ form.addEventListener("submit",function(e){
     alert("the two passwords don't match!");
     pw1.value ='';
     pw2.value ='';
+
+    pw1.style.borderColor='red';
+    pw2.style.borderColor='red';
     
 });
 
@@ -29,6 +32,10 @@ form.addEventListener("submit",function(e){
     if(current_year-parseInt(given_date)>=18){return;}
     alert("You are under 18!")
     e.preventDefault();
+
+    document.querySelector('#year').style.borderColor='red';
+    
+
 });
 
 
@@ -46,18 +53,24 @@ form.addEventListener("submit",function(e){
     if(thirty.includes(month) && day==31){
         e.preventDefault();
         alert("this month doesn't have 31 days!");
+        document.querySelector('#day').style.borderColor='red';
+        document.querySelector('#month').style.borderColor='red';
         return;
     }
 
     if(month === 2 && (Math.abs(2000-year)%4!=0) && day>28){
         e.preventDefault();
         alert("this month has 28 days!");
+        document.querySelector('#day').style.borderColor='red';
+        document.querySelector('#month').style.borderColor='red';
         return;
     }
 
     if(month === 2 && (Math.abs(2000-year)%4===0) && day>29){
         e.preventDefault();
         alert("this month has 29 days!");
+        document.querySelector('#day').style.borderColor='red';
+        document.querySelector('#month').style.borderColor='red';
         return;
     }
 
