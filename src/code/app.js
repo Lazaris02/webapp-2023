@@ -1,77 +1,113 @@
 // The code for the complex validation rules
-
 const form = document.querySelector('#signup_form');
+const pw1 = document.querySelector('#password');
+const pw2 = document.querySelector('#password_repeat');
+const dd = document.querySelector('#day');
+const mm = document.querySelector('#month');
+const yy = document.querySelector('#year');
 
 
 
-form.addEventListener("submit",function(e){
-    // This event listener checks if passwords are matching or not
-    let pw1 = document.querySelector('#password');
-    let pw2 = document.querySelector('#password_repeat');
+form.addEventListener("submit",(e)=>{
+
+    if(!checkAge() || !checkDates() || !checkPasswordCharacters() || !checkSamePassword()){
+        e.preventDefault();
+    }
+
+})
 
 
-    if(pw1.value === pw2.value){return;}
-
-    e.preventDefault();
-    console.log("Passwords don't match");
-    pw1.setCustomValidity("Passwords don't match!");
-    pw1.value ='';
-    pw2.value ='';
-
-    pw1.style.borderColor='red';
-    pw2.style.borderColor='red';
-    
-});
 
 
-form.addEventListener("submit",function(e){
-    //This event listener checks if user is over 18
+
+function checkAge(){
     let current_year = new Date().getFullYear();
-    let given_date = document.querySelector('#year').value;
+    let given_date = yy.value;
 
-    if(current_year-parseInt(given_date)>=18){return;}
-    alert("You are under 18!")
-    e.preventDefault();
+    if(current_year-parseInt(given_date)>=18){return true;}
 
-    document.querySelector('#year').style.borderColor='red';
-    
+    alert("You are under 18!");
+    yy.style.borderColor='red';
 
-});
+    return false;
+}
 
 
-form.addEventListener("submit",function(e){
+function checkDates(){
     // This event listener checks that the date
     //is ok for example 31-2 is not allowed obviously
     const thirty = [4,6,9,11];
     
-    let month = parseInt(document.querySelector('#month').value);
-    let day = parseInt(document.querySelector('#day').value);
-    let year = parseInt(document.querySelector('#year').value);
+    const month = parseInt(mm.value);
+    const day = parseInt(dd.value);
+    const year = parseInt(yy.value);
 
     console.log(month,day,year);
 
     if(thirty.includes(month) && day==31){
-        e.preventDefault();
+    
         alert("this month doesn't have 31 days!");
-        document.querySelector('#day').style.borderColor='red';
-        document.querySelector('#month').style.borderColor='red';
-        return;
+        dd.style.borderColor='red';
+        mm.style.borderColor='red';
+        return false;
     }
 
     if(month === 2 && (Math.abs(2000-year)%4!=0) && day>28){
-        e.preventDefault();
         alert("this month has 28 days!");
-        document.querySelector('#day').style.borderColor='red';
-        document.querySelector('#month').style.borderColor='red';
-        return;
+        dd.style.borderColor='red';
+        mm.style.borderColor='red';
+        return false;
     }
 
     if(month === 2 && (Math.abs(2000-year)%4===0) && day>29){
-        e.preventDefault();
         alert("this month has 29 days!");
-        document.querySelector('#day').style.borderColor='red';
-        document.querySelector('#month').style.borderColor='red';
-        return;
+        dd.style.borderColor='red';
+        mm.style.borderColor='red';
+        return false;
     }
 
-});
+    dd.style.borderColor='black';
+    mm.style.borderColor='black';
+
+    return true;
+}
+
+
+function checkSamePassword(){
+    // This event listener checks if passwords are matching or not
+    let pw1_value = pw1.value.trim();
+    let pw2_value = pw2.value.trim();
+
+    if(pw1_value === pw2_value){
+        pw1.style.borderColor = 'black';
+        pw2.style.borderColor = 'black';
+        return true;
+    }
+
+    pw1.style.borderColor = 'red';
+    pw2.style.borderColor = 'red';
+
+    return false;
+
+
+}
+
+function checkPasswordCharacters(){
+    //checks if password matches the requirements
+    let pw_value = pw1.value;
+    let regex = /^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[A-Z])[a-zA-Z0-9!@#$%^&*]{10,40}$/;
+
+    if(regex.test(pw_value)){
+        pw1.style.borderColor='black';
+        return true;
+    }
+    
+    pw1.style.borderColor='red';
+    console.log('I am here!');
+
+    return false;
+
+}
+
+
+
