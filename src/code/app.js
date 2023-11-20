@@ -1,4 +1,3 @@
-// The code for the complex validation rules
 const form = document.querySelector('#signup_form');
 const pw1 = document.querySelector('#password');
 const pw2 = document.querySelector('#password_repeat');
@@ -9,7 +8,8 @@ const yy = document.querySelector('#year');
 
 
 form.addEventListener("submit",(e)=>{
-
+// this event listener is attached to the signup form and checks if everything is
+//matching the set requirements , if it is not then it prevents the form submission
     if(!checkAge() || !checkDates() || !checkPasswordCharacters() || !checkSamePassword()){
         e.preventDefault();
     }
@@ -34,7 +34,7 @@ function checkAge(){
 
 
 function checkDates(){
-    // This event listener checks that the date
+    // This function checks that the date
     //is ok for example 31-2 is not allowed obviously
     const thirty = [4,6,9,11];
     
@@ -74,7 +74,7 @@ function checkDates(){
 
 
 function checkSamePassword(){
-    // This event listener checks if passwords are matching or not
+    // This function checks if passwords are matching or not
     let pw1_value = pw1.value.trim();
     let pw2_value = pw2.value.trim();
 
