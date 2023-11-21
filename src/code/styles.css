@@ -1666,3 +1666,19 @@ img{
 
 
 /* media queries end here */
+
+
+
+#bottom_footer>a{
+    color: var(--smoky-black);
+    font-size: large;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 1em;
+    margin-right: auto;
+}
+
+
+#bottom_footer>a:hover{
+    color: var(--nav-color);
+}
