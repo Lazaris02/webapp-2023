@@ -1420,8 +1420,10 @@ th {
 
     #bottom_footer{
         /* moves the copyright in the center horizontally */
-        justify-content: center;
+        justify-content: flex-end;
     }    
+
+   
 
 
 }
@@ -1505,3 +1507,22 @@ th {
 
 
 /* media queries end here */
+
+
+
+/* sign-up button styling */
+
+
+#bottom_footer>a{
+    color: var(--smoky-black);
+    font-size: large;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: 1em;
+    margin-right: auto;
+}
+
+
+#bottom_footer>a:hover{
+    color: var(--nav-color);
+}
