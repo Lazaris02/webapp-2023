@@ -49,17 +49,24 @@
                 </nav>
             </div>
             <div id="header_banner">
-                <img id="house_sales" src="../resources/house_sales.png" alt="house_sales">
+                <img id="house_sales"
+                srcset="../resources/house_sales.png 650w" sizes="(max-width:650px) 25vw,
+                        (max-width:1300px) 20vw,250px"
+                src="../resources/house_sales.png" alt="house_sales">
             </div>
 
         </header>
 
         <main id="main_content" class="sales_page">
-                
+  
             <a id="house_ad" href="house_sales_details.html">
                 <article class="ad">
-                    <img src="../resources/house_ad/house1.png" alt="house1">
-                    <div class="ad_wrapper">
+                    <img srcset="../resources/house_ad/house1.png 650w"
+                        sizes="(max-width:650px) 30vw,
+                                (max-width: 1300px) 40w,
+                                271px"    
+                        src="../resources/house_ad/house1.png" alt="house1">
+                    <div class="ad_info">
                         <h2>Apartment, 105m&sup2;</h2>
 
                         <h3>Ano Kypseli, Attiki</h3>
@@ -71,7 +78,7 @@
                             <li>1 bathroom</li>
                         </ul>
 
-                        <div>
+                        <div id="price">
                             <h3>400,000€</h3>
                             <img src="../resources/ad/price-increase.png" alt="price">
                         </div>
@@ -86,19 +93,19 @@
 
             <article class="ad">
                 <img src="../resources/ad/house2.png" alt="house2">
-                <div class="ad_wrapper">
+                <div class="ad_info">
                     <h2>Apartment, 124m&sup2;</h2>
 
                     <h3>Pagkrati, Attiki</h3>
                     <p>AH-002</p>
 
                     <ul class="infos">
-                        <li>3nd floor</li>
+                        <li>3rd floor</li>
                         <li>2 bedrooms</li>
                         <li>1 bathroom</li>
                     </ul>
 
-                    <div>
+                    <div id="price">
                         <h3>370,000€</h3>
                         <img src="../resources/ad/lowering-price.png" alt="price">
                     </div>
@@ -112,10 +119,10 @@
 
             <article class="ad">
                 <img src="../resources/ad/house3.png" alt="house3">
-                <div class="ad_wrapper">
+                <div class="ad_info">
                     <h2>Maisonette, 222m&sup2;</h2>
 
-                    <h3>Kolonaki-Lykavittos, Attiki</h3>
+                    <h3>Kolonaki, Attiki</h3>
                     <p>AH-003</p>
 
                     <ul class="infos">
@@ -123,7 +130,7 @@
                         <li>3 bedrooms</li>
                         <li>3 bathrooms</li>
                     </ul>
-                    <div>
+                    <div id="price">
                         <h3>1,650,000€</h3>
                         <img src="../resources/ad/price-increase.png" alt="price">
                     </div>
@@ -134,11 +141,10 @@
                 </div>
             </article>
 
-
             <article class="ad">
 
                 <img src="../resources/ad/house4.png" alt="house4">
-                <div class="ad_wrapper">
+                <div class="ad_info">
                     <h2>Apartment, 52m&sup2;</h2>
 
 
@@ -151,7 +157,7 @@
                         <li>1 bathroom</li>
                     </ul>
 
-                    <div>
+                    <div id="price">
                         <h3>100,000€</h3>
                         <img src="../resources/ad/lowering-price.png" alt="price">
                     </div>
@@ -164,7 +170,7 @@
 
             <article class="ad">
                 <img src="../resources/ad/house5.png" alt="house5">
-                <div class="ad_wrapper">
+                <div class="ad_info">
                     <h2>Apartment, 107m&sup2;</h2>
 
                     <h3>Exarcheia, Attiki</h3>
@@ -176,38 +182,13 @@
                         <li>2 bathrooms</li>
                     </ul>
 
-                    <div>
+                    <div id="price">
                         <h3>239,000€</h3>
                         <img src="../resources/ad/lowering-price.png" alt="price">
                     </div>
 
                     <footer>
                         <p>Published: 06/11/2023</p>
-                    </footer>
-                </div>
-            </article>
-
-            <article class="ad">
-                <img src="../resources/ad/house6.png" alt="house6">
-                <div class="ad_wrapper">
-                    <h2>Maisonette, 168m&sup2;</h2>
-
-                    <h3>Panormou, Attiki</h3>
-                    <p>AH-006</p>
-
-                    <ul class="infos">
-                        <li>6th floor</li>
-                        <li>3 bedrooms</li>
-                        <li>2 bathrooms</li>
-                    </ul>
-
-                    <div>
-                        <h3>580,000€</h3>
-                        <img src="../resources/ad/price-increase.png" alt="price">
-                    </div>
-
-                    <footer>
-                        <p>Published: 17/09/2023</p>
                     </footer>
                 </div>
             </article>
