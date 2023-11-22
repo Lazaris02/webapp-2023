@@ -1766,7 +1766,8 @@ img{
 }
 
 #signup_form input:hover,
-#signup_form button:hover {
+#signup_form button:hover,
+#signup_form textarea:hover {
     /* when you hover over the input and the buttons 
     in the form the background changed color and 
     has a smooth transition of 200ms */
