@@ -1814,6 +1814,7 @@ img{
     grid-template-rows: 1fr 1fr;
     align-items: center;
     margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .question{
@@ -1834,5 +1835,5 @@ img{
 
 #signup_lastpart{
     /* gives some space to the last part of the form*/
-    margin-top: 50px;
+    margin-top: 30px;
 }
