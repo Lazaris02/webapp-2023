@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Find</title>
+    <title>Sign Up</title>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,30 +58,40 @@
 
 
         <main id="main_content">
-            <h2>Sign Up!</h2>
+            <h2 id="signup_title">Sign Up!</h2>
 
             <form action="#" method="post" id="signup_form" name="signup_form">
-                <p>Requried fields are marked by <span aria-label="required">*</span>.</p>
+                <p>Requiried fields are marked by <span aria-label="required">*</span>.</p>
 
-                <fieldset>
-                    <legend>Personal Info</legend>
+                <div id="signup_grid">
 
-                    <label for="p_name">Name: <span aria-label="required">*</span></label>
-                    <input type="text" id="p_name" name="p_name" pattern="[A-Za-z]{1,30}" autocomplete="name" required>
+                    <fieldset id="personal_info">
+                        <legend>Personal Info</legend>
 
-                    <label for="p_surname">Surname: <span aria-label="required">*</span></label>
-                    <input type="text" id="p_surname" name="p_surname" pattern="[A-Za-z]{1,30}"
-                        autocomplete="family-name" required>
+                        <label for="p_name">Name: <span aria-label="required">*</span></label>
+                        <input type="text" id="p_name" name="p_name" pattern="[A-Za-z]{1,30}" autocomplete="name" required>
 
-                    <label for="p_email">Email: <span aria-label="required">*</span></label>
-                    <input type="email" id="p_email" name="p_email" autocomplete="email" list="user_email" required>
+                        <label for="p_surname">Surname: <span aria-label="required">*</span></label>
+                        <input type="text" id="p_surname" name="p_surname" pattern="[A-Za-z]{1,30}"
+                            autocomplete="family-name" required>
 
-                    <datalist id="user_email">
-                        <option>FriendlyVisitor01@gmail.com</option>
-                        <option>CarEnjoyer52@yahoo.com</option>
-                    </datalist>
+                        <label for="p_email">Email: <span aria-label="required">*</span></label>
+                        <input type="email" id="p_email" name="p_email" autocomplete="email" list="user_email" required>
 
-                    <fieldset>
+                        <datalist id="user_email">
+                            <option>FriendlyVisitor01@gmail.com</option>
+                            <option>CarEnjoyer52@yahoo.com</option>
+                        </datalist>
+
+                        <label for="gender_select">Gender:</label>
+                        <select name="gender" id="gender_select">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                        </select>
+                    </fieldset>
+
+                    <fieldset id="address_info">
                         <legend>Address</legend>
                         <label for="p_street">Street Name: <span aria-label="required">*</span></label>
                         <input type="text" id="p_street" name="p_street" pattern="[A-Za-z]{1,30}"
@@ -93,7 +103,7 @@
                             title="contains exactly 5 numbers" required>
                     </fieldset>
 
-                    <fieldset>
+                    <fieldset id="birth_info">
                         <legend>Date of Birth</legend>
 
                         <label for="day">DD <span aria-label="required">*</span></label>
@@ -110,7 +120,7 @@
 
                     </fieldset>
 
-                    <fieldset>
+                    <fieldset id="phone_info">
                         <legend>Phone Numbers</legend>
 
                         <label for="phone_1">Phone 1: <span aria-label="required">*</span></label>
@@ -123,71 +133,75 @@
 
                     </fieldset>
 
-                    <label for="gender_select">Gender:</label>
-                    <select name="gender" id="gender_select">
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                        <option value="other">Other</option>
-                    </select>
+                    <fieldset id="account_info">
+                        <legend>Account Info</legend>
 
-                </fieldset>
+                        <label for="username">UserName: <span aria-label="required">*</span></label>
 
-                <fieldset>
-                    <legend>Account Info</legend>
+                        <input type="text" id="username" name="username" maxlength="20" placeholder="displayed name"
+                            autocomplete="username" list="username_suggest" required>
 
-                    <label for="username">UserName: <span aria-label="required">*</span></label>
+                        <datalist id="username_suggest">
+                            <option>FriendlyVisitor01</option>
+                            <option>CarEnjoyer52</option>
+                        </datalist>
 
-                    <input type="text" id="username" name="username" maxlength="20" placeholder="displayed name"
-                        autocomplete="username" list="username_suggest" required>
+                        <details>
+                            <summary>Password Requirments</summary>
+                            The password must be between 10 and 40 characters and have
+                            at least 1 capital letter, 1 number , 1 special character.
+                        </details>
+                        <label for="password">Password: <span aria-label="required">*</span></label>
+                        <input type="password" id="password" name="password" title="must contain at least one number, one capital letter and one 
+                        special character while also being between 10 and 40 characters long" placeholder="your password"
+                            required>
 
-                    <datalist id="username_suggest">
-                        <option>FriendlyVisitor01</option>
-                        <option>CarEnjoyer52</option>
-                    </datalist>
-
-                    <details>
-                        <summary>Password Requirments</summary>
-                        The password must be between 10 and 40 characters and have
-                        at least 1 capital letter, 1 number , 1 special character.
-                    </details>
-                    <label for="password">Password: <span aria-label="required">*</span></label>
-                    <input type="password" id="password" name="password" title="must contain at least one number, one capital letter and one 
-                     special character while also being between 10 and 40 characters long" placeholder="your password"
-                        required>
-
-                    <label for="password_repeat"> Confirm Password: <span aria-label="required">*</span></label>
-                    <input type="password" id="password_repeat" name="password_repeat" minlength="10" maxlength="40"
-                        title="must be the same as the previous one" placeholder="re-enter password" required>
-
-                </fieldset>
+                        <label for="password_repeat"> Confirm Password: <span aria-label="required">*</span></label>
+                        <input type="password" id="password_repeat" name="password_repeat" minlength="10" maxlength="40"
+                            title="must be the same as the previous one" placeholder="re-enter password" required>
+                    </fieldset>
+                </div>
 
                 <fieldset>
-                    <legend>Shrot Q&A</legend>
+                    <legend>Short Q&A</legend>
 
-                    <label for="q1">Where would you like to live?</label>
-                    <textarea name="q1" id="q1" cols="30" rows="10" placeholder="mention some places!" 
-                        maxlength="500"></textarea>
+                    <div id="questions_wrap">
+                        <div class="question">
+                        <label for="q1">Where would you like to live?</label>
+                        <textarea name="q1" id="q1" cols="30" rows="10" placeholder="Mention some places!" 
+                            maxlength="500"></textarea>
+                        </div>
 
-                    <label for="q2">In which field would you like to work in?</label>
-                    <textarea name="q2" id="q2" cols="30" rows="10"  maxlength="500" 
-                        placeholder="Mention the fields and give some detail if needed!"></textarea>
+                        <div class="question">
+                        <label for="q2">In which field would you like to work in?</label>
+                        <textarea name="q2" id="q2" cols="30" rows="10"  maxlength="500" 
+                            placeholder="Mention the fields and give some detail if needed!"></textarea>
+                        </div>
 
-                    <label for="q3">What type of car do you feel suits your needs?</label>
-                    <textarea name="q3" id="q3" cols="30" rows="10"
-                        placeholder="you can mention both the type and the brand of the cars you have in mind!"
-                        maxlength="500"></textarea>
+                        <div class="question">
+                        <label for="q3">What type of car do you feel suits your needs?</label>
+                        <textarea name="q3" id="q3" cols="30" rows="10"
+                            placeholder="You can mention both the type and the brand of the cars you have in mind!"
+                            maxlength="500"></textarea>
+                        </div>
 
-                    <label for="q4">What type of devices are you in search of?</label>
-                    <textarea name="q4" id="q4" cols="30" rows="10"
-                        placeholder="you can mention specific device types or brands if you wish!"
-                        maxlength="500"></textarea>
-
-                    <label for="q5">Are you interested in any other services our site doesn't provide? </label>
-                    <textarea name="q5" id="q5" cols="30" rows="10"  maxlength="500"
-                        placeholder="it can be anything you would like us to provide you with!"></textarea>
+                        <div class="question">
+                        <label for="q4">What type of devices are you in search of?</label>
+                        <textarea name="q4" id="q4" cols="30" rows="10"
+                            placeholder="You can mention specific device types or brands if you wish!"
+                            maxlength="500"></textarea>
+                        </div>
+                        
+                        <div class="question">
+                        <label for="q5">Are you interested in any other services our site doesn't provide? </label>
+                        <textarea name="q5" id="q5" cols="30" rows="10"  maxlength="500"
+                            placeholder="It can be anything you would like us to provide you with!"></textarea>
+                        </div>
+                    </div>
 
                 </fieldset>
 
+                <div id="signup_lastpart">
                 <fieldset>
                     <legend>Would you like to receive new offers?</legend>
 
@@ -210,10 +224,14 @@
                         required>
                     <label for="terms">Terms&Condtions <span aria-label="required">*</span></label>
 
+                    <div id="signup_final_buttons">
                     <button type="submit" id="signup_submit" name="signup_submit">Submit</button>
                     <button type="reset">Clear</button>
+                    </div>
+                    
 
                 </footer>
+                </div>
             </form>
         </main>
 
