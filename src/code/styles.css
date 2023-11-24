@@ -1540,9 +1540,6 @@ img{
         /* making the images of the ad displaying in a grid of 2 columns and 5 rows */
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(5,1fr);
-        /* display: block;
-        max-height: 300px;
-        overflow-y: scroll; */
     }
 
     #find_arc{
@@ -1748,7 +1745,6 @@ img{
     /* adds some common properties that these form-elements all share
     which are the color the padding-left(visual improvement), the font-weight */
     background-color: rgba(255, 255, 255, 0.397);
-    border: none;
     border-radius: 5px;
     font-weight: 800;
     padding-left: 5px;
